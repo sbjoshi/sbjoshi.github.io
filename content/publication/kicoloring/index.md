@@ -28,7 +28,7 @@ summary: This paper is primarily about NP-completeness of $(k,i)$-coloring of gr
 
 tags:
 - CS Theory
-featured: false
+featured: true
 
 #links:
 # - name: "CALDAM 2018 version"
