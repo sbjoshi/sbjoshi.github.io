@@ -33,7 +33,7 @@ tags:
 - Source Themes
 featured: false
 
- links:
+links:
  - name: "CALDAM 2018 version"
    url: "https://arxiv.org/pdf/1802.03634v1.pdf"
 url_pdf: https://arxiv.org/pdf/1802.03634.pdf
