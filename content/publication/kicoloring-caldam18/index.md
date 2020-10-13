@@ -6,7 +6,7 @@ authors:
 - Anjeneya Swami Kare
 - B Sriram
 date: "2018-02-01T00:00:00Z"
-doi: "https://doi.org/10.1016/j.dam.2020.08.018"
+doi: "10.1007/978-3-319-74180-2"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2020-10-10T00:00:00Z"
