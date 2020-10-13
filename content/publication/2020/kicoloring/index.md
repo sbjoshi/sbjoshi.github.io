@@ -36,7 +36,10 @@ featured: false
 links:
  - name: "CALDAM 2018 version"
    url: "https://arxiv.org/pdf/1802.03634v1.pdf"
-url_pdf: https://arxiv.org/pdf/1802.03634.pdf
+ - name: "Extended Journal version"
+   url: "https://arxiv.org/pdf/1802.03634.pdf"
+
+url_pdf: 
 url_code: ''
 url_dataset: ''
 url_poster: ''
