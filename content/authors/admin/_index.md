@@ -54,6 +54,9 @@ social:
 - icon: dblp
   icon_pack: ai
   link: https://dblp.org/pid/13/4416-1.html
+- icon: orcid
+  icon_pack: ai
+  link: https://orcid.org/0000-0001-8070-1525
 - icon: github
   icon_pack: fab
   link: https://github.com/sbjoshi
