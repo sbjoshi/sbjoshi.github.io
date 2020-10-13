@@ -22,23 +22,23 @@ date_format = "Jan 2006"
   company = "IIT Guwahati"
   company_url = "http://www.iitg.ac.in"
   location = "Guwahati, India"
-  date_start = "Sep 2015"
-  date_end = "May 2016"
+  date_start = "2015-09-30"
+  date_end = "2016-05-20"
   description = """
-  Responsibilities include:
-  
-  * Analysing
-  * Modelling
-  * Deploying
-  """
+#  Responsibilities include:
+#  
+#  * Analysing
+#  * Modelling
+#  * Deploying
+#  """
 
 [[experience]]
   title = "PostDoc Research Assistant"
   company = "University of Oxford"
   company_url = "https://www.cs.ox.ac.uk"
   location = "Oxford, UK"
-  date_start = "Aug 2012"
-  date_end = "Aug 2015"
+  date_start = "2012-08-13"
+  date_end = "2015-08-12"
   description = """Taught electronic engineering and researched semiconductor physics."""
 
 
