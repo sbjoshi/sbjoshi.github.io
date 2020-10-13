@@ -10,7 +10,7 @@ subtitle = ""
 
 # Date format for experience
 #   Refer to https://sourcethemes.com/academic/docs/customization/#date-format
-date_format = "Jan 2006"
+date_format = "2006"
 
 # Experiences.
 #   Add/remove as many `[[experience]]` blocks below as you like.
@@ -19,18 +19,25 @@ date_format = "Jan 2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 [[experience]]
   title = "Assistant Professor"
+  company = "IIT Hyderabad"
+  company_url = "https://iith.ac.in"
+  location = "Hyderabad, India"
+  date_start = "2016-05-23"
+  date_end = ""
+  description = """
+  """
+
+
+
+[[experience]]
+  title = "Assistant Professor"
   company = "IIT Guwahati"
   company_url = "http://www.iitg.ac.in"
   location = "Guwahati, India"
   date_start = "2015-09-30"
   date_end = "2016-05-20"
   description = """
-#  Responsibilities include:
-#  
-#  * Analysing
-#  * Modelling
-#  * Deploying
-#  """
+  """
 
 [[experience]]
   title = "PostDoc Research Assistant"
@@ -39,27 +46,19 @@ date_format = "Jan 2006"
   location = "Oxford, UK"
   date_start = "2012-08-13"
   date_end = "2015-08-12"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  description = """
+"""
 
 
 [[experience]]
-  title = "Professor"
-  company = "University X"
+  title = "Project Trainee"
+  company = "IBM India Research Lab"
   company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
-
-
-[[experience]]
-  title = "Professor"
-  company = "University X"
-  company_url = ""
-  location = "California"
-  date_start = "2016-01-01"
-  date_end = "2016-12-31"
-  description = """Taught electronic engineering and researched semiconductor physics."""
+  location = "New Delhi, India"
+  date_start = "2006-08-02"
+  date_end = "2007-07-11"
+  description = """
+"""
 
 
 +++
