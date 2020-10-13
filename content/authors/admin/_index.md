@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Nelson Bighetti
+title: Saurabh Joshi
 
 # Username (this should match the folder name)
 authors:
@@ -10,12 +10,12 @@ authors:
 superuser: true
 
 # Role/position
-role: Professor of Artificial Intelligence
+role: Assistant Professor in Department of CSE
 
 # Organizations/Affiliations
 organizations:
-- name: Stanford University
-  url: ""
+- name: IIT Hyderabad
+  url: "https://iith.ac.in"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
