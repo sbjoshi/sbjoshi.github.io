@@ -28,7 +28,7 @@ interests:
 education:
   courses:
   - course: PhD in Computer Science and Engineering
-    institution: [IIT Kanpur](https://www.iitk.ac.in)
+    institution: <a href="https://www.iitk.ac.in">IIT Kanpur</a>
     year: 2012
   - course: MTech in Computer Science and Engineering
     institution: IIT Bombay
