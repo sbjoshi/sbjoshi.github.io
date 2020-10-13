@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor in Department of CSE
+role: Assistant Professor in [Department of CSE](https://cse.iith.ac.in)
 
 # Organizations/Affiliations
 organizations:
