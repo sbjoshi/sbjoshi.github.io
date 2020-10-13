@@ -89,7 +89,7 @@ show_related = {docs = true, page = false, post = true, project = true, publicat
 
 # Enter contact details (optional). To hide a field, clear it to "".
 email = "test@example.org"
-phone = "888 888 88 88"
+phone = "(+91) 40 2301 6364"
 
 # Address
 # For country_code, use the 2-letter ISO code (see https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 )
@@ -100,7 +100,7 @@ address = {street = "B514, Department of CSE, IIT Hyderabad", city = "Kandi", re
 coordinates = {latitude = "37.4275", longitude = "-122.1697"}
 
 # Directions for visitors to locate you.
-directions = "Enter Building 1 and take the stairs to Office 200 on Floor 2"
+directions = "Enter Academic Block B and take the elevator to 5th floor. Turn right in the corridor."
 
 # Office hours
 # A list of your office hours. To remove, set to an empty list `[]`.
