@@ -5,9 +5,6 @@ authors:
 - admin
 - Subrahmanyam Kalyanasundaram
 - Anjeneya Swami Kare
-author_notes:
-- "Equal contribution"
-- "Equal contribution"
 date: "2020-09-01T00:00:00Z"
 doi: "https://doi.org/10.1016/j.dam.2020.08.018"
 
@@ -30,7 +27,7 @@ abstract: In an undirected graph, a proper $(k,i)$-coloring is an assignment of 
 summary: This paper is primarily about NP-completeness of $(k,i)$-coloring of graph and giving a parameterized algorithm for this problem using feedback vertex set as the parameter.
 
 tags:
-- Source Themes
+- CS Theory
 featured: false
 
 links:
