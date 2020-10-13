@@ -18,7 +18,7 @@ organizations:
   url: "https://iith.ac.in"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: My research interests include Constraint Programming, Formal Verification and Program Analysis.
 
 interests:
 - Constraint Programming
@@ -54,6 +54,12 @@ social:
 - icon: github
   icon_pack: fab
   link: https://github.com/sbjoshi
+- icon: linkedin
+  icon_pack: fab
+  link: https://www.linkedin.com/in/sbjoshi0001/
+- icon: dblp
+  icon_pack: ai
+  link: https://dblp.org/pid/13/4416-1.html
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
