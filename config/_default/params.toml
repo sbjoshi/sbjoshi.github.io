@@ -98,7 +98,7 @@ address = {street = "B514, Department of CSE, IIT Hyderabad", city = "Kandi", re
 # Geographic coordinates
 # To get your coordinates, right-click on Google Maps and choose "What's here?". The coords will show up at the bottom.
 #coordinates = {latitude = "37.4275", longitude = "-122.1697"}
-coordinates = ""
+#coordinates = ""
 
 # Directions for visitors to locate you.
 directions = "Enter Academic Block B and take the elevator to 5th floor. Turn right in the corridor."
