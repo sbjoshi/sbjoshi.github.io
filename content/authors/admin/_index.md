@@ -28,7 +28,7 @@ interests:
 education:
   courses:
   - course: PhD in Computer Science and Engineering
-    institution: <a href="https://www.iitk.ac.in">IIT Kanpur</a>
+    institution: IIT Kanpur
     year: 2012
   - course: MTech in Computer Science and Engineering
     institution: IIT Bombay
@@ -51,16 +51,15 @@ social:
 - icon: google-scholar
   icon_pack: ai
   link: https://scholar.google.com/citations?user=MvHEGbYAAAAJ
+- icon: dblp
+  icon_pack: ai
+  link: https://dblp.org/pid/13/4416-1.html
 - icon: github
   icon_pack: fab
   link: https://github.com/sbjoshi
 - icon: linkedin
   icon_pack: fab
   link: https://www.linkedin.com/in/sbjoshi0001/
-- icon: dblp
-  icon_pack: ai
-  link: https://dblp.org/pid/13/4416-1.html
-
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.
 # - icon: cv
