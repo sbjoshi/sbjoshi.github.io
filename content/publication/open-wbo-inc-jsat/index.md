@@ -6,7 +6,7 @@ authors:
 - Sukrut Rao
 - Ruben Martins
 date: "2019-09-01T00:00:00Z"
-doi: "https://doi.org/10.3233/SAT190118"
+doi: "10.3233/SAT190118"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2020-10-10T00:00:00Z"
