@@ -40,7 +40,7 @@ url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides: ''
+url_slides: https://sv-comp.sosy-lab.org/2019/talks/23_Pinaka.pdf
 url_source: ''
 url_video: ''
 
