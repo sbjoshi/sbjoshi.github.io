@@ -36,12 +36,12 @@ featured: false
 # - name: "CALDAM 2018 version"
 #   url: "https://arxiv.org/pdf/1802.03634v1.pdf"
 
-url_pdf: https://arxiv.org/pdf/1806.07164.pdf
-url_code: https://github.com/sbjoshi/Open-WBO-Inc
+url_pdf: "https://arxiv.org/pdf/1806.07164.pdf"
+url_code: "https://github.com/sbjoshi/Open-WBO-Inc"
 url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides: {{ .Page.Site.BaseURL}}/slides/CP18_Slides.pdf
+url_slides: "{{.Page.Site.BaseURL}}/slides/CP18_Slides.pdf"
 url_source: ''
 url_video: ''
 
