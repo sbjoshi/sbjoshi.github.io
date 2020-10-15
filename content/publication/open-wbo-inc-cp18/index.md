@@ -40,8 +40,8 @@ url_pdf: "https://arxiv.org/pdf/1806.07164.pdf"
 url_code: "https://github.com/sbjoshi/Open-WBO-Inc"
 url_dataset: ''
 url_poster: ''
-url_project: ''
-url_slides: "/slides/CP18_Slides.pdf"
+url_project: "https://github.com/sbjoshi/Open-WBO-Inc"
+url_slides: /slides/CP18_Slides.pdf
 url_source: ''
 url_video: ''
 
