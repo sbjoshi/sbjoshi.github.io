@@ -41,7 +41,7 @@ url_code: https://github.com/sbjoshi/Open-WBO-Inc
 url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides: slides/CP18_Slides.pdf
+url_slides: {{ .Page.Site.BaseURL}}/slides/CP18_Slides.pdf
 url_source: ''
 url_video: ''
 
