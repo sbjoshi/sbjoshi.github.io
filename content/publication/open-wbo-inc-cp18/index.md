@@ -32,16 +32,16 @@ tags:
 - Constraint Programming
 featured: false
 
-#links:
-# - name: "CALDAM 2018 version"
-#   url: "https://arxiv.org/pdf/1802.03634v1.pdf"
+links:
+ - name: "Slides"
+   url: "slides/CP18_Slides.pdf"
 
 url_pdf: "https://arxiv.org/pdf/1806.07164.pdf"
 url_code: "https://github.com/sbjoshi/Open-WBO-Inc"
 url_dataset: ''
 url_poster: ''
-url_project: "https://github.com/sbjoshi/Open-WBO-Inc"
-url_slides:  "https://github.com/sbjoshi/Open-WBO-Inc"
+url_project: ''
+url_slides:  ''
 url_source: ''
 url_video: ''
 
