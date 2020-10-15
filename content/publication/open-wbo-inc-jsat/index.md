@@ -5,6 +5,8 @@ authors:
 - Prateek Kumar
 - Sukrut Rao
 - Ruben Martins
+author_notes:
+- Author name are listed in alphabetical order of their last names grouped within institutions
 date: "2019-09-01T00:00:00Z"
 doi: "10.3233/SAT190118"
 

@@ -5,6 +5,8 @@ authors:
 - Subrahmanyam Kalyanasundaram
 - Anjeneya Swami Kare
 - B Sriram
+author_names:
+- Author name are listed in alphabetical order of their last names
 date: "2018-02-01T00:00:00Z"
 doi: "10.1007/978-3-319-74180-2"
 
