@@ -1,5 +1,5 @@
 ---
-title: "Reactivity in SystemC Transaction-Level Models
+title: "Reactivity in SystemC Transaction-Level Models"
 authors:
 - Frederic Doucet
 - R K Shyamasundar
