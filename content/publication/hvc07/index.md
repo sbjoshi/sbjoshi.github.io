@@ -1,16 +1,14 @@
 ---
 title: "Reactivity in SystemC Transaction-Level Models"
 authors:
-- Frederic Doucet
-- R K Shyamasundar
-- Ingolf Krueger
+- Shivali Agarwal
 - admin
-- Rajesh K Gupta
-date: "2007-10-01T00:00:00Z"
-doi: "10.1007/978-3-540-77966-7_7"
+- R K Shyamasundar
+date: "2011-01-01T00:00:00Z"
+doi: "10.1007/978-3-642-17679-1_13"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2020-10-15T00:00:00Z"
+publishDate: "2020-10-16T00:00:00Z"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -19,28 +17,28 @@ publishDate: "2020-10-15T00:00:00Z"
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "*International Conference on Principles and Practice of Constraint Programming*"
-publication_short: "HVC 2007"
+publication: "*International Conference on Distributed Computing and Networking*"
+publication_short: "ICDCN 2011"
 
-abstract: Pseudo-Boolean constraints, also known as 0-1 Integer Linear Constraints, are used to model many real-world problems. A common approach to solve these constraints is to encode them into a SAT formula. The runtime of the SAT solver on such formula is sensitive to the manner in which the given pseudo-Boolean constraints are encoded. In this paper, we propose generalized Totalizer encoding (GTE), which is an arc-consistency preserving extension of the Totalizer encoding to pseudo-Boolean constraints. Unlike some other encodings, the number of auxiliary variables required for GTE does not depend on the magnitudes of the coefficients. Instead, it depends on the number of distinct combinations of these coefficients. We show the superiority of GTE with respect to other encodings when large pseudo-Boolean constraints have low number of distinct coefficients. Our experimental results also show that GTE remains competitive even when the pseudo-Boolean constraints do not have this characteristic. 
+abstract:  Barrier synchronization is widely used in shared-memory parallel programs to synchronize between phases of data-parallel algorithms. With proliferation of many-core processors, barrier synchronization has been adapted for higher level language abstractions in new languages such as X10 wherein the processes participating in barrier synchronization are not known a priori, and the processes in distinct “places” don’t share memory. Thus, the challenge here is to not only achieve barrier synchronization in a distributed setting without any centralized controller, but also to deal with dynamic nature of such a synchronization as processes are free to join and drop out at any synchronization phase. In this paper, we describe a solution for the generalized distributed barrier synchronization wherein processes can dynamically join or drop out of barrier synchronization; that is, participating processes are not known a priori. Using the policy of permitting a process to join only in the beginning of each phase, we arrive at a solution that ensures (i) Progress: a process executing phase k will enter phase k + 1 unless it wants to drop out of synchronization (assuming the phase execution of the processes terminate), and (ii) Starvation Freedom: a new process that wants to join a phase synchronization group that has already started, does so in a finite number of phases. The above protocol is further generalized to multiple groups of processes (possibly non-disjoint) engaged in barrier synchronization.
 
 # Summary. An optional shortened abstract.
-summary: This paper describes Generalized Totalizer Encoding (GTE) to encode Pseudo-Boolean Constraints. This encoding led Open-WBO to win accolades in MaxSAT evaluations and Pseudo-Boolean evaluations.
+summary: 
 
 tags:
-- Constraint Programming
+- Program Analysis
 featured: false
 
 #links:
-# - name: "Slides"
-#   url: "slides/CP18_Slides.pdf"
+# - name: "CALDAM 2018 version"
+#   url: "https://arxiv.org/pdf/1802.03634v1.pdf"
 
-url_pdf: https://arxiv.org/pdf/1507.05920.pdf
-url_code: https://github.com/sat-group/open-wbo
+url_pdf: "papers/icdcn2011.pdf"
+url_code: ''
 url_dataset: ''
 url_poster: ''
 url_project: ''
-url_slides:  ''
+url_slides: ''
 url_source: ''
 url_video: ''
 
