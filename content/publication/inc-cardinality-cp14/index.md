@@ -25,8 +25,7 @@ abstract:     Maximum Satisfiability (MaxSAT) is an optimization variant of the 
 
 
 # Summary. An optional shortened abstract.
-summary: This paper describes techniques to incremental encode cardinality constraints. This
-led Open-WBO to win accolades in MaxSAT evaluations.
+summary: This paper describes techniques to incremental encode cardinality constraints. This led Open-WBO to win accolades in MaxSAT evaluations.
 
 tags:
 - Constraint Programming
