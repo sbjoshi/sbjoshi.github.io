@@ -25,8 +25,7 @@ abstract: In recent years, unsatisfiability-based algorithms have become prevale
 
 
 # Summary. An optional shortened abstract.
-summary: This paper is an extended version of the CP 2014 paper where incremental encoding
-is extended to weighted MaxSAT.
+summary: This paper is an extended version of the CP 2014 paper where incremental encoding is extended to weighted MaxSAT.
 
 tags:
 - Constraint Programming
