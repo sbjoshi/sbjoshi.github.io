@@ -30,9 +30,9 @@ tags:
 - Constraint Programming
 featured: false
 
-#links:
-# - name: "Slides"
-#   url: "slides/CP18_Slides.pdf"
+links:
+ - name: "Virtual Volume"
+   url: "https://freuder.wordpress.com/cp-anniversary-project/"
 
 url_pdf: "https://arxiv.org/pdf/1910.04643.pdf"
 url_code: 
