@@ -5,7 +5,6 @@ authors:
 - admin
 - Daniel Kroening
 date: "2016-01-01T00:00:00Z"
-"
 doi: "10.1145/2851141.2851165"
 
 # Schedule page publish date (NOT publication's date).
