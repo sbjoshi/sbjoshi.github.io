@@ -66,13 +66,13 @@ subtitle = ""
 
 #### Masters
 * Archit Sanghi - MTech - (July 2020--Present)
-* Akash Banerjee - MTech RA - (July 2018--Present)
+* [Akash Banerjee](https://www.linkedin.com/in/akashbanerjeeab/) - MTech RA - (July 2018--Present)
 * [Eti Chaudhary](https://etichaudhary.github.io) - _Verification of Programs_ - MTech RA - (July 2017--July 2020) - now at Goldman Sachs, Bengaluru.
-* Aditya Kumar - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
+* [Aditya Kumar](https://www.linkedin.com/in/npakr/) - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
 * Sunil Sarode - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
 * [Uttaran Sinha](https://uttaransinha.github.io) - MTech - _Defending Neural Networks against Structural Perturbations_ - (July 2017--July 2019)
 * Arpit Aggarwal - MTech (IIT Delhi, co-advised with Dr. Subodh Sharma) - _GoProver: a bounded model-checker for GO_ - (July 2017--July 2018) - now at Oracle, Bengaluru
-* Rasika Sapate - MTech - _LLVM2GOTO: A translator from LLVM IR to CPROVER IR_ - (July 2016--July 2018) - now at Mentor Graphics, Hyderabad
+* [Rasika Sapate](https://www.linkedin.com/in/rasika-sapate-67bb38a2/) - MTech - _LLVM2GOTO: A translator from LLVM IR to CPROVER IR_ - (July 2016--July 2018) - now at Mentor Graphics, Hyderabad
 
 ---
 
@@ -81,6 +81,6 @@ subtitle = ""
 * Gitanjali Mannepalli - BTech - Mini Project - _Proving program correctness using Coq_ (July 2018--Nov 2018)
 * [Sukrut Rao](https://sukrutrao.github.io) - BTech - Research Internship - _Improving MaxSAT Solving_ - now PhD candidate at Max Planck Institute, Germany
 * [Prateek Kumar](https://prateekkumar.in) - BTech - _Improving MaxSAT Solving_ - (Dec 2017--May 2019) - now at AQR Capital Management, Bengaluru
-* Nidhi Dhamnani - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ - (July 2017--Nov 2017) - now at Goldman Sachs, Bangalore
-* B Shreya - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ -(July 2017--Nov2017) - now as Software Development Engineer at Swiggy, Bangalore
+* [Nidhi Dhamnani](https://www.linkedin.com/in/nidhidhamnani/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ - (July 2017--Nov 2017) - now at Goldman Sachs, Bangalore
+* [B Shreya](https://www.linkedin.com/in/ballijepalli-shreya-b25384112/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ -(July 2017--Nov2017) - now as Software Development Engineer at Swiggy, Bangalore
 
