@@ -58,7 +58,7 @@ subtitle = ""
 
 #### PhD
 
-* Utpal Bora - PhD Candidate (co-supervised with Dr. Ramakrishna Upadrasta)
+* [Utpal Bora](https://utpalbora.com) - PhD Candidate (co-supervised with Dr. Ramakrishna Upadrasta)
 * Gautam Muduganti - PhD Candidate - (Jan 2017--Present)
 
 
@@ -70,7 +70,7 @@ subtitle = ""
 * [Eti Chaudhary](https://etichaudhary.github.io) - _Verification of Programs_ - MTech RA - (July 2017--July 2020) - now at Goldman Sachs, Bengaluru.
 * Aditya Kumar - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
 * Sunil Sarode - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
-* Uttaran Sinha - MTech - _Defending Neural Networks against Structural Perturbations_ - (July 2017--July 2019)
+* [Uttaran Sinha](https://uttaransinha.github.io) - MTech - _Defending Neural Networks against Structural Perturbations_ - (July 2017--July 2019)
 * Arpit Aggarwal - MTech (IIT Delhi, co-advised with Dr. Subodh Sharma) - _GoProver: a bounded model-checker for GO_ - (July 2017--July 2018) - now at Oracle, Bengaluru
 * Rasika Sapate - MTech - _LLVM2GOTO: A translator from LLVM IR to CPROVER IR_ - (July 2016--July 2018) - now at Mentor Graphics, Hyderabad
 
