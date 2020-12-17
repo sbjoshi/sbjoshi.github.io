@@ -3,6 +3,7 @@ title: GPURepair
 summary: A tool for automated repair of CUDA and OpenCL kernels
 tags:
 - Formal Verification
+- Automated Program Repair
 date: "2018-01-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
