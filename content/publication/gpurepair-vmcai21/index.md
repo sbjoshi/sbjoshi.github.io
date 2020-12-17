@@ -1,8 +1,10 @@
 ---
-title: GPURepair: Automated Repair of GPU Kernels"
+title: "GPURepair: Automated Repair of GPU Kernels"
 authors:
 - admin
 - Gautam Muduganti
+author_notes:
+- Author names are listed in alphabetical order of their last names
 date: "2021-01-01T00:00:00Z"
 
 # Schedule page publish date (NOT publication's date).
