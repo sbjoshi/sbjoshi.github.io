@@ -59,7 +59,7 @@ subtitle = ""
 #### PhD
 
 * [Utpal Bora](https://utpalbora.com) - PhD Candidate (co-supervised with Dr. Ramakrishna Upadrasta)
-* Gautam Muduganti - PhD Candidate - (Jan 2017--Present)
+* [Gautam Muduganti](https://www.linkedin.com/in/gautammuduganti/) - PhD Candidate - (Jan 2017--Present)
 
 
 ---
