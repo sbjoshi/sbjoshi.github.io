@@ -54,5 +54,5 @@ subtitle = ""
 
 
 - [Pinaka](https://github.com/sbjoshi/Pinaka) stands 2nd in _ReachSafety-Floats_, 2nd is _ReachSafety-Loops_, 3rd in _ReachSafety-Combinations_ subcategories and is placed 7th in _ReachSafety_ category in [SVCOMP 2021](https://sv-comp.sosy-lab.org/2021/)
-- Paper on _"GPURepair: Automated Repair of GPU Kernels"_ is accepted at VMCAI 2021.
+- Paper on _"[GPURepair: Automated Repair of GPU Kernels](/publication/gpurepair-vmcai21/)"_ is accepted at VMCAI 2021.
 
