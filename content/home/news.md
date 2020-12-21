@@ -50,7 +50,6 @@ subtitle = ""
  css_class = ""
 +++
 
-### News
 
 
 - [Pinaka](https://github.com/sbjoshi/Pinaka) stands 2nd in _ReachSafety-Floats_, 2nd is _ReachSafety-Loops_, 3rd in _ReachSafety-Combinations_ subcategories and is placed 7th in _ReachSafety_ category in [SVCOMP 2021](https://sv-comp.sosy-lab.org/2021/)
