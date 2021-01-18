@@ -6,6 +6,7 @@ authors:
 author_notes:
 - Author names are listed in alphabetical order of their last names
 date: "2021-01-12T00:00:00Z"
+doi: "10.1007/978-3-030-67067-2_18"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2020-10-10T00:00:00Z"
