@@ -1,18 +1,19 @@
-@article{DBLP:journals/corr/abs-1912-12189,
-  author    = {Utpal Bora and
-               Santanu Das and
-               Pankaj Kureja and
-               Saurabh Joshi and
-               Ramakrishna Upadrasta and
-               Sanjay V. Rajopadhye},
-  title     = {{LLOV:} {A} Fast Static Data-Race Checker for OpenMP Programs},
-  journal   = {CoRR},
-  volume    = {abs/1912.12189},
-  year      = {2019},
-  url       = {http://arxiv.org/abs/1912.12189},
-  archivePrefix = {arXiv},
-  eprint    = {1912.12189},
-  timestamp = {Mon, 20 Apr 2020 17:14:42 +0200},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-1912-12189.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@article{bora-taco2020,
+author = {Bora, Utpal and Das, Santanu and Kukreja, Pankaj and Joshi, Saurabh and Upadrasta, Ramakrishna and Rajopadhye, Sanjay},
+title = {LLOV: A Fast Static Data-Race Checker for OpenMP Programs},
+year = {2020},
+issue_date = {December 2020},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {17},
+number = {4},
+issn = {1544-3566},
+url = {https://doi.org/10.1145/3418597},
+doi = {10.1145/3418597},
+abstract = {In the era of Exascale computing, writing efficient parallel programs is indispensable, and, at the same time, writing sound parallel programs is very difficult. Specifying parallelism with frameworks such as OpenMP is relatively easy, but data races in these programs are an important source of bugs. In this article, we propose LLOV, a fast, lightweight, language agnostic, and static data race checker for OpenMP programs based on the LLVM compiler framework. We compare LLOV with other state-of-the-art data race checkers on a variety of well-established benchmarks. We show that the precision, accuracy, and the F1 score of LLOV is comparable to other checkers while being orders of magnitude faster. To the best of our knowledge, LLOV is the only tool among the state-of-the-art data race checkers that can verify a C/C++ or FORTRAN program to be data race free.},
+journal = {ACM Trans. Archit. Code Optim.},
+month = dec,
+articleno = {35},
+numpages = {26},
+keywords = {shared memory programming, OpenMP, program verification, polyhedral compilation, static analysis, data race detection}
 }
