@@ -32,11 +32,11 @@ tags:
 - Program Analysis
 featured: false
 
-#links:
-# - name: "CALDAM 2018 version"
-#   url: "https://arxiv.org/pdf/1802.03634v1.pdf"
+links:
+ - name: "pre-print"
+   url: "https://arxiv.org/pdf/1912.12189.pdf"
 
-url_pdf: https://arxiv.org/pdf/1912.12189.pdf
+url_pdf: https://dl.acm.org/doi/pdf/10.1145/3418597
 url_code: https://github.com/utpalbora/LLOV
 url_dataset: ''
 url_poster: ''
@@ -57,7 +57,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects: []
+projects: [llov]
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
