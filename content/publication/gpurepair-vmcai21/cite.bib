@@ -1,14 +1,15 @@
-@article{DBLP:journals/corr/abs-2011-08373,
-  author    = {Saurabh Joshi and
-               Gautam Muduganti},
-  title     = {GPURepair: Automated Repair of {GPU} Kernels},
-  journal   = {CoRR},
-  volume    = {abs/2011.08373},
-  year      = {2020},
-  url       = {https://arxiv.org/abs/2011.08373},
-  archivePrefix = {arXiv},
-  eprint    = {2011.08373},
-  timestamp = {Wed, 18 Nov 2020 16:48:35 +0100},
-  biburl    = {https://dblp.org/rec/journals/corr/abs-2011-08373.bib},
-  bibsource = {dblp computer science bibliography, https://dblp.org}
+@InProceedings{joshi-vmcai2021,
+author="Joshi, Saurabh
+and Muduganti, Gautam",
+editor="Henglein, Fritz
+and Shoham, Sharon
+and Vizel, Yakir",
+title="GPURepair: Automated Repair of GPU Kernels",
+booktitle="Verification, Model Checking, and Abstract Interpretation",
+year="2021",
+publisher="Springer International Publishing",
+address="Cham",
+pages="401--414",
+abstract="This paper presents a tool for repairing errors in GPU kernels written in CUDA or OpenCL due to data races and barrier divergence. Our novel extension to prior work can also remove barriers that are deemed unnecessary for correctness. We implement these ideas in our tool called GPURepair, which uses GPUVerify as the verification oracle for GPU kernels. We also extend GPUVerify to support CUDA Cooperative Groups, allowing GPURepair to perform inter-block synchronization for CUDA kernels. To the best of our knowledge, GPURepair is the only tool that can propose a fix for intra-block data races and barrier divergence errors for both CUDA and OpenCL kernels and the only tool that fixes inter-block data races for CUDA kernels. We perform extensive experiments on about 750 kernels and provide a comparison with prior work. We demonstrate the superiority of GPURepair through its capability to fix more kernels and its unique ability to remove redundant barriers and handle inter-block data races.",
+isbn="978-3-030-67067-2"
 }

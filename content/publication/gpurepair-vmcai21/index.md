@@ -5,7 +5,7 @@ authors:
 - Gautam Muduganti
 author_notes:
 - Author names are listed in alphabetical order of their last names
-date: "2021-01-01T00:00:00Z"
+date: "2021-01-12T00:00:00Z"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2020-10-10T00:00:00Z"
@@ -29,12 +29,12 @@ tags:
 - Formal Verification
 featured: false
 
-#links:
-# - name: "CALDAM 2018 version"
-#   url: "https://arxiv.org/pdf/1802.03634v1.pdf"
+links:
+ - name: "Paper"
+   url: "https://link.springer.com/chapter/10.1007/978-3-030-67067-2_18"
 
 url_pdf: https://arxiv.org/pdf/2011.08373.pdf
-url_code: ''
+url_code: https://github.com/cs17resch01003/gpurepair
 url_dataset: ''
 url_poster: ''
 url_project: ''
@@ -54,7 +54,7 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-projects: []
+projects: [gpurepair]
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
