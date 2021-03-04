@@ -65,9 +65,9 @@ subtitle = ""
 * Archit Sanghi - MTech - (July 2020--Present)
 * [Akash Banerjee](https://www.linkedin.com/in/akashbanerjeeab/) - MTech RA - (July 2018--Present)
 * [Eti Chaudhary](https://etichaudhary.github.io) - _Verification of Programs_ - MTech RA - (July 2017--July 2020) - now at Goldman Sachs, Bengaluru.
-* [Aditya Kumar](https://www.linkedin.com/in/npakr/) - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
+* [Aditya Kumar](https://www.linkedin.com/in/npakr/) - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020) - now at OPPO R&D
 * Sunil Sarode - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
-* [Uttaran Sinha](https://uttaransinha.github.io) - MTech - _Defending Neural Networks against Structural Perturbations_ - (July 2017--July 2019)
+* [Uttaran Sinha](https://uttaransinha.github.io) - MTech - _Defending Neural Networks against Structural Perturbations_ - (July 2017--July 2019) - now at Amazon, Bengaluru
 * Arpit Aggarwal - MTech (IIT Delhi, co-advised with Dr. Subodh Sharma) - _GoProver: a bounded model-checker for GO_ - (July 2017--July 2018) - now at Oracle, Bengaluru
 * [Rasika Sapate](https://www.linkedin.com/in/rasika-sapate-67bb38a2/) - MTech - _LLVM2GOTO: A translator from LLVM IR to CPROVER IR_ - (July 2016--July 2018) - now at Mentor Graphics, Hyderabad
 
