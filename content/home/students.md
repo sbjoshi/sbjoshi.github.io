@@ -63,7 +63,7 @@ subtitle = ""
 
 #### Masters
 * Archit Sanghi - MTech - (July 2020--Present)
-* [Akash Banerjee](https://www.linkedin.com/in/akashbanerjeeab/) - MTech RA - (July 2018--Present)
+* [Akash Banerjee](https://www.linkedin.com/in/akashbanerjeeab/) - MTech RA - (July 2018--June 2021) - now at Imagination Technologies, UK.
 * [Eti Chaudhary](https://etichaudhary.github.io) - _Verification of Programs_ - MTech RA - (July 2017--July 2020) - now at Goldman Sachs, Bengaluru.
 * [Aditya Kumar](https://www.linkedin.com/in/npakr/) - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020) - now at OPPO R&D
 * Sunil Sarode - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
