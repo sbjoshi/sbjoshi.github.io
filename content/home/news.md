@@ -51,7 +51,7 @@ subtitle = ""
 +++
 
 
-
+- My talk on _"Code Contract: What, Why and How?"_ at [CppIndiaCon 2021](https://www.cppindia.co.in/conference/2021/conference_home/) is now available on [YouTube](https://www.youtube.com/watch?v=_eoZ4OfHypU&t=1s). The slides used for the talk are available [here](https://slides.com/saurabhjoshi-1/deck/fullscreen) and the examples used during the talk are available on [GitHub](https://github.com/sbjoshi/CppIndiaCon-Examples).
 - [Pinaka](https://github.com/sbjoshi/Pinaka) stands 2nd in _ReachSafety-Floats_, 2nd is _ReachSafety-Loops_, 3rd in _ReachSafety-Combinations_ subcategories and is placed 7th in _ReachSafety_ category in [SVCOMP 2021](https://sv-comp.sosy-lab.org/2021/)
 - Paper on _"[GPURepair: Automated Repair of GPU Kernels](/publication/gpurepair-vmcai21/)"_ is accepted at VMCAI 2021.
 
