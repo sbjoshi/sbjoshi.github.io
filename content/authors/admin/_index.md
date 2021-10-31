@@ -10,12 +10,13 @@ authors:
 superuser: true
 
 # Role/position
-role: Assistant Professor, [CSE](https://cse.iith.ac.in)
+role: Engineer, Product Security
+#role: Assistant Professor, [CSE](https://cse.iith.ac.in)
 
 # Organizations/Affiliations
-organizations:
-- name: IIT Hyderabad
-  url: "https://iith.ac.in"
+#organizations:
+#- name: IIT Hyderabad
+#  url: "https://iith.ac.in"
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include Constraint Programming, Formal Verification and Program Analysis.
