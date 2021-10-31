@@ -23,7 +23,7 @@ date_format = "2006"
   company_url = "https://iith.ac.in"
   location = "Hyderabad, India"
   date_start = "2016-05-23"
-  date_end = ""
+  date_end = "2021-09-20"
   description = """
   """
 
