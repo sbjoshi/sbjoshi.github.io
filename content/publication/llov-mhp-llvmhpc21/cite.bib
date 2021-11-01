@@ -1,0 +1,32 @@
+@inproceedings{Bora-llvm-hpc-2021,
+  author = {Bora, Utpal and Vaishay, Shraiysh and Joshi, Saurabh and Upadrasta, Ramakrishna},
+  title = {{OpenMP aware MHP Analysis for Improved Static Data-Race Detection}},
+  year = {2021},
+  abstract = {Data races, a major source of bugs in concurrent
+  programs, can result in loss of manpower and time as well as data
+  loss due to system failures. OpenMP, the de facto shared memory
+  parallelism framework used in the HPC community, also suffers
+  from data races. To detect race conditions in OpenMP programs
+  and improve turnaround time and/or developer productivity, we
+  present a data flow analysis based, fast, static data race checker
+  in the LLVM compiler framework. Our tool can detect races in
+  the presence or absence of explicit barriers, with implicit or
+  explicit synchronization. In addition, our tool effectively works
+  for the OpenMP target offloading constructs and also supports
+  the frequently used OpenMP constructs.
+  We formalize and provide a data flow analysis framework to
+  perform Phase Interval Analysis (PIA) of OpenMP programs.
+  Phase intervals are then used to compute the MHP (and its
+  complement NHP) sets for the programs, which, in turn, are
+  used to detect data races statically.
+  We evaluate our work using multiple OpenMP race detection
+  benchmarks and real world applications. Our experiments show
+  that the checker is comparable to the state-of-the-art in various
+  performance metrics with around 90\% accuracy, almost perfect
+  recall, and significantly lower runtime and memory footprint.
+  },
+  booktitle = {Proceedings of the Seventh Annual Workshop on the LLVM Compiler Infrastructure in HPC},
+  numpages = {11},
+  location = {St. Louis, Missouri, USA},
+  series = {LLVM-HPC '21}
+}

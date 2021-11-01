@@ -6,8 +6,8 @@ authors:
 - admin
 - Krishna P Kadiyala
 author_notes: ""
-date: "2021-06-25T00:00:00Z"
-doi: ""
+date: "2021-08-25T00:00:00Z"
+doi: "10.1145/3472873.3472880"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2021-06-25T00:00:00Z"
@@ -35,7 +35,7 @@ featured: false
 # - name: "Slides"
 #   url: "slides/CP18_Slides.pdf"
 
-url_pdf: ''
+url_pdf: 'papers/p4anomaly-spin-2021.pdf'
 url_code: ''
 url_dataset: ''
 url_poster: ''
