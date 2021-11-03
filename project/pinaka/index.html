@@ -175,7 +175,7 @@ $$y_0 \wedge x_0 = 10 \wedge x_1 = x_0 + y_0\wedge x_1=0 \ \wedge x_2=x_1+1 \wed
 <p>In the <em>full incremental mode</em>, the predicate/formula at line <code>6</code> would have looked like the following:
 $$y_0 \wedge x_0 = 10 \wedge x_1 = x_0 + y_0 \ \wedge (b_1 \implies x_1=0) \wedge (b_1 \implies x_2=x_1+1) \ \wedge (b_1 \implies (b_2 \implies y_0&lt;-10)) \wedge [b_1,b_2] \quad(6) $$</p>
 <p>Notice that a new assumption is added for every branch condition as later we may want to <em>backtrack</em> from a <em>then</em> branch and explore an <em>else</em> branch. So in the full incremental mode, the same solver instance will be reused after the symbolic state at line <code>6</code> for the <em>then</em> branch is found to be infeasible. For the <em>else</em> branch, the formula would look like the following:
-$$y_0 \wedge x_0 = 10 \wedge x_1 = x_0 + y_0 \ \wedge (b_1 \implies x_1=0) \wedge (b_1 \implies x_2=x_1+1) \ \wedge (b_1 \implies (b_2 \implies y_0&lt;-10)) \<br>
+$$y_0 \wedge x_0 = 10 \wedge x_1 = x_0 + y_0 \ \wedge (b_1 \implies x_1=0) \wedge (b_1 \implies x_2=x_1+1) \ \wedge (b_1 \implies (b_2 \implies y_0&lt;-10)) \
 \wedge (b_1 \implies (\neg b_2 \implies y\geq -10))
 \wedge [b_1,\neg b_2] \quad(7) $$</p>
 <p>Once the symbolic execution has gone through the path depicted by lines <code>1-6, 8,11</code> we have to check for assertion violation. Essentially, we again want to know, if there is any set of values that program variables can take that can result in assertion violation. This can be done by asking if the following symbolic state is feasible:</p>
