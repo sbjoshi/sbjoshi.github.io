@@ -1,1 +1,291 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Saurabh Joshi</title><link>https://sbjoshi.github.io/post/</link><atom:link href="https://sbjoshi.github.io/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://sbjoshi.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://sbjoshi.github.io/post/</link></image></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts | Saurabh Joshi</title><link>https://sbjoshi.github.io/post/</link><atom:link href="https://sbjoshi.github.io/post/index.xml" rel="self" type="application/rss+xml"/><description>Posts</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><image><url>https://sbjoshi.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Posts</title><link>https://sbjoshi.github.io/post/</link></image><item><title>Posts</title><link>https://sbjoshi.github.io/post/pinaka-usermanual/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://sbjoshi.github.io/post/pinaka-usermanual/</guid><description>&lt;h1 id="how-to-use-pinaka">How to use Pinaka&lt;/h1>
+&lt;p>Pinaka is a single-path symbolic execution engine, built on top of
+&lt;a href="https://www.cprover.org" target="_blank" rel="noopener">CPROVER&lt;/a> framework.&lt;/p>
+&lt;p>In the following text, we will show how to use Pinaka through various examples.&lt;/p>
+&lt;h2 id="using-assert-to-check-properties">Using &lt;code>assert&lt;/code> to check properties&lt;/h2>
+&lt;p>Pinaka verifies a program with respect to given specifications. These specifications are typically given as a set of program assertions using &lt;code>assert&lt;/code> statements in the program.&lt;/p>
+&lt;pre>&lt;code class="language-c">1 #include &amp;lt;assert.h&amp;gt;
+2 int main()
+3 {
+4 int a, b=5;
+5 int c = a+b;
+6 assert(c&amp;lt;100);
+7 return 0;
+8 }
+&lt;/code>&lt;/pre>
+&lt;p>Look at the example shown above. The C language standard does not
+forbid the use of uninitialized variable, however, using uninitialized variables may lead to undefined behavior. Here, &lt;code>a&lt;/code> is uninitialized and therefore, as per the C language standard, it is free to to take any value within the domain of &lt;code>int&lt;/code>.&lt;/p>
+&lt;p>As, you can observe, on &lt;code>line 6&lt;/code>, assertion has been given. Programmers or user of Pinaka is supposed to use &lt;code>assert&lt;/code> to indicate what properties they want Pinaka to verify the program against.&lt;/p>
+&lt;p>On the above program, the following command shall be issued:&lt;/p>
+&lt;p>&lt;code>pinaka filename.c&lt;/code>&lt;/p>
+&lt;p>Pinaka will show the following output:&lt;/p>
+&lt;pre>&lt;code>Running with 8 object bits, 56 offset bits (default)
+Parsing /tmp/try4.c
+&amp;lt;command-line&amp;gt;: warning: &amp;quot;__STDC_VERSION__&amp;quot; redefined
+&amp;lt;built-in&amp;gt;: note: this is the location of the previous definition
+Converting
+Type-checking try4
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Generic Property Instrumentation
+Removal of function pointers and virtual functions
+Depth First Search
+Full Incremental Mode
+OUR FUNCTION CALLED
+Number of dropped states: 0
+Generated 1 VCC(s), 1 remaining after simplification
+Number of SAT queries made: 0
+Number of new SAT instances: 0
+Number of total paths: 0
+Number of feasible path: 1
+Number of infeasible path: 0
+Runtime: 0.036s total, 0.001s SAT
+[main.assertion.1] assertion c&amp;lt;100: FAILED
+** 1 of 1 failed
+VERIFICATION FAILED (ReachSafety)
+&lt;/code>&lt;/pre>
+&lt;p>Note that without any assertions, Pinaka does not have any specification to verify the program. Therefore the following program would result in &lt;code>VERIFICATION SUCCESSFULL&lt;/code>.&lt;/p>
+&lt;pre>&lt;code class="language-c">
+1 #include &amp;lt;assert.h&amp;gt;
+2 int main()
+3 {
+4 int a, b=5;
+5 int c = a+b;
+6 return 0;
+7 }
+&lt;/code>&lt;/pre>
+&lt;p>&lt;code>printf&lt;/code> statements are irrelevant for Pinaka as it does not consider any &lt;code>printf&lt;/code> as part of the specification.&lt;/p>
+&lt;h2 id="verifying-functions-other-than-main-and-signed-integer-overflow-check">Verifying functions other than &lt;code>main&lt;/code> and signed integer overflow check&lt;/h2>
+&lt;p>By default, Pinaka assumes that the entry point, or starting point for analysis would be &lt;code>main&lt;/code> subroutine. However, one can specify a subroutine other than &lt;code>main&lt;/code> as well and verify the subroutine.&lt;/p>
+&lt;p>For example,&lt;/p>
+&lt;pre>&lt;code class="language-c">int inc(int x)
+{
+return ++x;
+}
+&lt;/code>&lt;/pre>
+&lt;p>Let us assume that we want to check for signed integer overflow for &lt;code>inc&lt;/code> subroutine. We should use the following command&lt;/p>
+&lt;p>&lt;code>pinaka --signed-overflow-check --function inc filename.c&lt;/code>&lt;/p>
+&lt;p>Note, that we combined two command line options here.&lt;/p>
+&lt;ol>
+&lt;li>&lt;code>--signed-overflow-check&lt;/code> tells Pinaka to use signed integer arithmetic overflow as the property to be verified. In such a case, we do not have to provide any &lt;code>assert&lt;/code> statements in the program.&lt;/li>
+&lt;li>&lt;code>--function inc&lt;/code> tells Pinaka to use subroutine &lt;code>inc&lt;/code> as the starting point for the analysis. In this case, the source file need not have a &lt;code>main&lt;/code> subroutine inside it. Even if it is present, it will be &lt;em>ignored&lt;/em> .&lt;/li>
+&lt;/ol>
+&lt;h2 id="array-index-out-of-bounds-check-and-showing-the-trace">Array index out-of-bounds check and showing the trace&lt;/h2>
+&lt;p>Pinaka supports array index out-of-bounds check as in-built property.&lt;/p>
+&lt;p>For example,&lt;/p>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+int main()
+{
+int a[] = {0,1,2,3,4};
+int i,sum=0;
+for (i=0;i&amp;lt;=5;i++)
+{
+sum+=a[i];
+assert(sum&amp;gt;=0);
+}
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;p>Let us first try without the array index out-of-bounds check.&lt;/p>
+&lt;p>&lt;code>pinaka filename.c&lt;/code>&lt;/p>
+&lt;p>The result would be &lt;code>VERIFICATION FAILED&lt;/code> because the &lt;code>sum&lt;/code> can indeed become negative since &lt;code>a[5]&lt;/code> can be &lt;code>-11&lt;/code> or less. Note that the above program would compile successfully.&lt;/p>
+&lt;p>If we also want to see the trace/potential execution through which the program would fail we should issue the following command:&lt;/p>
+&lt;p>&lt;code>pinaka --show-trace filename.c&lt;/code>&lt;/p>
+&lt;p>The trace would clearly show that the value for &lt;code>a[5]&lt;/code> would be so much negative so that &lt;code>sum&lt;/code> becomes negative. We can observe that this issue arises as the program tries to access an array index which is outside the legal range of the array.&lt;/p>
+&lt;p>To perform the array index out-of-bounds check, the following command shall be issued:&lt;/p>
+&lt;p>&lt;code>pinaka --bounds-check --show-trace filename.c&lt;/code>&lt;/p>
+&lt;p>Now it will show that the upper bound on array index &lt;code>a&lt;/code> is violated.&lt;/p>
+&lt;h2 id="pinaka-search-modes">Pinaka search modes&lt;/h2>
+&lt;p>Pinaka supports various internal modes, each with having their own advantages and disadvantages in terms of speed and memory consumption.&lt;/p>
+&lt;p>For the search, two modes are supported, Since, Pinaka is a single path symbolic execution engine, the default mode of the search is &lt;em>depth-first search&lt;/em>. If you wish to use &lt;em>breadth-first search&lt;/em> instead, please use the following command.&lt;/p>
+&lt;p>&lt;code>pinaka --bfs filename.c&lt;/code>&lt;/p>
+&lt;p>Similarly, the default incremental mode of Pinaka is &lt;em>full incremental mode&lt;/em>. If, you wish to use &lt;em>partial incremental mode&lt;/em>, please use the following command.&lt;/p>
+&lt;p>&lt;code>pinaka --partial-incremental filename.c&lt;/code>&lt;/p>
+&lt;p>Note that we &lt;strong>DO NOT&lt;/strong> recommend to use &lt;em>partial incremental mode&lt;/em> with &lt;em>breadth-first search&lt;/em> as it can quickly consume a lot of memory.&lt;/p>
+&lt;p>For SVCOMP, we found &lt;em>partial incremental mode&lt;/em> with the &lt;em>deapth-first search&lt;/em> to be the best combination to use. So the command to use this combination would be&lt;/p>
+&lt;p>&lt;code>pinaka --partial-incremental filename.c&lt;/code>&lt;/p>
+&lt;h2 id="bit-width-options">Bit-width options&lt;/h2>
+&lt;p>Pinaka has options to specify the width for a word. For example, you can choose if the width of a word is 16-bit, 32-bit or 64 bit. Pinaka internally uses a technique called &lt;em>bit-blasting&lt;/em> to provide a bit-precise analysis of the program. For example, the specified bit-width would determine when to flag for an overflow, underflow for integers.&lt;/p>
+&lt;p>These options can be used as follows:&lt;/p>
+&lt;p>&lt;code>pinaka --64 filename.c&lt;/code>&lt;/p>
+&lt;p>Similarly, to specify bit-width of 16 or 32 bits, one can use &lt;code>--16&lt;/code> or &lt;code>--32&lt;/code> respectively.&lt;/p>
+&lt;h2 id="floating-point-rounding-modes">Floating-point rounding modes&lt;/h2>
+&lt;p>Pinaka supports four rounding modes for floating-point arithmetic. Floating-point modelling is compliant to IEEE 754 standard.&lt;/p>
+&lt;p>There are four rounding modes:&lt;/p>
+&lt;ul>
+&lt;li>Round to nearest (&lt;code>--round-to-nearest&lt;/code>)&lt;/li>
+&lt;li>Round to $+\infty$ (&lt;code>--round-to-plus-inf&lt;/code>)&lt;/li>
+&lt;li>Round to $-\infty$ (&lt;code>--round-to-minus-inf&lt;/code>)&lt;/li>
+&lt;li>Round to $0$ (&lt;code>--round-to-zero&lt;/code>)&lt;/li>
+&lt;/ul>
+&lt;p>One can refer to this &lt;a href="https://en.wikipedia.org/wiki/Floating-point_arithmetic" target="_blank" rel="noopener">Wikipedia article&lt;/a> to know more about rounding modes.&lt;/p>
+&lt;h2 id="divide-by-zero-check">Divide by zero check&lt;/h2>
+&lt;p>You can use &lt;code>--div-by-zero-check&lt;/code> to tell Pinaka to detect potential division by zero.&lt;/p>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+int main()
+{
+int a,b;
+int c = a/b;
+assert(c&amp;gt;0);
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;p>Look at the example above. There is a potential division by $0$ since &lt;code>b&lt;/code> being an uninitialized variable, can potentially have the value of &lt;code>0&lt;/code>.&lt;/p>
+&lt;p>You can use the following command to tell Pinaka to check for such errors as follows:&lt;/p>
+&lt;p>&lt;code>pinaka --div-by-zero-check filename.c&lt;/code>&lt;/p>
+&lt;p>Note that, the assertion &lt;code>assert(c&amp;gt;0)&lt;/code> will be shown as &lt;code>OK&lt;/code> if the division by zero check is enabled. Because the assertion is after the division by zero error. The program is in an undefined state after the error, therefore, this result of &lt;code>OK&lt;/code> should be ignored as Pinaka will already show that there is a division by zero error in the expression &lt;code>int c=a/b&lt;/code>.&lt;/p>
+&lt;p>If you omit the flag for this check, it will correctly raise a warning for assertion violation.&lt;/p>
+&lt;p>&lt;code>pinaka filename.c&lt;/code>&lt;/p>
+&lt;p>On the above program, this will correctly raise a warning of assertion &lt;code>assert(c&amp;gt;0)&lt;/code> being violated.&lt;/p>
+&lt;p>Note that along the same path, if there are multiple properties, Pinaka will correctly identify the status of the first property and ignore the rest, therefore, reporting the status of &lt;code>OK&lt;/code> for other properties.&lt;/p>
+&lt;p>For example,&lt;/p>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+int main()
+{
+int a,b;
+int c = a/b;
+int d = c/a;
+assert(c&amp;gt;0);
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;p>for the above program, when you use &lt;code>--div-by-zero-check&lt;/code> it will show error only on &lt;code>int c=a/b&lt;/code> and the rest will be ignored or shown as &lt;code>OK&lt;/code>.&lt;/p>
+&lt;h2 id="pointer-checks">Pointer checks&lt;/h2>
+&lt;p>Pinaka supports certain checks with respect to pointers. All of the checks mentioned below are done when you provide &lt;code>--pointer-check&lt;/code> flag to Pinaka.&lt;/p>
+&lt;h3 id="null-pointer-check">Null-pointer check&lt;/h3>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+#define NULL 0
+int max (int *p, int *q)
+{
+int tmp1=*p;
+int tmp2=*q;
+if (tmp1 &amp;gt; tmp2) return tmp1;
+else return tmp2;
+}
+int main()
+{
+int *a=NULL;
+int b=5;
+int *c = &amp;amp;b;
+max(a,c);
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;p>Use the following command to run pointer-checks:&lt;/p>
+&lt;p>&lt;code>pinaka --pointer-check filename.c&lt;/code>&lt;/p>
+&lt;p>It performs checks like NULL pointer dereference, invalid pointer usage, pointer use after deallocation of memory, pointer access outside the bounds, dangling pointer.&lt;/p>
+&lt;h3 id="use-after-free-check">Use-after-free check&lt;/h3>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+#define NULL 0
+int max (int *p, int *q)
+{
+int tmp1=*p;
+int tmp2=*q;
+if (tmp1 &amp;gt; tmp2) return tmp1;
+else return tmp2;
+}
+int main()
+{
+int *a=NULL;
+int b=5;
+int *c = &amp;amp;b;
+// max(a,c);
+a=malloc(10*sizeof(int));
+*a=10;
+free(a);
+*a=5;
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="dangling-pointer-check-example">Dangling pointer check example&lt;/h3>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+#define NULL 0
+int a;
+int *q=&amp;amp;a;
+void foo ()
+{
+int x;
+q=&amp;amp;x;
+}
+int main()
+{
+int *a=NULL;
+int b=5;
+int *c = &amp;amp;b;
+foo();
+b = *q;
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="outside-dynamic-object-bounds-check">Outside dynamic object bounds check&lt;/h3>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+#define NULL 0
+int a;
+int *q=&amp;amp;a;
+void foo ()
+{
+int x;
+q=&amp;amp;x;
+}
+int main()
+{
+int *a=NULL;
+int b=5;
+int *c = &amp;amp;b;
+q=malloc(4*sizeof(int));
+*(q+5)=5;
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;h3 id="outside-object-bounds">Outside object bounds&lt;/h3>
+&lt;pre>&lt;code class="language-c">#include &amp;lt;assert.h&amp;gt;
+#define NULL 0
+int a;
+int *q=&amp;amp;a;
+void foo ()
+{
+int x;
+q=&amp;amp;x;
+}
+int main()
+{
+int *a=NULL;
+int b=5;
+int *c = &amp;amp;b;
+int d[] = {1,2,3,4};
+q=d;
+*(q+10)=10;
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;h2 id="memory-leak-detection">Memory leak detection&lt;/h2>
+&lt;p>Pinaka can check for memory leaks (allocated memory not freed during the lifetime of the program). Provide &lt;code>--memory-leak-check&lt;/code> flag to perform such a check.&lt;/p>
+&lt;pre>&lt;code class="language-c">include &amp;lt;assert.h&amp;gt;
+#define NULL 0
+int a;
+int *q=&amp;amp;a;
+void foo ()
+{
+int x;
+q=&amp;amp;x;
+}
+int main()
+{
+int *a=NULL;
+int b=5;
+int *c = &amp;amp;b;
+int d[] = {1,2,3,4};
+q=malloc(4*sizeof(10));
+*q=5;
+q=d;
+*(q+1)=10;
+return 0;
+}
+&lt;/code>&lt;/pre>
+&lt;p>Use the command&lt;/p>
+&lt;p>&lt;code>pinaka --memory-leak-check filename.c&lt;/code>&lt;/p>
+&lt;h2 id="note">Note&lt;/h2>
+&lt;p>Please note that Pinaka being a single-path symbolic-execution engine with early pruning will return as soon as the first violation of the given property is encountered. All the other properties will remain un-checked, and therefore, the status of the other properties, even if shown &lt;code>OK&lt;/code> does not indicate that these properties hold.&lt;/p>
+&lt;h2 id="termination-check">Termination check&lt;/h2>
+&lt;p>Pinaka unrolls any loop/recursion on-the-fly and therefore, the termination of the program can be checked by virtue of termination of execution of Pinaka itself. If Pinaka returns &lt;code>VERIFICATION SUCCESSFUL&lt;/code> it also implies that the program terminates.&lt;/p>
+&lt;p>If the program is non-terminating (infinite loop or recursion), Pinaka will return if on some path there is a property violation, it will not terminate otherwise.&lt;/p></description></item></channel></rss>

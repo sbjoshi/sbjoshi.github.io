@@ -1,0 +1,626 @@
+<!doctype html><html lang=en-us>
+<head>
+<meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1">
+<meta http-equiv=x-ua-compatible content="IE=edge">
+<meta name=generator content="Wowchemy 4.8.0 for Hugo">
+<meta name=author content="Saurabh Joshi">
+<meta name=description content="How to use Pinaka Pinaka is a single-path symbolic execution engine, built on top of CPROVER framework.
+In the following text, we will show how to use Pinaka through various examples.">
+<link rel=alternate hreflang=en-us href=https://sbjoshi.github.io/post/pinaka-usermanual/>
+<link rel=preconnect href=https://fonts.gstatic.com crossorigin>
+<meta name=theme-color content="hsl(339, 90%, 68%)">
+<script src=/js/mathjax-config.js></script>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/academicons/1.9.0/css/academicons.min.css integrity="sha512-W4yqoT1+8NLkinBLBZko+dFB2ZbHsYLDdr50VElllRcNt2Q4/GSs6u71UHKxB7S6JEMCp5Ve4xjh3eGQl/HRvg==" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css integrity="sha256-FMvZuGapsJLjouA6k7Eo2lusoAX9i0ShlWFG6qt7SLc=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css integrity="sha256-Vzbj7sDDS/woiFS3uNKo8eIuni59rjyNGtXfstRzStA=" crossorigin=anonymous>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/github.min.css crossorigin=anonymous title=hl-light disabled>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/styles/dracula.min.css crossorigin=anonymous title=hl-dark>
+<link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.css integrity="sha512-1xoFisiGdy9nvho8EgXuXvnpR5GAMSjFwp40gSRE3NwdUdIMIKuPa7bqoUhLD0O/5tPNhteAsE5XyyMi5reQVA==" crossorigin=anonymous>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin=anonymous async></script>
+<script src=https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js integrity crossorigin=anonymous async></script>
+<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,400italic,700%7CRoboto+Mono&display=swap">
+<link rel=stylesheet href=/css/wowchemy.css>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-115463750-1"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}function trackOutboundLink(a,b){gtag('event','click',{event_category:'outbound',event_label:a,transport_type:'beacon',event_callback:function(){b!=='_blank'&&(document.location=a)}}),console.debug("Outbound link clicked: "+a)}function onClickCallback(a){if(a.target.tagName!=='A'||a.target.host===window.location.host)return;trackOutboundLink(a.target,a.target.getAttribute('target'))}gtag('js',new Date),gtag('config','UA-115463750-1',{}),document.addEventListener('click',onClickCallback,!1)</script>
+<link rel=manifest href=/index.webmanifest>
+<link rel=icon type=image/png href=/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_32x32_fill_lanczos_center_3.png>
+<link rel=apple-touch-icon type=image/png href=/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png>
+<link rel=canonical href=https://sbjoshi.github.io/post/pinaka-usermanual/>
+<meta property="twitter:card" content="summary">
+<meta property="twitter:site" content="@sbjoshi">
+<meta property="twitter:creator" content="@sbjoshi">
+<meta property="og:site_name" content="Saurabh Joshi">
+<meta property="og:url" content="https://sbjoshi.github.io/post/pinaka-usermanual/">
+<meta property="og:title" content="Posts | Saurabh Joshi">
+<meta property="og:description" content="How to use Pinaka Pinaka is a single-path symbolic execution engine, built on top of CPROVER framework.
+In the following text, we will show how to use Pinaka through various examples."><meta property="og:image" content="https://sbjoshi.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png">
+<meta property="twitter:image" content="https://sbjoshi.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png"><meta property="og:locale" content="en-us">
+<meta property="article:modified_time" content="2021-11-15T21:06:36+05:30">
+<script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://sbjoshi.github.io/post/pinaka-usermanual/"},"headline":"Posts","datePublished":"0001-01-01T00:00:00Z","dateModified":"2021-11-15T21:06:36+05:30","author":{"@type":"Person","name":"Saurabh Joshi"},"publisher":{"@type":"Organization","name":"Saurabh Joshi","logo":{"@type":"ImageObject","url":"https://sbjoshi.github.io/images/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_192x192_fill_lanczos_center_3.png"}},"description":"How to use Pinaka Pinaka is a single-path symbolic execution engine, built on top of CPROVER framework.\nIn the following text, we will show how to use Pinaka through various examples."}</script>
+<title>Posts | Saurabh Joshi</title>
+</head>
+<body id=top data-spy=scroll data-offset=70 data-target=#TableOfContents class=dark>
+<script>const isSiteThemeDark=!0</script>
+<script src=/js/load-theme.js></script>
+<aside class=search-results id=search>
+<div class=container>
+<section class=search-header>
+<div class="row no-gutters justify-content-between mb-3">
+<div class=col-6>
+<h1>Search</h1>
+</div>
+<div class="col-6 col-search-close">
+<a class=js-search href=#><i class="fas fa-times-circle text-muted" aria-hidden=true></i></a>
+</div>
+</div>
+<div id=search-box>
+<input name=q id=search-query placeholder=Search... autocapitalize=off autocomplete=off autocorrect=off spellcheck=false type=search class=form-control>
+</div>
+</section>
+<section class=section-search-results>
+<div id=search-hits>
+</div>
+</section>
+</div>
+</aside>
+<nav class="navbar navbar-expand-lg navbar-light compensate-for-scrollbar" id=navbar-main>
+<div class=container>
+<div class="d-none d-lg-inline-flex">
+<a class=navbar-brand href=/>Saurabh Joshi</a>
+</div>
+<button type=button class=navbar-toggler data-toggle=collapse data-target=#navbar-content aria-controls=navbar aria-expanded=false aria-label="Toggle navigation">
+<span><i class="fas fa-bars"></i></span>
+</button>
+<div class="navbar-brand-mobile-wrapper d-inline-flex d-lg-none">
+<a class=navbar-brand href=/>Saurabh Joshi</a>
+</div>
+<div class="navbar-collapse main-menu-item collapse justify-content-start" id=navbar-content>
+<ul class="navbar-nav d-md-inline-flex">
+<li class=nav-item>
+<a class=nav-link href=/#about><span>Home</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#projects><span>Projects</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#publications><span>Publications</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#teaching><span>Teaching</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#students><span>Students</span></a>
+</li>
+<li class=nav-item>
+<a class=nav-link href=/#contact><span>Contact</span></a>
+</li>
+</ul>
+</div>
+<ul class="nav-icons navbar-nav flex-row ml-auto d-flex pl-md-2">
+<li class=nav-item>
+<a class="nav-link js-search" href=# aria-label=Search><i class="fas fa-search" aria-hidden=true></i></a>
+</li>
+</ul>
+</div>
+</nav>
+<article class=article>
+<div class="article-container pt-3">
+<h1>Posts</h1>
+<div class=article-metadata>
+<span class=article-date>
+Last updated on
+Nov 15, 2021
+</span>
+<span class=middot-divider></span>
+<span class=article-reading-time>
+8 min read
+</span>
+</div>
+</div>
+<div class=article-container>
+<div class=article-style>
+<h1 id=how-to-use-pinaka>How to use Pinaka</h1>
+<p>Pinaka is a single-path symbolic execution engine, built on top of
+<a href=https://www.cprover.org target=_blank rel=noopener>CPROVER</a> framework.</p>
+<p>In the following text, we will show how to use Pinaka through various examples.</p>
+<h2 id=using-assert-to-check-properties>Using <code>assert</code> to check properties</h2>
+<p>Pinaka verifies a program with respect to given specifications. These specifications are typically given as a set of program assertions using <code>assert</code> statements in the program.</p>
+<pre><code class=language-c>1 #include &lt;assert.h&gt;
+2 int main()
+3 {
+4 	int a, b=5;
+5	int c = a+b;
+6	assert(c&lt;100);
+7	return 0;
+8 }
+</code></pre>
+<p>Look at the example shown above. The C language standard does not
+forbid the use of uninitialized variable, however, using uninitialized variables may lead to undefined behavior. Here, <code>a</code> is uninitialized and therefore, as per the C language standard, it is free to to take any value within the domain of <code>int</code>.</p>
+<p>As, you can observe, on <code>line 6</code>, assertion has been given. Programmers or user of Pinaka is supposed to use <code>assert</code> to indicate what properties they want Pinaka to verify the program against.</p>
+<p>On the above program, the following command shall be issued:</p>
+<p><code>pinaka filename.c</code></p>
+<p>Pinaka will show the following output:</p>
+<pre><code>Running with 8 object bits, 56 offset bits (default)
+Parsing /tmp/try4.c
+&lt;command-line&gt;: warning: &quot;__STDC_VERSION__&quot; redefined
+&lt;built-in&gt;: note: this is the location of the previous definition
+Converting
+Type-checking try4
+Generating GOTO Program
+Adding CPROVER library (x86_64)
+Generic Property Instrumentation
+Removal of function pointers and virtual functions
+Depth First Search 
+Full Incremental Mode
+OUR FUNCTION CALLED 
+
+ Number of dropped states: 0
+Generated 1 VCC(s), 1 remaining after simplification
+Number of SAT queries made: 0
+Number of new SAT instances: 0
+Number of total paths: 0
+Number of feasible path: 1
+Number of infeasible path: 0
+Runtime: 0.036s total, 0.001s SAT
+[main.assertion.1] assertion c&lt;100: FAILED
+
+** 1 of 1 failed
+VERIFICATION FAILED (ReachSafety)
+</code></pre>
+<p>Note that without any assertions, Pinaka does not have any specification to verify the program. Therefore the following program would result in <code>VERIFICATION SUCCESSFULL</code>.</p>
+<pre><code class=language-c>
+1 #include &lt;assert.h&gt;
+2 int main()
+3 {
+4 	int a, b=5;
+5	int c = a+b;
+6	return 0;
+7 }
+</code></pre>
+<p><code>printf</code> statements are irrelevant for Pinaka as it does not consider any <code>printf</code> as part of the specification.</p>
+<h2 id=verifying-functions-other-than-main-and-signed-integer-overflow-check>Verifying functions other than <code>main</code> and signed integer overflow check</h2>
+<p>By default, Pinaka assumes that the entry point, or starting point for analysis would be <code>main</code> subroutine. However, one can specify a subroutine other than <code>main</code> as well and verify the subroutine.</p>
+<p>For example,</p>
+<pre><code class=language-c>int inc(int x)
+{
+   return ++x;
+}
+
+</code></pre>
+<p>Let us assume that we want to check for signed integer overflow for <code>inc</code> subroutine. We should use the following command</p>
+<p><code>pinaka --signed-overflow-check --function inc filename.c</code></p>
+<p>Note, that we combined two command line options here.</p>
+<ol>
+<li><code>--signed-overflow-check</code> tells Pinaka to use signed integer arithmetic overflow as the property to be verified. In such a case, we do not have to provide any <code>assert</code> statements in the program.</li>
+<li><code>--function inc</code> tells Pinaka to use subroutine <code>inc</code> as the starting point for the analysis. In this case, the source file need not have a <code>main</code> subroutine inside it. Even if it is present, it will be <em>ignored</em> .</li>
+</ol>
+<h2 id=array-index-out-of-bounds-check-and-showing-the-trace>Array index out-of-bounds check and showing the trace</h2>
+<p>Pinaka supports array index out-of-bounds check as in-built property.</p>
+<p>For example,</p>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+int main()
+{
+   int a[] = {0,1,2,3,4};
+   int i,sum=0;
+   for (i=0;i&lt;=5;i++)
+   {
+      sum+=a[i];
+      assert(sum&gt;=0);
+   }
+   return 0;
+}
+</code></pre>
+<p>Let us first try without the array index out-of-bounds check.</p>
+<p><code>pinaka filename.c</code></p>
+<p>The result would be <code>VERIFICATION FAILED</code> because the <code>sum</code> can indeed become negative since <code>a[5]</code> can be <code>-11</code> or less. Note that the above program would compile successfully.</p>
+<p>If we also want to see the trace/potential execution through which the program would fail we should issue the following command:</p>
+<p><code>pinaka --show-trace filename.c</code></p>
+<p>The trace would clearly show that the value for <code>a[5]</code> would be so much negative so that <code>sum</code> becomes negative. We can observe that this issue arises as the program tries to access an array index which is outside the legal range of the array.</p>
+<p>To perform the array index out-of-bounds check, the following command shall be issued:</p>
+<p><code>pinaka --bounds-check --show-trace filename.c</code></p>
+<p>Now it will show that the upper bound on array index <code>a</code> is violated.</p>
+<h2 id=pinaka-search-modes>Pinaka search modes</h2>
+<p>Pinaka supports various internal modes, each with having their own advantages and disadvantages in terms of speed and memory consumption.</p>
+<p>For the search, two modes are supported, Since, Pinaka is a single path symbolic execution engine, the default mode of the search is <em>depth-first search</em>. If you wish to use <em>breadth-first search</em> instead, please use the following command.</p>
+<p><code>pinaka --bfs filename.c</code></p>
+<p>Similarly, the default incremental mode of Pinaka is <em>full incremental mode</em>. If, you wish to use <em>partial incremental mode</em>, please use the following command.</p>
+<p><code>pinaka --partial-incremental filename.c</code></p>
+<p>Note that we <strong>DO NOT</strong> recommend to use <em>partial incremental mode</em> with <em>breadth-first search</em> as it can quickly consume a lot of memory.</p>
+<p>For SVCOMP, we found <em>partial incremental mode</em> with the <em>deapth-first search</em> to be the best combination to use. So the command to use this combination would be</p>
+<p><code>pinaka --partial-incremental filename.c</code></p>
+<h2 id=bit-width-options>Bit-width options</h2>
+<p>Pinaka has options to specify the width for a word. For example, you can choose if the width of a word is 16-bit, 32-bit or 64 bit. Pinaka internally uses a technique called <em>bit-blasting</em> to provide a bit-precise analysis of the program. For example, the specified bit-width would determine when to flag for an overflow, underflow for integers.</p>
+<p>These options can be used as follows:</p>
+<p><code>pinaka --64 filename.c</code></p>
+<p>Similarly, to specify bit-width of 16 or 32 bits, one can use <code>--16</code> or <code>--32</code> respectively.</p>
+<h2 id=floating-point-rounding-modes>Floating-point rounding modes</h2>
+<p>Pinaka supports four rounding modes for floating-point arithmetic. Floating-point modelling is compliant to IEEE 754 standard.</p>
+<p>There are four rounding modes:</p>
+<ul>
+<li>Round to nearest (<code>--round-to-nearest</code>)</li>
+<li>Round to $+\infty$ (<code>--round-to-plus-inf</code>)</li>
+<li>Round to $-\infty$ (<code>--round-to-minus-inf</code>)</li>
+<li>Round to $0$ (<code>--round-to-zero</code>)</li>
+</ul>
+<p>One can refer to this <a href=https://en.wikipedia.org/wiki/Floating-point_arithmetic target=_blank rel=noopener>Wikipedia article</a> to know more about rounding modes.</p>
+<h2 id=divide-by-zero-check>Divide by zero check</h2>
+<p>You can use <code>--div-by-zero-check</code> to tell Pinaka to detect potential division by zero.</p>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+
+int main()
+{
+        int a,b;
+
+        int c = a/b;
+
+        assert(c&gt;0);
+
+        return 0;
+}
+
+</code></pre>
+<p>Look at the example above. There is a potential division by $0$ since <code>b</code> being an uninitialized variable, can potentially have the value of <code>0</code>.</p>
+<p>You can use the following command to tell Pinaka to check for such errors as follows:</p>
+<p><code>pinaka --div-by-zero-check filename.c</code></p>
+<p>Note that, the assertion <code>assert(c>0)</code> will be shown as <code>OK</code> if the division by zero check is enabled. Because the assertion is after the division by zero error. The program is in an undefined state after the error, therefore, this result of <code>OK</code> should be ignored as Pinaka will already show that there is a division by zero error in the expression <code>int c=a/b</code>.</p>
+<p>If you omit the flag for this check, it will correctly raise a warning for assertion violation.</p>
+<p><code>pinaka filename.c</code></p>
+<p>On the above program, this will correctly raise a warning of assertion <code>assert(c>0)</code> being violated.</p>
+<p>Note that along the same path, if there are multiple properties, Pinaka will correctly identify the status of the first property and ignore the rest, therefore, reporting the status of <code>OK</code> for other properties.</p>
+<p>For example,</p>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+
+int main()
+{
+        int a,b;
+
+        int c = a/b;
+        int d = c/a;
+
+        assert(c&gt;0);
+
+        return 0;
+}
+
+</code></pre>
+<p>for the above program, when you use <code>--div-by-zero-check</code> it will show error only on <code>int c=a/b</code> and the rest will be ignored or shown as <code>OK</code>.</p>
+<h2 id=pointer-checks>Pointer checks</h2>
+<p>Pinaka supports certain checks with respect to pointers. All of the checks mentioned below are done when you provide <code>--pointer-check</code> flag to Pinaka.</p>
+<h3 id=null-pointer-check>Null-pointer check</h3>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+
+#define NULL 0
+
+int max (int *p, int *q)
+{
+        int tmp1=*p;
+        int tmp2=*q;
+      if (tmp1 &gt; tmp2) return tmp1;
+      else return tmp2;
+
+
+}
+
+int main()
+{
+
+        int *a=NULL;
+        int b=5;
+        int *c = &amp;b;
+        max(a,c);
+
+        return 0;
+}
+
+</code></pre>
+<p>Use the following command to run pointer-checks:</p>
+<p><code>pinaka --pointer-check filename.c</code></p>
+<p>It performs checks like NULL pointer dereference, invalid pointer usage, pointer use after deallocation of memory, pointer access outside the bounds, dangling pointer.</p>
+<h3 id=use-after-free-check>Use-after-free check</h3>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+
+#define NULL 0
+
+int max (int *p, int *q)
+{
+        int tmp1=*p;
+        int tmp2=*q;
+      if (tmp1 &gt; tmp2) return tmp1;
+      else return tmp2;
+
+
+}
+
+int main()
+{
+
+        int *a=NULL;
+        int b=5;
+        int *c = &amp;b;
+//      max(a,c);
+
+        a=malloc(10*sizeof(int));
+        *a=10;
+        free(a);
+        *a=5;
+
+        return 0;
+}
+
+</code></pre>
+<h3 id=dangling-pointer-check-example>Dangling pointer check example</h3>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+
+#define NULL 0
+int a;
+int *q=&amp;a;
+void foo ()
+{
+
+        int x;
+        q=&amp;x;
+
+}
+
+int main()
+{
+
+        int *a=NULL;
+        int b=5;
+        int *c = &amp;b;
+        foo();
+        b = *q;
+
+
+        return 0;
+}
+</code></pre>
+<h3 id=outside-dynamic-object-bounds-check>Outside dynamic object bounds check</h3>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+
+#define NULL 0
+int a;
+int *q=&amp;a;
+void foo ()
+{
+
+        int x;
+        q=&amp;x;
+
+}
+
+int main()
+{
+
+        int *a=NULL;
+        int b=5;
+        int *c = &amp;b;
+
+        q=malloc(4*sizeof(int));
+
+        *(q+5)=5;
+
+        return 0;
+}
+
+</code></pre>
+<h3 id=outside-object-bounds>Outside object bounds</h3>
+<pre><code class=language-c>#include &lt;assert.h&gt;
+
+#define NULL 0
+int a;
+int *q=&amp;a;
+void foo ()
+{
+
+        int x;
+        q=&amp;x;
+
+}
+
+int main()
+{
+
+        int *a=NULL;
+        int b=5;
+        int *c = &amp;b;
+        int d[] = {1,2,3,4};
+
+        q=d;
+
+        *(q+10)=10;
+        return 0;
+}
+
+</code></pre>
+<h2 id=memory-leak-detection>Memory leak detection</h2>
+<p>Pinaka can check for memory leaks (allocated memory not freed during the lifetime of the program). Provide <code>--memory-leak-check</code> flag to perform such a check.</p>
+<pre><code class=language-c>include &lt;assert.h&gt;
+
+#define NULL 0
+int a;
+int *q=&amp;a;
+void foo ()
+{
+
+        int x;
+        q=&amp;x;
+
+}
+
+int main()
+{
+
+        int *a=NULL;
+        int b=5;
+        int *c = &amp;b;
+        int d[] = {1,2,3,4};
+
+        q=malloc(4*sizeof(10));
+        *q=5;
+        q=d;
+
+        *(q+1)=10;
+        return 0;
+}
+
+</code></pre>
+<p>Use the command</p>
+<p><code>pinaka --memory-leak-check filename.c</code></p>
+<h2 id=note>Note</h2>
+<p>Please note that Pinaka being a single-path symbolic-execution engine with early pruning will return as soon as the first violation of the given property is encountered. All the other properties will remain un-checked, and therefore, the status of the other properties, even if shown <code>OK</code> does not indicate that these properties hold.</p>
+<h2 id=termination-check>Termination check</h2>
+<p>Pinaka unrolls any loop/recursion on-the-fly and therefore, the termination of the program can be checked by virtue of termination of execution of Pinaka itself. If Pinaka returns <code>VERIFICATION SUCCESSFUL</code> it also implies that the program terminates.</p>
+<p>If the program is non-terminating (infinite loop or recursion), Pinaka will return if on some path there is a property violation, it will not terminate otherwise.</p>
+</div>
+<div class=share-box aria-hidden=true>
+<ul class=share>
+<li>
+<a href="https://twitter.com/intent/tweet?url=https://sbjoshi.github.io/post/pinaka-usermanual/&text=Posts" target=_blank rel=noopener class=share-btn-twitter>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://www.facebook.com/sharer.php?u=https://sbjoshi.github.io/post/pinaka-usermanual/&t=Posts" target=_blank rel=noopener class=share-btn-facebook>
+<i class="fab fa-facebook"></i>
+</a>
+</li>
+<li>
+<a href="mailto:?subject=Posts&body=https://sbjoshi.github.io/post/pinaka-usermanual/" target=_blank rel=noopener class=share-btn-email>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href="https://www.linkedin.com/shareArticle?url=https://sbjoshi.github.io/post/pinaka-usermanual/&title=Posts" target=_blank rel=noopener class=share-btn-linkedin>
+<i class="fab fa-linkedin-in"></i>
+</a>
+</li>
+<li>
+<a href="whatsapp://send?text=Posts%20https://sbjoshi.github.io/post/pinaka-usermanual/" target=_blank rel=noopener class=share-btn-whatsapp>
+<i class="fab fa-whatsapp"></i>
+</a>
+</li>
+<li>
+<a href="https://service.weibo.com/share/share.php?url=https://sbjoshi.github.io/post/pinaka-usermanual/&title=Posts" target=_blank rel=noopener class=share-btn-weibo>
+<i class="fab fa-weibo"></i>
+</a>
+</li>
+</ul>
+</div>
+<div class="media author-card content-widget-hr">
+<a href=https://sbjoshi.github.io/><img class="avatar mr-3 avatar-circle" src=/author/saurabh-joshi/avatar_hu9e224a04c8a7932fdf975b5cbbc650de_247255_270x270_fill_q90_lanczos_center.jpg alt="Saurabh Joshi"></a>
+<div class=media-body>
+<h5 class=card-title><a href=https://sbjoshi.github.io/>Saurabh Joshi</a></h5>
+<h6 class=card-subtitle>Engineer, Product Security</h6>
+<p class=card-text>My research interests include Constraint Programming, Formal Verification and Program Analysis.</p>
+<ul class=network-icon aria-hidden=true>
+<li>
+<a href=/#contact>
+<i class="fas fa-envelope"></i>
+</a>
+</li>
+<li>
+<a href=https://twitter.com/sbjoshi target=_blank rel=noopener>
+<i class="fab fa-twitter"></i>
+</a>
+</li>
+<li>
+<a href="https://scholar.google.com/citations?user=MvHEGbYAAAAJ" target=_blank rel=noopener>
+<i class="ai ai-google-scholar"></i>
+</a>
+</li>
+<li>
+<a href=https://dblp.org/pid/13/4416-1.html target=_blank rel=noopener>
+<i class="ai ai-dblp"></i>
+</a>
+</li>
+<li>
+<a href=https://orcid.org/0000-0001-8070-1525 target=_blank rel=noopener>
+<i class="ai ai-orcid"></i>
+</a>
+</li>
+<li>
+<a href=https://github.com/sbjoshi target=_blank rel=noopener>
+<i class="fab fa-github"></i>
+</a>
+</li>
+<li>
+<a href=https://www.linkedin.com/in/sbjoshi0001/ target=_blank rel=noopener>
+<i class="fab fa-linkedin"></i>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.4/imagesloaded.pkgd.min.js integrity="sha256-lqvxZrPLtfffUl2G/e7szqSvPBILGbwmsGE1MKlOi0Q=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.6/isotope.pkgd.min.js integrity="sha256-CBrpuqrMhXwcLLUd5tvQ4euBHCdh7wGlDfNz8vbu/iI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js integrity="sha256-yt2kYMy0w8AbtF89WXb2P1rfjcP/HTHLT7097U8Y5b8=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.1.0/instantpage.min.js integrity="sha512-1+qUtKoh9XZW7j+6LhRMAyOrgSQKenQ4mluTR+cvxXjP1Z54RxZuzstR/H9kgPXQsVB8IW7DMDFUJpzLjvhGSQ==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/highlight.min.js integrity="sha512-TDKKr+IvoqZnPzc3l35hdjpHD0m+b2EC2SrLEgKDRWpxf2rFCxemkgvJ5kfU48ip+Y+m2XVKyOCD85ybtlZDmw==" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.2.0/languages/r.min.js></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.min.js integrity="sha512-SeiQaaDh73yrb56sTW/RgVdi/mMqNeM2oBwubFHagc5BkixSpP1fvqF47mKzPGWYSSy4RwbBunrJBQ4Co8fRWA==" crossorigin=anonymous></script>
+<script>const code_highlighting=!0</script>
+<script>const search_config={indexURI:"/index.json",minLength:1,threshold:.3},i18n={no_results:"No results found",placeholder:"Search...",results:"results found"},content_type={post:"Posts",project:"Projects",publication:"Publications",talk:"Talks",slides:"Slides"}</script>
+<script id=search-hit-fuse-template type=text/x-template>
+      <div class="search-hit" id="summary-{{key}}">
+      <div class="search-hit-content">
+        <div class="search-hit-name">
+          <a href="{{relpermalink}}">{{title}}</a>
+          <div class="article-metadata search-hit-type">{{type}}</div>
+          <p class="search-hit-description">{{snippet}}</p>
+        </div>
+      </div>
+      </div>
+    </script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.2.1/fuse.min.js integrity="sha256-VzgmKYmhsGNNN4Ph1kMW+BjoYJM2jV5i4IlFoeZA9XI=" crossorigin=anonymous></script>
+<script src=https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/jquery.mark.min.js integrity="sha256-4HLtjeVgH0eIB3aZ9mLYF6E8oU5chNdjU6p6rrXpl9U=" crossorigin=anonymous></script>
+<script src=/js/wowchemy.min.434af0ebce9e15b273b954d65feb39c7.js></script>
+<div class=container>
+<footer class=site-footer>
+<p class=powered-by>
+</p>
+<p class=powered-by>
+Published with
+<a href=https://wowchemy.com target=_blank rel=noopener>Wowchemy</a> —
+the free, <a href=https://github.com/wowchemy/wowchemy-hugo-modules target=_blank rel=noopener>
+open source</a> website builder that empowers creators.
+<span class=float-right aria-hidden=true>
+<a href=# class=back-to-top>
+<span class=button_icon>
+<i class="fas fa-chevron-up fa-2x"></i>
+</span>
+</a>
+</span>
+</p>
+</footer>
+</div>
+<div id=modal class="modal fade" role=dialog>
+<div class=modal-dialog>
+<div class=modal-content>
+<div class=modal-header>
+<h5 class=modal-title>Cite</h5>
+<button type=button class=close data-dismiss=modal aria-label=Close>
+<span aria-hidden=true>&#215;</span>
+</button>
+</div>
+<div class=modal-body>
+<pre><code class="tex hljs"></code></pre>
+</div>
+<div class=modal-footer>
+<a class="btn btn-outline-primary my-1 js-copy-cite" href=# target=_blank>
+<i class="fas fa-copy"></i> Copy
+</a>
+<a class="btn btn-outline-primary my-1 js-download-cite" href=# target=_blank>
+<i class="fas fa-download"></i> Download
+</a>
+<div id=modal-error></div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
