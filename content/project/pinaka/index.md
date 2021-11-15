@@ -37,6 +37,9 @@ Symbolic execution as well as incremental solving has been quite well known conc
 
 Today I am going to write about [Pinaka](https://github.com/sbjoshi/Pinaka), a symbolic execution engine that combines symbolic execution with incremental solving in a fairly simple fashion.
 
+
+If you are merely looking at documentation about how to use it, please refer to the post on [_"How to use Pinaka"_](/post/pinaka-usermanual).
+
 #### Incremental Solving
 
 Many modern day constraint solvers, such as SAT and SMT solvers support incremental solving in some fashion.
