@@ -62,10 +62,10 @@ subtitle = ""
 ---
 
 #### Masters
-* Archit Sanghi - MTech - (co-advised with [Dr. Praveen Tammana](https://ptammana.wordpress.com/))(July 2020--July 2021)
+* [Archit Sanghi](https://www.linkedin.com/in/archit-sanghi-984925200/) - MTech - (co-advised with [Dr. Praveen Tammana](https://ptammana.wordpress.com/))(July 2020--July 2021) - now at Oracle, India.
 * [Akash Banerjee](https://www.linkedin.com/in/akashbanerjeeab/) - MTech RA - (July 2018--June 2021) - now at Imagination Technologies, UK.
 * [Eti Chaudhary](https://etichaudhary.github.io) - _Verification of Programs_ - MTech RA - (July 2017--July 2020) - now at Goldman Sachs, Bengaluru.
-* [Aditya Kumar](https://www.linkedin.com/in/npakr/) - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020) - now at OPPO R&D
+* [Aditya Kumar](https://www.linkedin.com/in/npakr/) - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020) - now at Oracle, India.
 * Sunil Sarode - MTech (co-advised with Dr. Ramakrishna Upadrasta) (May 2019--July 2020)
 * [Uttaran Sinha](https://uttaransinha.github.io) - MTech - _Defending Neural Networks against Structural Perturbations_ - (July 2017--July 2019) - now at Amazon, Bengaluru
 * [Arpit Aggarwal](https://www.linkedin.com/in/arpit94/) - MTech (IIT Delhi, co-advised with Dr. Subodh Sharma) - _GoProver: a bounded model-checker for GO_ - (July 2017--July 2018) - now at Oracle, Bengaluru
@@ -75,9 +75,9 @@ subtitle = ""
 
 #### Undergraduates
 
-* Gitanjali Mannepalli - BTech - Mini Project - _Proving program correctness using Coq_ (July 2018--Nov 2018)
+* [Gitanjali Mannepalli](https://www.linkedin.com/in/gitanjali-mannepalli-a45b4a220/) - BTech - Mini Project - _Proving program correctness using Coq_ (July 2018--Nov 2018) - now pursuing masters at Georgia Tech, US.
 * [Sukrut Rao](https://sukrutrao.github.io) - BTech - Research Internship - _Improving MaxSAT Solving_ - now PhD candidate at Max Planck Institute, Germany
-* [Prateek Kumar](https://prateekkumar.in) - BTech - _Improving MaxSAT Solving_ - (Dec 2017--May 2019) - now at AQR Capital Management, Bengaluru
-* [Nidhi Dhamnani](https://www.linkedin.com/in/nidhidhamnani/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ - (July 2017--Nov 2017) - now at Goldman Sachs, Bangalore
-* [B Shreya](https://www.linkedin.com/in/ballijepalli-shreya-b25384112/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ -(July 2017--Nov2017) - now as Software Development Engineer at Swiggy, Bangalore
+* [Prateek Kumar](https://prateekkumar.in) - BTech - _Improving MaxSAT Solving_ - (Dec 2017--May 2019) - now at Apple, India.
+* [Nidhi Dhamnani](https://www.linkedin.com/in/nidhidhamnani/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ - (July 2017--Nov 2017) - now pursuing masters at University of California, San Diego, US.
+* [B Shreya](https://www.linkedin.com/in/ballijepalli-shreya-b25384112/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ -(July 2017--Nov2017) - now pursuing masters at Purdue University, US.
 

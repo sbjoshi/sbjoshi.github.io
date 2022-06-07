@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Engineer, Product Security
+role: Principal Researcher
 #role: Assistant Professor, [CSE](https://cse.iith.ac.in)
 
 # Organizations/Affiliations
