@@ -83,4 +83,4 @@ user_groups:
 - Visitors
 ---
 
-I am an Engineer working with a Product Security group at a private company. All the information/views expressed here are my own and do not represent views of any of my past or current employer.
+I am a Researcher working with a private company. All the information/views expressed here are my own and do not represent views of any of my past or current employer.

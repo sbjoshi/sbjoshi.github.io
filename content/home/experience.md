@@ -19,15 +19,15 @@ date_format = "2006"
 #   Begin/end multi-line descriptions with 3 quotes `"""`.
 
 
-[[experience]]
-  title = "Principal Researcher"
-  company = "SupraOracles"
-  company_url = "https://supraoracles.com"
-  location = ""
-  date_start = "2021-05-16"
-  date_end = ""
-  description = """
-  """
+#[[experience]]
+#  title = "Principal Researcher"
+#  company = "SupraOracles"
+#  company_url = "https://supraoracles.com"
+#  location = ""
+#  date_start = "2021-05-16"
+#  date_end = ""
+#  description = """
+#  """
 
 
 
