@@ -30,6 +30,16 @@ date_format = "2006"
 #  """
 
 
+[[experience]]
+  title = "Principal Researcher"
+  company = "SupraOracles"
+  company_url = "https://supraoracles.com"
+  location = ""
+  date_start = "2022-05-16"
+  date_end = ""
+  description = """
+  """
+
 
 
 [[experience]]
