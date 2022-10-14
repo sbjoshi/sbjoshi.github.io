@@ -55,9 +55,8 @@ subtitle = ""
 
 #### PhD
 
-* [Utpal Bora](https://utpalbora.com) - PhD Candidate (co-supervised with Dr. Ramakrishna Upadrasta)
 * [Gautam Muduganti](https://www.linkedin.com/in/gautammuduganti/) - PhD Candidate - (Jan 2017--Present)
-
+* [Utpal Bora](https://utpalbora.com) - PhD - _Techniques for Static Detection of Data-races in OpenMP Programs_ - (Jan 2019--Oct 2022) - now a PostDoc at Cambridge University, UK.
 
 ---
 
