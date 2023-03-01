@@ -22,9 +22,11 @@ role: Principal Researcher
 bio: My research interests include Constraint Programming, Formal Verification and Program Analysis.
 
 interests:
+- Blockchain
 - Constraint Programming
 - Formal Verification
 - Program Analysis
+- Programming Languages
 
 education:
   courses:
