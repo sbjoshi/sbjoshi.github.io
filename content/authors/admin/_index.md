@@ -19,10 +19,11 @@ role: Principal Researcher
 #  url: "https://iith.ac.in"
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include Constraint Programming, Formal Verification and Program Analysis.
+bio: My research interests include Blockchain, Distributed Systems, Constraint Programming, Formal Verification, Programming Languages and Program Analysis.
 
 interests:
 - Blockchain
+- Distributed Systems
 - Constraint Programming
 - Formal Verification
 - Program Analysis

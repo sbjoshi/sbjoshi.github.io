@@ -3,6 +3,7 @@ title: DORA
 summary: Scaleable, transparent and efficient Distributed Oracle Agreement
 tags:
 - Blockchain
+- Distributed Systems
 date: "2022-12-01T00:00:00Z"
 
 # Optional external URL for project (replaces project detail page).
