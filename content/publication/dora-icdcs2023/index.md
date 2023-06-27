@@ -6,7 +6,7 @@ authors:
 - Aniket Kate
 - Joshua Tobkin
 - David Yang
-author_names:
+author_notes:
 - Author name are listed in alphabetical order of their last names
 date: "2023-06-07T00:00:00Z"
 doi: "10.48550/arXiv.2305.03903"
