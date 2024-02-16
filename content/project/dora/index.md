@@ -33,5 +33,5 @@ url_video: ""
 
 ## DORA
 
-DORA is a scaleable, transparent and efficient distributed oracle agreement protocole designed and developed at SupraOracles. Find more details [here](https://supraoracles.com/news/dora-distributed-oracle-agreement)
+DORA is a scaleable, transparent and efficient distributed oracle agreement protocole designed and developed at SupraOracles. Find more details [here](https://supra.com/news/dora-distributed-oracle-agreement)
 

@@ -50,6 +50,8 @@ subtitle = ""
  css_class = ""
 +++
 
+- My talk on [DORA](/project/dora) at _Ethereum Engineering Group meetup_ is available [here](https://www.youtube.com/watch?v=i9ySrtZD6sM)
+- _"[GPURepair: Automated Repair of GPU Kernels (Extended Version)](https://www.ias.ac.in/describe/article/sadh/049/0010)"_ is published in [Sadhana](https://www.ias.ac.in/Journals/Sadhana) , [Volume 49](https://www.ias.ac.in/listing/articles/sadh/049).
 - [Whitepaper](https://supraoracles.com/docs/SupraOracles-DORA-Whitepaper.pdf), [blog post](https://supraoracles.com/news/dora-distributed-oracle-agreement/), and [video](https://supraoracles.com/whitepapers/) on _"Distributed Oracle Agreement (DORA)"_ is available at [SupraOracles](https://supraoracles.com) website.
 - My talk on _"Code Contract: What, Why and How?"_ at [CppIndiaCon 2021](https://www.cppindia.co.in/conference/2021/conference_home/) is now available on [YouTube](https://www.youtube.com/watch?v=_eoZ4OfHypU&t=1s). The slides used for the talk are available [here](https://slides.com/saurabhjoshi-1/deck/fullscreen) and the examples used during the talk are available on [GitHub](https://github.com/sbjoshi/CppIndiaCon-Examples).
 - [Pinaka](https://github.com/sbjoshi/Pinaka) stands 2nd in _ReachSafety-Floats_, 2nd is _ReachSafety-Loops_, 3rd in _ReachSafety-Combinations_ subcategories and is placed 7th in _ReachSafety_ category in [SVCOMP 2021](https://sv-comp.sosy-lab.org/2021/)
