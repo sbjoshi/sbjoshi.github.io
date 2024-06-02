@@ -74,9 +74,9 @@ subtitle = ""
 
 #### Undergraduates
 
-* [Gitanjali Mannepalli](https://www.linkedin.com/in/gitanjali-mannepalli-a45b4a220/) - BTech - Mini Project - _Proving program correctness using Coq_ (July 2018--Nov 2018) - now pursuing masters at Georgia Tech, US.
+* [Gitanjali Mannepalli](https://www.linkedin.com/in/gitanjali-mannepalli-a45b4a220/) - BTech - Mini Project - _Proving program correctness using Coq_ (July 2018--Nov 2018) - now at Microsoft, US.
 * [Sukrut Rao](https://sukrutrao.github.io) - BTech - Research Internship - _Improving MaxSAT Solving_ - now PhD candidate at Max Planck Institute, Germany
 * [Prateek Kumar](https://prateekkumar.in) - BTech - _Improving MaxSAT Solving_ - (Dec 2017--May 2019) - now at Apple, India.
 * [Nidhi Dhamnani](https://www.linkedin.com/in/nidhidhamnani/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ - (July 2017--Nov 2017) - now at Momento, US as a Software Engineer
-* [B Shreya](https://www.linkedin.com/in/ballijepalli-shreya-b25384112/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ -(July 2017--Nov2017) - now pursuing masters at Purdue University, US.
+* [B Shreya](https://www.linkedin.com/in/ballijepalli-shreya-b25384112/) - BTech - Research Internship - _Optimizing SAT Solver for push/pop queries_ -(July 2017--Nov2017) - now  at Amazon Web Services, US.
 
