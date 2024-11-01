@@ -31,12 +31,23 @@ date_format = "2006"
 
 
 [[experience]]
+  title = "Director of R&D"
+  company = "Supra"
+  company_url = "https://supra.com"
+  location = ""
+  date_start = "2024-10-21"
+  date_end = ""
+  description = """
+  """
+
+
+[[experience]]
   title = "Principal Researcher"
   company = "SupraOracles"
-  company_url = "https://supraoracles.com"
+  company_url = "https://supra.com"
   location = ""
   date_start = "2022-05-16"
-  date_end = ""
+  date_end = "2024-10-21"
   description = """
   """
 
