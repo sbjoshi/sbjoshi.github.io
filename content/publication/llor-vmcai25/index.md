@@ -1,5 +1,5 @@
 ---
-title: "GPURepair: Automated Repair of GPU Kernels"
+title: "LLOR: Automated Repair of OpenMP Programs"
 authors:
 - Utpal Bora
 - admin
