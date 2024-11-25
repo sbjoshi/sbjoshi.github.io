@@ -50,6 +50,7 @@ subtitle = ""
  css_class = ""
 +++
 
+- Paper on _"[LLOR: Automated Repair of OpenMP Programs](/publication/llor-vmcai25/)"_ is accepted at VMCAI 2025.
 - Invited talk on [Web3 and Program Analysis](https://www.youtube.com/watch?v=CZLJ28Sw9nw) at IICT ([CompilerTech](https://compilertech.org)) 2024.
 - Talk on [Supra Automation Network](https://www.youtube.com/watch?v=w07EkuNPdwM) as part of _The Tech Behind Supra_ webinar series.
 - Invited talk on [DORA](/project/dora) at _Ethereum Engineering Group meetup_ is available [here](https://www.youtube.com/watch?v=i9ySrtZD6sM)
