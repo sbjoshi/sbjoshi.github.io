@@ -7,8 +7,8 @@ authors:
 - Ramakrishna Upadrasta
 author_notes:
 - Author names are listed in alphabetical order of their last names
-date: "2024-11-24T00:00:00Z"
-doi: "10.48550/arXiv.2411.14590"
+date: "2025-01-23T00:00:00Z"
+doi: "10.1007/978-3-031-82703-7_6"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: "2025-01-23T00:00:00Z"
