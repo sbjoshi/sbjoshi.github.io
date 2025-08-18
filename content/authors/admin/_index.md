@@ -10,7 +10,7 @@ authors:
 superuser: true
 
 # Role/position
-role: Principal Researcher
+role: Director of R&D
 #role: Assistant Professor, [CSE](https://cse.iith.ac.in)
 
 # Organizations/Affiliations
