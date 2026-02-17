@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Redirecting...</title>
+    <!-- The meta refresh tag instructs the browser to redirect immediately -->
+    <meta http-equiv="refresh" content="0; url=https://sbjoshi.github.io/publication/">
+    <link rel="canonical" href="https://sbjoshi.github.io/publication/">
+</head>
+<body>
+    <p>This page has moved. If you are not redirected automatically, please follow this <a href="https://sbjoshi.github.io/publication/">link to the new page</a>.</p>
+</body>
+</html>
+
