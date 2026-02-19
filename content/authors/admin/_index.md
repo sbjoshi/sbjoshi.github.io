@@ -86,4 +86,4 @@ user_groups:
 - Visitors
 ---
 
-I am a Researcher working with a private company. All the information/views expressed here are my own and do not represent views of any of my past or current employer.
+I am an Applied Researcher working with a private company. All the information/views expressed here are my own and do not represent views of any of my past or current employer. Please find my CV with full details [here](files/sbjoshi_cv.pdf)
