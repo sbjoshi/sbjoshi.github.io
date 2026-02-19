@@ -87,4 +87,4 @@ user_groups:
 ---
 
 
-I am an Applied Researcher and Engineer working with a private company. Problems are not confined to one area of research or technology. I strongly believe that one should learn any tool/technology/area that allows the problem at hand to be solved in the best possible manner. The diversity of my research publications, as well as technologies that I have worked with, is a testament to this belief. Please find my CV with full details [here](/files/sbjoshi_cv.pdf).
+Problems are not confined to one area of research or technology. I strongly believe that one should learn any tool/technology/area that allows the problem at hand to be solved in the best possible manner. The diversity of my research publications, as well as technologies that I have worked with, is a testament to this belief. Please find my CV with full details [here](/files/sbjoshi_cv.pdf).
