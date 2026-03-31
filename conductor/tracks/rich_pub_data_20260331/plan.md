@@ -14,12 +14,12 @@
 4.  - [x] Task: Verify data integrity after migration b2995d7
 5.  - [x] Task: Conductor - User Manual Verification 'Phase 2: Data Migration' (Protocol in workflow.md) 59c5e95
 
-## Phase 3: UI & Template Enhancement
+## Phase 3: UI & Template Enhancement [checkpoint: 1066434]
 1.  - [x] Task: Integrate icon system (e.g., SVG sprites) for resource types c04da52
 2.  - [x] Task: Write tests for publication macro rendering with multiple links a9aff5d
 3.  - [x] Task: Update `src/_includes/macros/pub-item.njk` to support rich resources f3d011a
 4.  - [x] Task: Enhance styling in `src/assets/css/main.css` for icons and action buttons 3c1e483
-5.  - [ ] Task: Conductor - User Manual Verification 'Phase 3: UI & Template Enhancement' (Protocol in workflow.md)
+5.  - [x] Task: Conductor - User Manual Verification 'Phase 3: UI & Template Enhancement' (Protocol in workflow.md) 1066434
 
 ## Phase 4: Final Validation
 1.  - [ ] Task: Run automated link checker on built site
