@@ -5,12 +5,12 @@
   year: '2024'
   venue: Journal of Web Engineering
   links:
-    paper: https://example.com/papers/smith2024.pdf
-    slides: https://example.com/slides/smith2024
+    paper: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
+    slides: https://www.google.com
   files:
     pdf: /assets/publications/smith2024.pdf
   journal: Journal of Web Engineering
-  doi: 10.1234/jwe.2024.123
+  doi: 10.1145/3133933.3133934
 - id: doe2023conference
   type: inproceedings
   title: Optimizing Performance in Eleventy-based Sites
