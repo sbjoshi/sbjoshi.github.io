@@ -1,31 +1,742 @@
-- id: smith2024journal
-  type: article
-  title: A Comprehensive Study on Static Site Generators
-  author: Smith, John and Doe, Jane
-  year: '2024'
-  venue: Journal of Web Engineering
+- id: llor-vmcai25
+  title: 'LLOR: Automated Repair of OpenMP Programs'
+  author: Utpal Bora, Saurabh Joshi, Gautam Muduganti, Ramakrishna Upadrasta
+  year: '2025'
+  venue: VMCAI 2025
+  abstract: >-
+    In this paper, we present a technique for repairing data race errors in
+    parallel programs written in C/C++ and Fortran using the OpenMP API. Our
+    technique can also remove barriers that are deemed unnecessary for
+    correctness. We implement these ideas in our tool called LLOR, which takes a
+    language-independent approach to provide appropriate placements of
+    synchronization constructs to avoid data races. To the best of our
+    knowledge, LLOR is the only tool that can repair parallel programs that use
+    the OpenMP API. We showcase the capabilities of LLOR by performing extensive
+    experiments on 415 parallel programs.
+  doi: 10.1007/978-3-031-82703-7_6
   links:
-    paper: https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf
-    slides: https://www.google.com
-  files:
-    pdf: /assets/publications/smith2024.pdf
-  journal: Journal of Web Engineering
-  doi: 10.1145/3133933.3133934
-- id: doe2023conference
-  type: inproceedings
-  title: Optimizing Performance in Eleventy-based Sites
-  author: Doe, Jane and Brown, Robert
+    github: https://github.com/cs17resch01003/llor
+    paper: https://doi.org/10.1007/978-3-031-82703-7_6
+  files: {}
+  booktitle: >-
+    26th International Conference on Verification, Model Checking and Abstract
+    Interpretation
+- id: joshi-sadhana2024
+  title: 'GPURepair: Automated Repair of GPU Kernels (Extended Version)'
+  author: Saurabh Joshi, Gautam Muduganti
+  year: '2024'
+  venue: Sadhana, Vol. 49
+  abstract: >-
+    This paper presents a technique for repairing errors in GPU kernels written
+    in CUDA or OpenCL due to data races and barrier divergence. Our novel
+    extension to prior work can also remove barriers that are deemed unnecessary
+    for correctness. We implement these ideas in our tool called GPURepair,
+    which usesGPUVerify as the verification oracle for GPU kernels. We also
+    extend GPUVerify to support CUDA Cooperative Groups, allowing GPURepair to
+    suggest inter-block synchronization for repairing a CUDA kernel if deemed
+    necessary. To the best of our knowledge, GPURepair is the only tool that can
+    propose a fix for intrablockdata races and barrier divergence errors for
+    both CUDA and OpenCL kernels. It is also the only tool that can propose
+    fixes for inter-block data races in CUDA kernels. We perform extensive
+    experiments on about 750 kernels and provide a comparison with prior work.
+    We demonstrate the superiority of GPURepair through its capability to fix
+    more kernels and its unique ability to remove redundant barriers and handle
+    inter-block data races. We have also enhanced the initial version of
+    GPURepair to support incremental solving during the repairprocess. This
+    enhancement improves the performance of GPURepair by about 25% for the test
+    suite that we have used.
+  doi: 10.1007/s12046-023-02291-0
+  links:
+    github: https://github.com/cs17resch01003/gpurepair
+    paper: https://www.ias.ac.in/describe/article/sadh/049/0010
+    video: https://www.youtube.com/watch?v=WtOT31S-RA8&t=2h57m34s
+  files: {}
+  journal: Sadhana - A Journal of Indian Academy of Sciences, Vol. 49
+- id: dora-icdcs23
+  title: 'DORA: Distributed Agreement with Simple Majority'
+  author: Prasanth Chakka, Saurabh Joshi, Aniket Kate, Joshua Tobkin, David Yang
   year: '2023'
-  venue: Proceedings of the International Conference on Web Performance (ICWP)
-  links: {}
+  venue: ICDCS 2023
+  abstract: >-
+    Oracle networks feeding off-chain information to a blockchain are required
+    to solve a distributed agreement problem since these networks receive
+    information from multiple sources and at different times. We make a key
+    observation that in most cases, the value obtained by oracle network nodes
+    from multiple information sources are in close proximity. We deﬁne a notion
+    of agreement distance and leverage the availability of a state machine
+    replication (SMR) service to solve this distributed agreement problem with
+    an honest simple majority of nodes instead of the conventional requirement
+    of an honest super majority of nodes. Values from multiple nodes being in
+    close proximity, therefore, forming a coherent cluster, is one of the keys
+    to its efﬁciency. Our asynchronous protocol also embeds a fallback mechanism
+    if the coherent cluster formation fails.  Through simulations using
+    real-world exchange data from seven prominent exchanges, we show that even
+    for very small agreement distance values, the protocol would be able to form
+    coherent clusters and therefore, can safely tolerate up to 1/2 fraction of
+    Byzantine nodes. We also show that, for a small statistical error, it is
+    possible to choose the size of the oracle network to be signiﬁcantly smaller
+    than the entire system tolerating up to a 1/3 fraction of Byzantine
+    failures. This allows the oracle network to operate much more efﬁciently and
+    horizontally scale much better.
+  doi: 10.1109/ICDCS57875.2023.00025
+  links:
+    paper: https://arxiv.org/pdf/2305.03903.pdf
+    video: https://www.youtube.com/watch?v=i9ySrtZD6sM
+    icdcs 2023 version: https://ieeexplore.ieee.org/document/10272471
   files: {}
-  booktitle: Proceedings of the International Conference on Web Performance (ICWP)
-- id: brown2022preprint
-  type: unpublished
-  title: 'The Future of Jamstack: A Survey'
-  author: Brown, Robert and Smith, John
-  year: '2022'
-  venue: ''
-  links: {}
+  booktitle: International Conference on Distributed Computing Systems 2023
+- id: joshi-vmcai2021
+  title: 'GPURepair: Automated Repair of GPU Kernels'
+  author: Saurabh Joshi, Gautam Muduganti
+  year: '2021'
+  venue: VMCAI 2021
+  abstract: >-
+    This paper presents a tool for repairing errors in GPU kernels written in
+    CUDA or OpenCL due to data races and barrier divergence. Our novel extension
+    to prior work can also remove barriers that are deemed unnecessary for
+    correctness. We implement these ideas in our tool called GPURepair, which
+    uses GPUVerify as the verification oracle for GPU kernels. We also extend
+    GPUVerify to support CUDA Cooperative Groups, allowing GPURepair to perform
+    inter-block synchronization for CUDA kernels. To the best of our knowledge,
+    GPURepair is the only tool that can propose a fix for intra-block data races
+    and barrier divergence errors for both CUDA and OpenCL kernels and the only
+    tool that fixes inter-block data races for CUDA kernels. We perform
+    extensive experiments on about 750 kernels and provide a comparison with
+    prior work. We demonstrate the superiority of GPURepair through its
+    capability to fix more kernels and its unique ability to remove redundant
+    barriers and handle inter-block data races.
+  doi: 10.1007/978-3-030-67067-2_18
+  links:
+    github: https://github.com/cs17resch01003/gpurepair
+    paper: https://link.springer.com/chapter/10.1007/978-3-030-67067-2_18
+    video: https://www.youtube.com/watch?v=WtOT31S-RA8&t=2h57m34s
   files: {}
-  note: Preprint available at arXiv:2201.12345
+  booktitle: >-
+    22nd International Conference on Verification, Model Checking and Abstract
+    Interpretation
+- id: Bora-llvm-hpc-2021
+  title: OpenMP aware MHP Analysis for Improved Static Data-Race Detection
+  author: Utpal Bora, Shraiysh Vaishay, Saurabh Joshi, Ramakrishna Upadrasta
+  year: '2021'
+  venue: LLVM HPC 2021
+  abstract: >-
+    Data races, a major source of bugs in concurrent programs, can result in
+    loss of manpower and time as well as data loss due to system failures.
+    OpenMP, the de facto shared memory parallelism framework used in the HPC
+    community, also suffers from data races. To detect race conditions in OpenMP
+    programs and improve turnaround time and/or developer productivity, we
+    present a data flow analysis based, fast, static data race checker in the
+    LLVM compiler framework. Our tool can detect races in the presence or
+    absence of explicit barriers, with implicit or explicit synchronization. In
+    addition, our tool effectively works for the OpenMP target offloading
+    constructs and also supports the frequently used OpenMP constructs.  We
+    formalize and provide a data flow analysis framework to perform Phase
+    Interval Analysis (PIA) of OpenMP programs.  Phase intervals are then used
+    to compute the MHP (and its complement NHP) sets for the programs, which, in
+    turn, are used to detect data races statically.  We evaluate our work using
+    multiple OpenMP race detection benchmarks and real world applications. Our
+    experiments show that the checker is comparable to the state-of-the-art in
+    various performance metrics with around 90 percent accuracy, almost perfect
+    recall, and significantly lower runtime and memory footprint.
+  doi: ''
+  links:
+    github: https://github.com/utpalbora/LLOV
+    pre-print: https://arxiv.org/pdf/2111.04259.pdf
+  files: {}
+  booktitle: Workshop on the LLVM Compiler Infrastructure in HPC
+- id: spin2021-anomaly-detection
+  title: Anomaly Detection in Data Plane Systems using Packet Execution Paths
+  author: Archit Sanghi, Praveen Tammana, Saurabh Joshi, Krishna P Kadiyala
+  year: '2021'
+  venue: ACM SIGCOMM SPIN 2021
+  abstract: >-
+    Programmable data planes provide exciting opportunities to realize fast,
+    accurate, and data-driven control-loop decisions. Many data plane systems
+    have been proposed for handling network dynamics (congestion, failures) in
+    near real-time. The core of these systems has packet-processing data-plane
+    algorithms that continuously monitor traffic and respond automatically.
+    Despite their benefits, automatic response to network events lead to an
+    increase in potential sources of inputs, and hence, an increase in attack
+    surface. This paper takes a step towards securing such systems by (1)
+    identifying possible attacks on recently proposed data-driven data-plane
+    systems; and (2) designing a scalable tool for detecting such attacks at run
+    time. Our approach models plausible expected behavior and uses the model as
+    a reference to check whether the system is under attack. We conduct
+    preliminary experiments to demonstrate the feasibility of our detection
+    methodology.
+  doi: 10.1145/3472873.3472880
+  links: {}
+  files:
+    pdf: /assets/publications/p4anomaly-spin-2021.pdf
+  booktitle: ACM SIGCOMM workshop on Secure Programmable network INfrastructure
+- id: BHYRAVARAPU2020
+  title: On the tractability of $(k,i)$-coloring (Extended Journal Version)
+  author: >-
+    Sriram Bhyravarapu, Saurabh Joshi, Subrahmanyam Kalyanasundaram, Anjeneya
+    Swami Kare
+  year: '2020'
+  venue: DAM
+  abstract: >-
+    In an undirected graph, a proper $(k,i)$-coloring is an assignment of a set
+    of colors to each vertex such that any two adjacent vertices have at most
+    common colors. The $(k,i)$-coloring problem is to compute the minimum number
+    of colors required for a proper $(k,i)$-coloring. This is a generalization
+    of the classical graph coloring problem.  We design a parameterized
+    algorithm for the $(k,i)$-coloring problem with the size of the feedback
+    vertex set as a parameter. Our algorithm does not use tree-width machinery,
+    thus answering a question of Majumdar, Neogi, Raman and Tale [CALDAM 2017].
+    We also give a faster exact algorithm for $(k,k-1)$-coloring. From the
+    hardness perspective, we show that the $(k,i)$-coloring problem is
+    NP-complete for any fixed values $i$, $k$, whenever $i < k$, thereby
+    settling a conjecture of Méndez-Díaz and Zabala (1999) and again asked by
+    Majumdar, Neogi, Raman and Tale. The NP-completeness result improves the
+    partial NP-completeness shown in the preliminary version of this paper
+    published in CALDAM 2018.
+  doi: 10.1016/j.dam.2020.08.018
+  links:
+    paper: https://arxiv.org/pdf/1802.03634.pdf
+  files: {}
+  journal: Discrete Applied Mathematics
+- id: bora-taco2020
+  title: 'LLOV: A Fast Static Data-Race Checker for OpenMP Programs'
+  author: >-
+    Utpal Bora, Santanu Das, Pankaj Kukreja, Saurabh Joshi, Ramakrishna
+    Upadrasta, Sanjay V Rajopadhye
+  year: '2020'
+  venue: ACM TACO
+  abstract: >-
+    In the era of Exascale computing, writing efficient parallel programs is
+    indispensable and at the same time, writing sound parallel programs is very
+    difficult. Specifying parallelism with frameworks such as OpenMP is
+    relatively easy, but data races in these programs are an important source of
+    bugs. In this paper, we propose LLOV, a fast, lightweight, language
+    agnostic, and static data race checker for OpenMP programs based on the LLVM
+    compiler framework. We compare LLOV with other state-of-the-art data race
+    checkers on a variety of well-established benchmarks. We show that the
+    precision, accuracy, and the F1 score of LLOV is comparable to other
+    checkers while being orders of magnitude faster. To the best of our
+    knowledge, LLOV is the only tool among the state-of-the-art data race
+    checkers that can verify a C/C++ or FORTRAN program to be data race free.
+  doi: 10.1145/3418597
+  links:
+    github: https://github.com/utpalbora/LLOV
+    paper: https://dl.acm.org/doi/pdf/10.1145/3418597
+    video: https://www.youtube.com/watch?v=kyD4ysn8ljE&t=1h3m00s
+    pre-print: https://arxiv.org/pdf/1912.12189.pdf
+  files: {}
+  journal: ACM Transaction on Architecture and Code Optimization
+- id: DBLP:journals/jsat/JoshiKRM19
+  title: 'Open-WBO-Inc: Approximation Strategies for Incomplete Weighted MaxSAT'
+  author: Saurabh Joshi, Prateek Kumar, Sukrut Rao, Ruben Martins
+  year: '2019'
+  venue: JSAT
+  abstract: >-
+    Incomplete MaxSAT solving aims to quickly find a solution that attempts to
+    minimize the sum of the weights of unsatisfied soft clauses without
+    providing any optimality guarantees. In this paper, we propose two
+    approximation strategies for improving incomplete weighted MaxSAT solving.
+    In one of the strategies, we cluster the weights and approximate them with a
+    representative weight. In another strategy, we break up the problem of
+    minimizing the sum of weights of unsatisfiable clauses into multiple
+    minimization subproblems. We have implemented these strategies in a tool
+    Open-WBO-Inc. Using the subproblem minimization strategy, Open-WBO-Inc
+    placed first and second in the weighted incomplete tracks in the MaxSAT
+    Evaluation 2018 whereas the strategy based on weight approximation was
+    placed fourth. We compare these strategies with the best incomplete MaxSAT
+    solvers on benchmarks taken from MaxSAT Evaluation 2017 and MaxSAT
+    Evaluation 2018 and show that the strategies proposed are competitive with
+    the best of the solvers.
+  doi: 10.3233/SAT190118
+  links:
+    github: https://github.com/sbjoshi/Open-WBO-Inc
+    paper: >-
+      https://content.iospress.com/download/journal-on-satisfiability-boolean-modeling-and-computation/sat190118?id=journal-on-satisfiability-boolean-modeling-and-computation%2Fsat190118
+  files: {}
+  journal: Journal of Satisfiability, Boolean Modelling and Computation(11)
+- id: DBLP:conf/ijcai/PoteJM19
+  title: Phase Transition Behavior of Cardinality and XOR Constraints
+  author: Yash Pote, Saurabh Joshi, Kuldeep Meel
+  year: '2019'
+  venue: IJCAI 2019
+  abstract: >-
+    The runtime performance of modern SAT solvers is deeply connected to the
+    phase transition behavior of CNF formulas. While CNF solving has witnessed
+    significant runtime improvement over the past two decades, the same does not
+    hold for several other classes such as the conjunction of cardinality and
+    XOR constraints, denoted as CARD-XOR formulas. The problem of determining
+    the satisfiability of CARD-XOR formulas is a fundamental problem with a wide
+    variety of applications ranging from discrete integration in the field of
+    artificial intelligence to maximum likelihood decoding in coding theory. The
+    runtime behavior of random CARD-XOR formulas is unexplored in prior work. In
+    this paper, we present the first rigorous empirical study to characterize
+    the runtime behavior of 1-CARD-XOR formulas. We show empirical evidence of a
+    surprising phase-transition that follows a non-linear tradeoff between CARD
+    and XOR constraints.
+  doi: 10.24963/ijcai.2019/162
+  links:
+    paper: https://arxiv.org/pdf/1910.09755.pdf
+  files: {}
+  booktitle: International Joint Conference on Artificial Intelligence
+- id: DBLP:conf/tacas/ChaudharyJ19
+  title: >-
+    Pinaka: Symbolic Execution Meets Incremental Solving - (Competition
+    Contribution)
+  author: Eti Chaudhary, Saurabh Joshi
+  year: '2019'
+  venue: TACAS 2019
+  abstract: >-
+    The runtime performance of modern SAT solvers is deeply connected to the
+    phase transition behavior of CNF formulas. While CNF solving has witnessed
+    significant runtime improvement over the past two decades, the same does not
+    hold for several other classes such as the conjunction of cardinality and
+    XOR constraints, denoted as CARD-XOR formulas. The problem of determining
+    the satisfiability of CARD-XOR formulas is a fundamental problem with a wide
+    variety of applications ranging from discrete integration in the field of
+    artificial intelligence to maximum likelihood decoding in coding theory. The
+    runtime behavior of random CARD-XOR formulas is unexplored in prior work. In
+    this paper, we present the first rigorous empirical study to characterize
+    the runtime behavior of 1-CARD-XOR formulas. We show empirical evidence of a
+    surprising phase-transition that follows a non-linear tradeoff between CARD
+    and XOR constraints.
+  doi: 10.1007/978-3-030-17502-3_20
+  links:
+    paper: https://link.springer.com/content/pdf/10.1007%2F978-3-030-17502-3_20.pdf
+    slides: https://sv-comp.sosy-lab.org/2019/talks/23_Pinaka.pdf
+    pre-print: https://arxiv.org/pdf/1903.02309.pdf
+    post on acm india blog: >-
+      https://acm-fm-blog.blogspot.com/2020/04/pinaka-symbolic-execution-meets.html
+  files: {}
+  booktitle: Tools and Algorithms for the Construction and Analysis of Systems
+- id: DBLP:journals/corr/abs-1910-04643
+  title: Reflections on "Incremental Cardinality Constraints for MaxSAT"
+  author: Ruben Martins, Saurabh Joshi, Vasco Manquinho, Ines Lynce
+  year: '2019'
+  venue: Virtual Volume
+  abstract: >-
+    To celebrate the first 25 years of the International Conference on
+    Principles and Practice of Constraint Programming (CP) the editors invited
+    the authors of the most cited paper of each year to write a commentary on
+    their paper. This report describes our reflections on the CP 2014 paper
+    "Incremental Cardinality Constraints for MaxSAT" and its impact on the
+    Maximum Satisfiability community and beyond.
+  doi: 10.1007/978-3-319-98334-9_15
+  links:
+    paper: https://arxiv.org/pdf/1910.04643.pdf
+    virtual volume: https://freuder.wordpress.com/cp-anniversary-project/
+  files: {}
+  booktitle: 'Virtual Volume to celebrate 25 years of CP '
+- id: DBLP:conf/caldam/JoshiKKB18
+  title: On the tractability of $(k,i)$-coloring
+  author: Saurabh Joshi, Subrahmanyam Kalyanasundaram, Anjeneya Swami Kare, B Sriram
+  year: '2018'
+  venue: CALDAM 2018
+  abstract: >-
+    In an undirected graph, a proper $(k, i)$-coloring is an assignment of a set
+    of k colors to each vertex such that any two adjacent vertices have at most
+    i common colors. The $(k,i)$-coloring problem is to compute the minimum
+    number of colors required for a proper $(k,i)$-coloring. This is a
+    generalization of the classic graph coloring problem. Majumdar et. al.
+    [CALDAM 2017] studied this problem and showed that the decision version of
+    the $(k, i)$-coloring problem is fixed parameter tractable (FPT) with
+    tree-width as the parameter. They asked if there exists an FPT algorithm
+    with the size of the feedback vertex set (FVS) as the parameter without
+    using tree-width machinery. We answer this in positive by giving a
+    parameterized algorithm with the size of the FVS as the parameter. We also
+    give a faster and simpler exact algorithm for $(k,k-1)$-coloring, and make
+    progress on the NP-completeness of specific cases of (k,i)-coloring.
+  doi: 10.1007/978-3-319-74180-2
+  links:
+    paper: https://arxiv.org/pdf/1802.03634.pdf
+  files: {}
+  booktitle: International Conference on Algorithms and Discrete Applied Mathematics
+- id: DBLP:conf/cp/0001KMR18
+  title: Approximation Strategies for Incomplete MaxSAT
+  author: Saurabh Joshi, Prateek Kumar, Ruben Martins, Sukrut Rao
+  year: '2018'
+  venue: CP 2018
+  abstract: >-
+    Incomplete MaxSAT solving aims to quickly find a solution that attempts to
+    minimize the sum of the weights of the unsatisfied soft clauses without
+    providing any optimality guarantees.  In this paper, we propose two
+    approximation strategies for improving incomplete MaxSAT solving. In one of
+    the strategies, we cluster the weights and approximate them with a
+    representative weight. In another strategy, we break up the problem of
+    minimizing the sum of weights of unsatisfiable clauses into multiple
+    minimization subproblems. Experimental results show that approximation
+    strategies can be used to find better solutions than the best incomplete
+    solvers in the MaxSAT Evaluation 2017.
+  doi: 10.1007/978-3-319-98334-9_15
+  links:
+    github: https://github.com/sbjoshi/Open-WBO-Inc
+    paper: https://arxiv.org/pdf/1806.07164.pdf
+    slides: /assets/publications/CP18_Slides.pdf
+  files: {}
+  booktitle: >-
+    International Conference on Principles and Practice of Constraint
+    Programming
+- id: DBLP:journals/toplas/ForejtJKNS17
+  title: >-
+    Precise Predictive Analysis for Discovering Communication Deadlocks in MPI
+    Programs
+  author: >-
+    Vojtech Forejt, Saurabh Joshi, Daniel Kroening, Ganesh Narayanaswamy, Subodh
+    Sharma
+  year: '2017'
+  venue: TOPLAS
+  abstract: >-
+    The Message Passing Interface (MPI) is the standard API for parallelization
+    in high-performance and scientific computing. Communication deadlocks are a
+    frequent problem in MPI programs, and this article addresses the problem of
+    discovering such deadlocks. We begin by showing that if an MPI program is
+    single path, the problem of discovering communication deadlocks is
+    NP-complete. We then present a novel propositional encoding scheme that
+    captures the existence of communication deadlocks. The encoding is based on
+    modeling executions with partial orders and implemented in a tool called
+    MOPPER. The tool executes an MPI program, collects the trace, builds a
+    formula from the trace using the propositional encoding scheme, and checks
+    its satisfiability. Finally, we present experimental results that quantify
+    the benefit of the approach in comparison to other analyzers and demonstrate
+    that it offers a scalable solution for single-path programs.
+  doi: 10.1016/j.dam.2020.08.018
+  links: {}
+  files:
+    pdf: /assets/publications/toplas2017-mpi.pdf
+  journal: ACM Transactions on Programming Languages and Systems(39)
+- id: DBLP:conf/ppopp/Narayanaswamy0K16
+  title: 'The virtues of conflict: analysing modern concurrency'
+  author: Ganesh Narayanaswamy, Saurabh Joshi, Daniel Kroening
+  year: '2016'
+  venue: PPoPP 2016
+  abstract: >-
+    Modern shared memory multiprocessors permit reordering of memory operations
+    for performance reasons. These reorderings are often a source of subtle bugs
+    in programs written for such architectures. Traditional approaches to verify
+    weak memory programs often rely on interleaving semantics, which is prone to
+    state space explosion, and thus severely limits the scalability of the
+    analysis. In recent times, there has been a renewed interest in modelling
+    dynamic executions of weak memory programs using partial orders. However,
+    such an approach typically requires ad-hoc mechanisms to correctly capture
+    the data and control-flow choices/conflicts present in real-world programs.
+    In this work, we propose a novel, conflict-aware, composable, truly
+    concurrent semantics for programs written using C/C++ for modern weak memory
+    architectures. We exploit our symbolic semantics based on general event
+    structures to build an efficient decision procedure that detects assertion
+    violations in bounded multi-threaded programs. Using a large, representative
+    set of benchmarks, we show that our conflict-aware semantics outperforms the
+    state-of-the-art partial-order based approaches.
+  doi: 10.1145/2851141.2851165
+  links:
+    paper: https://arxiv.org/pdf/1602.08321.pdf
+  files: {}
+  booktitle: ACM SIGPLAN Symposium on Principles and Practice of Parallel Programming
+- id: DBLP:conf/fm/Mukherjee0GKM16
+  title: Equivalence Checking of a Floating-Point Unit Against a High-Level C Model
+  author: >-
+    Rajdeep Mukherjee, Saurabh Joshi, Andreas Griesmayer, Daniel Kroening, Tom
+    Melham
+  year: '2016'
+  venue: FM 2016
+  abstract: >-
+    Semiconductor companies have increasingly adopted a methodology that starts
+    with a system-level design specification in C/C++/SystemC. This model is
+    extensively simulated to ensure correct functionality and performance.
+    Later, a Register Transfer Level (RTL) implementation is created in Verilog,
+    either manually by a designer or automatically by a high-level synthesis
+    tool. It is essential to check that the C and Verilog programs are
+    consistent. In this paper, we present a two-step approach, embodied in two
+    equivalence checking tools, VERIFOX and HW-CBMC, to validate designs at the
+    software and RTL levels, respectively. VERIFOX is used for equivalence
+    checking of an untimed software model in C against a high-level reference
+    model in C. HW-CBMC verifies the equivalence of a Verilog RTL implementation
+    against an untimed software model in C. To evaluate our tools, we applied
+    them to a commercial floating-point arithmetic unit (FPU) from ARM and an
+    open-source dual-path floating-point adder.
+  doi: 10.1007/978-3-319-48989-6_33
+  links:
+    paper: https://arxiv.org/pdf/1609.00169.pdf
+  files: {}
+  booktitle: International Symposium on Formal Methods
+- id: DBLP:conf/cp/0001MM15
+  title: Generalized Totalizer Encoding for Pseudo-Boolean Constraints
+  author: Saurabh Joshi, Ruben Martins, Vasco Manquinho
+  year: '2015'
+  venue: CP 2015
+  abstract: >-
+    Pseudo-Boolean constraints, also known as 0-1 Integer Linear Constraints,
+    are used to model many real-world problems. A common approach to solve these
+    constraints is to encode them into a SAT formula. The runtime of the SAT
+    solver on such formula is sensitive to the manner in which the given
+    pseudo-Boolean constraints are encoded. In this paper, we propose
+    generalized Totalizer encoding (GTE), which is an arc-consistency preserving
+    extension of the Totalizer encoding to pseudo-Boolean constraints. Unlike
+    some other encodings, the number of auxiliary variables required for GTE
+    does not depend on the magnitudes of the coefficients. Instead, it depends
+    on the number of distinct combinations of these coefficients. We show the
+    superiority of GTE with respect to other encodings when large pseudo-Boolean
+    constraints have low number of distinct coefficients. Our experimental
+    results also show that GTE remains competitive even when the pseudo-Boolean
+    constraints do not have this characteristic.
+  doi: 10.1007/978-3-319-23219-5_15
+  links:
+    github: https://github.com/sat-group/open-wbo
+    paper: https://arxiv.org/pdf/1507.05920.pdf
+  files: {}
+  booktitle: >-
+    International Conference on Principles and Practice of Constraint
+    Programming
+- id: DBLP:journals/jsat/Martins0ML14
+  title: On Using Incremental Encodings in Unsatisfiability-based MaxSAT Solving
+  author: Ruben Martins, Saurabh Joshi, Vasco Manquinho, Ines Lynce
+  year: '2015'
+  venue: JSAT
+  abstract: >-
+    In recent years, unsatisfiability-based algorithms have become prevalent as
+    state of the art for solving industrial instances of Maximum Satisfiability
+    (MaxSAT). These algorithms perform a succession of unsatisfiable SAT solver
+    calls until an optimal solution is found. In several of these algorithms,
+    cardinality or pseudo-Boolean constraints are extended between iterations.
+    However, in most cases, the formula provided to the SAT solver in each
+    iteration must be rebuilt and no knowledge is reused from one iteration to
+    the next.  This paper describes how to implement incremental
+    unsatisfiability-based algorithms for MaxSAT. In particular, we detail and
+    analyze our implementation of the MSU3 algorithm in the open-wbo framework
+    that performed remarkably well in the MaxSAT Evaluation of 2014.
+    Furthermore, we also propose to extend incrementality to weighted MaxSAT
+    through an incremental encoding of pseudo-Boolean constraints. The
+    experimental results show that the performance of MaxSAT algorithms can be
+    greatly improved by exploiting the learned information and maintaining the
+    internal state of the SAT solver between iterations. Finally, the proposed
+    incremental encodings of cardinality and pseudo-Boolean constraints are not
+    exclusive for MaxSAT usage and can be used in other domains.
+  doi: 10.3233/sat190102
+  links:
+    github: https://github.com/sat-group/open-wbo
+    paper: >-
+      https://content.iospress.com/articles/journal-on-satisfiability-boolean-modeling-and-computation/sat190102
+  files: {}
+  journal: Journal of Satisfiability, Boolean Modelling and Computation (9)
+- id: DBLP:conf/sas/Brain0KS15
+  title: Safety Verification and Refutation by $k$-Invariants and $k$-Induction
+  author: Martin Brain, Saurabh Joshi, Daniel Kroening, Peter Schrammel
+  year: '2015'
+  venue: SAS 2015
+  abstract: >-
+    Most software verification tools can be classified into one of a number of
+    established families, each of which has their own focus and strengths. For
+    example, concrete counterexample generation in model checking, invariant
+    inference in abstract interpretation and completeness via annotation for
+    deductive verification. This creates a significant and fundamental usability
+    problem as users may have to learn and use one technique to find potential
+    problems but then need an entirely different one to show that they have been
+    fixed. This paper presents a single, unified algorithm kIkI, which strictly
+    generalises abstract interpretation, bounded model checking and k-induction.
+    This not only combines the strengths of these techniques but allows them to
+    interact and reinforce each other, giving a `single-tool' approach to
+    verification.
+  doi: 10.1007/978-3-662-48288-9_9
+  links:
+    github: https://github.com/diffblue/2ls
+    paper: https://arxiv.org/pdf/1506.05671.pdf
+  files: {}
+  booktitle: Static Analysis Symposium
+- id: DBLP:conf/fm/0001K15
+  title: Property-Driven Fence Insertion Using Reorder Bounded Model Checking
+  author: Saurabh Joshi, Daniel Kroening
+  year: '2015'
+  venue: FM 2015
+  abstract: >-
+    Modern architectures provide weaker memory consistency guarantees than
+    sequential consistency. These weaker guarantees allow programs to exhibit
+    behaviours where the program statements appear to have executed out of
+    program order. Fortunately, modern architectures provide memory barriers
+    (fences) to enforce the program order between a pair of statements if
+    needed. Due to the intricate semantics of weak memory models, the placement
+    of fences is challenging even for experienced programmers. Too few fences
+    lead to bugs whereas overuse of fences results in performance degradation.
+    This motivates automated placement of fences. Tools that restore sequential
+    consistency in the program may insert more fences than necessary for the
+    program to be correct. Therefore, we propose a property-driven technique
+    that introduces "reorder-bounded exploration" to identify the smallest
+    number of program locations for fence placement. We implemented our
+    technique on top of CBMC; however, in principle, our technique is generic
+    enough to be used with any model checker. Our experimental results show that
+    our technique is faster and solves more instances of relevant benchmarks as
+    compared to earlier approaches.
+  doi: 10.1007/978-3-319-19249-9_19
+  links:
+    github: http://www.cprover.org/glue
+    paper: https://arxiv.org/pdf/1407.7443.pdf
+  files: {}
+  booktitle: International Symposium on Formal Methods
+- id: DBLP:journals/corr/0001L14
+  title: Automatically finding atomic regions for fixing bugs in Concurrent Programs
+  author: Saurabh Joshi, Akash Lal
+  year: '2014'
+  venue: arXiv
+  abstract: >-
+    This paper presents a technique for automatically constructing a fix for
+    buggy concurrent programs: given a concurrent program that does not satisfy
+    user-provided assertions, we infer atomic blocks that fix the program. An
+    atomic block protects a piece of code and ensures that it runs without
+    interruption from other threads. Our technique uses a verification tool as a
+    subroutine to find the smallest atomic regions that remove all bugs in a
+    given program. Keeping the atomic regions small allows for maximum
+    concurrency. We have implemented our approach in a tool called AtomicInf. A
+    user of AtomicInf can choose between strong and weak atomicity semantics for
+    the inferred fix. While the former is simpler to find, the latter provides
+    more information about the bugs that got fixed.  We ran AtomicInf on several
+    benchmarks and came up with the smallest and the most precise atomic regions
+    in all of them. We implemented an earlier technique to our setting and
+    observed that AtomicInf is 1.7 times faster on an average as compared to an
+    earlier approach.
+  doi: ''
+  links:
+    paper: https://arxiv.org/pdf/1403.1749.pdf
+  files: {}
+  booktitle: Computational Research Repository
+- id: DBLP:conf/cp/MartinsJML14
+  title: Incremental Cardinality Constraints for MaxSAT
+  author: Ruben Martins, Saurabh Joshi, Vasco Manquinho, Ines Lynce
+  year: '2014'
+  venue: CP 2014
+  abstract: >-
+    Maximum Satisfiability (MaxSAT) is an optimization variant of the Boolean
+    Satisfiability (SAT) problem. In general, MaxSAT algorithms perform a
+    succession of SAT solver calls to reach an optimum solution making extensive
+    use of cardinality constraints. Many of these algorithms are non-incremental
+    in nature, i.e. at each iteration the formula is rebuilt and no knowledge is
+    reused from one iteration to another. In this paper, we exploit the
+    knowledge acquired across iterations using novel schemes to use cardinality
+    constraints in an incremental fashion. We integrate these schemes with
+    several MaxSAT algorithms. Our experimental results show a significant
+    performance boost for these algo- rithms as compared to their
+    non-incremental counterparts. These results suggest that incremental
+    cardinality constraints could be beneficial for other constraint solving
+    domains.
+  doi: 10.1007/978-3-319-10428-7_39
+  links:
+    github: https://github.com/sat-group/open-wbo
+    paper: https://arxiv.org/pdf/1408.4628.pdf
+  files: {}
+  booktitle: >-
+    International Conference on Principles and Practice of Constraint
+    Programming
+- id: DBLP:conf/ipps/JoshiSA12
+  title: A New Method of {MHP} Analysis for Languages with Dynamic Barriers
+  author: Saurabh Joshi, R K Shyamasundar, Sanjeev K Aggarwal
+  year: '2012'
+  venue: HIPS IPDPSW 2012
+  abstract: >-
+    May-happen-in-parallel analysis is a very important analysis which enables
+    several optimizations in parallel programs. Most of the work on MHP analysis
+    has used forward flow analysis to compute \"parallel(n)\" -- set of nodes
+    which may execute in parallel to a given node \"n\" -- including those
+    approaches that addressed the issue for dynamic barrier languages. We
+    propose a new approach to MHP analysis called "Phase Interval Analysis"
+    (PIA) which computes phase intervals, corresponding to dynamic barriers, in
+    which a statement may execute. PIA enables us to infer an order between two
+    statements whenever it can establish that they can not execute in parallel.
+    Because the ordering relation is transitive, we may also be able to infer
+    indirect synchronization happening between two statements, even when they do
+    not share a barrier. To the best of our knowledge, the issue of indirect
+    synchronization has not been addressed prior to this work. We also compute
+    condition functions under which different instances of the same statement
+    may not execute in parallel, when the statements are nested within loops.
+  doi: 10.1109/IPDPSW.2012.70
+  links: {}
+  files:
+    pdf: /assets/publications/hips2012.pdf
+  booktitle: International Parallel and Distributed Processing Symposium Workshops
+- id: DBLP:conf/popl/JoshiLL12
+  title: Underspecified harnesses and interleaved bugs
+  author: Saurabh Joshi, Shuvendu Lahiri, Akash Lal
+  year: '2012'
+  venue: POPL 2012
+  abstract: >-
+    Static assertion checking of open programs requires setting up a precise
+    harness to capture the environment assumptions. For instance, a library may
+    require a file handle to be properly initialized before it is passed into
+    it. A harness is used to set up or specify the appropriate preconditions
+    before invoking methods from the program. In the absence of a precise
+    harness, even the most precise automated static checkers are bound to report
+    numerous false alarms. This often limits the adoption of static assertion
+    checking in the hands of a user.  In this work, we explore the possibility
+    of automatically filtering away (or prioritizing) warnings that result from
+    imprecision in the harness. We limit our attention to the scenario when one
+    is interested in finding bugs due to concurrency. We define a warning to be
+    an interleaved bug when it manifests on an input for which no sequential
+    interleaving produces a warning. As we argue in the paper, limiting a static
+    analysis to only consider interleaved bugs greatly reduces false positives
+    during static concurrency analysis in the presence of an imprecise harness. 
+    We formalize interleaved bugs as a differential analysis between the
+    original program and its sequential version and provide various techniques
+    for finding them. Our implementation CBugs demonstrates that the scheme of
+    finding interleaved bugs can alleviate the need to construct precise
+    harnesses while checking real-life concurrent programs.
+  doi: 10.1145/2103656.2103662
+  links: {}
+  files:
+    pdf: /assets/publications/popl148-joshi.pdf
+  booktitle: ACM SIGPLAN-SIGACT Symposium on Principles Programming Languages
+- id: DBLP:conf/icdcn/AgarwalJS11
+  title: Distributed Generalized Dynamic Barrier Synchronization
+  author: Shivali Agarwal, Saurabh Joshi, R K Shyamasundar
+  year: '2011'
+  venue: ICDCN 2011
+  abstract: >-
+    Static assertion checking of open programs requires setting up a precise
+    harness to capture the environment assumptions. For instance, a library may
+    require a file handle to be properly initialized before it is passed into
+    it. A harness is used to set up or specify the appropriate preconditions
+    before invoking methods from the program. In the absence of a precise
+    harness, even the most precise automated static checkers are bound to report
+    numerous false alarms. This often limits the adoption of static assertion
+    checking in the hands of a user.  In this work, we explore the possibility
+    of automatically filtering away (or prioritizing) warnings that result from
+    imprecision in the harness. We limit our attention to the scenario when one
+    is interested in finding bugs due to concurrency. We define a warning to be
+    an interleaved bug when it manifests on an input for which no sequential
+    interleaving produces a warning. As we argue in the paper, limiting a static
+    analysis to only consider interleaved bugs greatly reduces false positives
+    during static concurrency analysis in the presence of an imprecise harness. 
+    We formalize interleaved bugs as a differential analysis between the
+    original program and its sequential version and provide various techniques
+    for finding them. Our implementation CBugs demonstrates that the scheme of
+    finding interleaved bugs can alleviate the need to construct precise
+    harnesses while checking real-life concurrent programs.
+  doi: 10.1007/978-3-642-17679-1_13
+  links: {}
+  files:
+    pdf: /assets/publications/icdcn2011.pdf
+  booktitle: International Conference on Distributed Computing and Networking
+- id: DBLP:conf/hvc/DoucetSKJG07
+  title: Reactivity in SystemC Transaction-Level Models
+  author: >-
+    Frederic Doucet, R K Shyamasundar, Ingolf Krueger, Saurabh Joshi, Rajesh K
+    Gupta
+  year: '2007'
+  venue: HVC 2007
+  abstract: >-
+    SystemC is a popular language used in modeling system-on-chip
+    implementations. To support this task at a high level of abstraction,
+    transaction-level modeling (TLM) libraries have been recently developped.
+    While TLM libraries are useful, it is difficult to capture the reactive
+    nature of certain transactions with the constructs currently available in
+    the SystemC and TLM libraries. In this paper, we propose an approach to
+    specify and verify reactive transactions in SystemC designs. Reactive
+    transactions are different from TLM transactions in the sense that a
+    transaction can be killed or reset. Our approach consists of: (1) a language
+    to describe reactive transactions that can be translated to verification
+    monitors, (2) an architectural pattern to implement reactive transactions,
+    and (3) the verification support to verify that the design does not
+    deadlock, allows only legal behaviors and is always responsive. We
+    illustrate our approach through an example of a transactional memory system
+    where a transaction can be killed or reset before its completion. We
+    identify the architectural patterns for reactive transactions. Our results
+    demonstrate the feasibility of our approach as well as support for a
+    comprehensive verification using RuleBase/NuSMV tools.
+  doi: 10.1007/978-3-540-77966-7_7
+  links: {}
+  files:
+    pdf: /assets/publications/hvc2007.pdf
+  booktitle: International Haifa Verification Conference

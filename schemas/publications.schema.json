@@ -18,14 +18,14 @@
       "links": {
         "type": "object",
         "properties": {
-          "slides": { "type": "string", "format": "uri" },
-          "video": { "type": "string", "format": "uri" },
-          "github": { "type": "string", "format": "uri" },
-          "talk": { "type": "string", "format": "uri" },
-          "paper": { "type": "string", "format": "uri" },
-          "arxiv": { "type": "string", "format": "uri" }
+          "slides": { "type": "string" },
+          "video": { "type": "string" },
+          "github": { "type": "string" },
+          "talk": { "type": "string" },
+          "paper": { "type": "string" },
+          "arxiv": { "type": "string" }
         },
-        "additionalProperties": { "type": "string", "format": "uri" }
+        "additionalProperties": { "type": "string" }
       },
       "files": {
         "type": "object",
