@@ -1,0 +1,8 @@
+{
+  "track_id": "homepage_v2_core_20260331",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-03-31T12:00:00Z",
+  "updated_at": "2026-03-31T12:00:00Z",
+  "description": "Build core Eleventy site with publication list and technical blog foundations"
+}
