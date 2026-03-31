@@ -1,6 +1,6 @@
 {% macro icon(name) %}
 <svg class="icon icon-{{ name }}" aria-hidden="true" focusable="false">
-  <use xlink:href="/assets/icons/resource-icons.svg#icon-{{ name }}"></use>
+  <use xlink:href="{{ '/assets/icons/resource-icons.svg#icon-' + name | url }}"></use>
 </svg>
 {% endmacro %}
 
@@ -28,9 +28,9 @@
   <div class="pub-item__resources">
     {% if pub.links %}
       <ul class="pub-item__links">
-        {% for key, url in pub.links %}
+        {% for key, url_link in pub.links %}
           <li class="pub-item__link-item">
-            <a href="{{ url }}" class="pub-item__resource-link" target="_blank" rel="noopener noreferrer">
+            <a href="{{ url_link | url }}" class="pub-item__resource-link" target="_blank" rel="noopener noreferrer">
               {{ icon(key) }}
               <span>{{ key | capitalize }}</span>
             </a>
@@ -41,9 +41,9 @@
 
     {% if pub.files %}
       <ul class="pub-item__files">
-        {% for key, path in pub.files %}
+        {% for key, path_file in pub.files %}
           <li class="pub-item__file-item">
-            <a href="{{ path }}" class="pub-item__resource-link" download>
+            <a href="{{ path_file | url }}" class="pub-item__resource-link" download>
               {{ icon(key if key != 'pdf' else 'paper') }}
               <span>{{ key | upper }}</span>
             </a>

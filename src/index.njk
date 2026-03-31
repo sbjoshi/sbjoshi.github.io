@@ -12,7 +12,7 @@ title: Home
   <ul class="post-list">
     {% for post in collections.posts | reverse %}
       <li class="post-list__item">
-        <a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a>
+        <a href="{{ post.url | url }}" class="post-list__link">{{ post.data.title }}</a>
         <time class="post-list__date" datetime="{{ post.date | date('yyyy-LL-dd') }}">{{ post.date | date('DDD') }}</time>
       </li>
     {% endfor %}
@@ -21,5 +21,5 @@ title: Home
 
 <section class="featured-publications">
   <h2 class="section__title">Featured Publications</h2>
-  <p>Check out my <a href="/publications/">full list of publications</a>.</p>
+  <p>Check out my <a href="{{ '/publications/' | url }}">full list of publications</a>.</p>
 </section>
