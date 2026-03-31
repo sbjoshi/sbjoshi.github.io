@@ -4,5 +4,5 @@ This file tracks all major tracks for the project. Each track has its own detail
 
 ---
 
-- [ ] **Track: Build core Eleventy site with publication list and technical blog foundations**
+- [x] **Track: Build core Eleventy site with publication list and technical blog foundations**
   *Link: [./tracks/homepage_v2_core_20260331/](./tracks/homepage_v2_core_20260331/)*
