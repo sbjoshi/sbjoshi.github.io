@@ -7,12 +7,12 @@
 4.  - [x] Task: Integrate YAML data parsing into Eleventy's data cascade a7247d2
 5.  - [x] Task: Conductor - User Manual Verification 'Phase 1: Infrastructure & Data Schema Update' (Protocol in workflow.md) 95bbfab
 
-## Phase 2: Data Migration
+## Phase 2: Data Migration [checkpoint: 59c5e95]
 1.  - [x] Task: Write failing tests for BibTeX to YAML conversion script 3de3d71
 2.  - [x] Task: Implement Node.js conversion utility in `scripts/migrate-pubs.js` 3de3d71
 3.  - [x] Task: Convert existing `src/data/publications.bib` to `src/_data/publications.yaml` 9fb4498
 4.  - [x] Task: Verify data integrity after migration b2995d7
-5.  - [ ] Task: Conductor - User Manual Verification 'Phase 2: Data Migration' (Protocol in workflow.md)
+5.  - [x] Task: Conductor - User Manual Verification 'Phase 2: Data Migration' (Protocol in workflow.md) 59c5e95
 
 ## Phase 3: UI & Template Enhancement
 1.  - [ ] Task: Integrate icon system (e.g., SVG sprites) for resource types
