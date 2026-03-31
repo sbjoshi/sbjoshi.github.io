@@ -1,7 +1,7 @@
 # Implementation Plan: Rich Publication Data Support
 
 ## Phase 1: Infrastructure & Data Schema Update
-1.  - [ ] Task: Update global metadata to support publication site URL
+1.  - [x] Task: Update global metadata to support publication site URL 3d5eb51
 2.  - [ ] Task: Create YAML schema definition for rich publications
 3.  - [ ] Task: Implement unit tests for YAML data parsing in Eleventy
 4.  - [ ] Task: Integrate YAML data parsing into Eleventy's data cascade
