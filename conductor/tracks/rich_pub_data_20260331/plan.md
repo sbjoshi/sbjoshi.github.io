@@ -2,7 +2,7 @@
 
 ## Phase 1: Infrastructure & Data Schema Update
 1.  - [x] Task: Update global metadata to support publication site URL 3d5eb51
-2.  - [ ] Task: Create YAML schema definition for rich publications
+2.  - [x] Task: Create YAML schema definition for rich publications da12566
 3.  - [ ] Task: Implement unit tests for YAML data parsing in Eleventy
 4.  - [ ] Task: Integrate YAML data parsing into Eleventy's data cascade
 5.  - [ ] Task: Conductor - User Manual Verification 'Phase 1: Infrastructure & Data Schema Update' (Protocol in workflow.md)
