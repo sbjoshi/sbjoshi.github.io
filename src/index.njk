@@ -13,7 +13,7 @@ title: Home
     {% for post in collections.posts | reverse %}
       <li class="post-list__item">
         <a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a>
-        <time class="post-list__date" datetime="{{ post.date }}">{{ post.date }}</time>
+        <time class="post-list__date" datetime="{{ post.date | date('yyyy-LL-dd') }}">{{ post.date | date('DDD') }}</time>
       </li>
     {% endfor %}
   </ul>
