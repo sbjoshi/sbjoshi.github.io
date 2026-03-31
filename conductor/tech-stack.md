@@ -5,7 +5,7 @@
 
 ## 2. Front-end Development
 *   **Styling:** CSS Modules / Vanilla CSS – A modern, component-driven approach to styling that focuses on simplicity and maintainability while avoiding the overhead of large frameworks.
-*   **Content Format:** Markdown / MDX – Standard, portable, and easy-to-edit format for all text-based content, including blog posts, publications, and course descriptions.
+*   **Content Format:** Markdown / YAML – Standard, portable, and easy-to-edit formats for text-based content and structured data (e.g., rich publications).
 
 ## 3. Deployment & Automation
 *   **Hosting:** GitHub Pages – Reliable, integrated hosting for static sites directly from the repository.

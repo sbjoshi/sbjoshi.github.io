@@ -16,7 +16,7 @@ The goal of this project is to create a modern, high-impact personal homepage fo
 ## 3. Core Features & Sections
 *   **Professional Summary:** A high-level overview of engineering skills, research areas, and career highlights.
 *   **Teaching & Mentorship:** Detailed lists of courses taught, educational materials, and a section on teaching philosophy.
-*   **Publications & Research:** A comprehensive, categorized library of published work, including links to PDFs, abstracts, and citations.
+*   **Publications & Research:** A comprehensive, categorized library of published work, including rich resource links (PDFs, slides, videos, repositories, and arXiv) and associated supplementary materials.
 *   **Student Supervision:** A dedicated space for current and former students, highlighting their projects and achievements.
 *   **Blog & Project Portfolio:** A technical blog for sharing insights and a portfolio to showcase specific engineering projects.
 
