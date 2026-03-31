@@ -1,5 +1,4 @@
 node_modules/
 _site/
-package-lock.json
 test-*.js
 delegation-prompt-*.md

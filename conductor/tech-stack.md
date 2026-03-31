@@ -14,3 +14,5 @@
 ## 4. Development Environment
 *   **Runtime:** Node.js – The primary runtime for Eleventy and its associated build tools.
 *   **Package Manager:** npm or yarn – Standard tools for managing project dependencies.
+*   **Testing:** Ava – A minimalistic test runner for Node.js with native ESM support.
+

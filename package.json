@@ -7,7 +7,8 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "debug": "DEBUG=Eleventy* eleventy"
+    "debug": "DEBUG=Eleventy* eleventy",
+    "test": "ava"
   },
   "keywords": [],
   "author": "",
@@ -15,5 +16,13 @@
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
     "bibtex-parse-js": "^0.0.24"
+  },
+  "devDependencies": {
+    "ava": "^6.1.1"
+  },
+  "ava": {
+    "files": [
+      "tests/**/*.test.js"
+    ]
   }
 }
