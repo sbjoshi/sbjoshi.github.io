@@ -1,3 +1,9 @@
+{% macro icon(name) %}
+<svg class="icon icon-{{ name }}" aria-hidden="true" focusable="false">
+  <use xlink:href="/assets/icons/resource-icons.svg#icon-{{ name }}"></use>
+</svg>
+{% endmacro %}
+
 {% macro pubItem(pub) %}
 <div class="pub-item" id="{{ pub.id }}">
   <h3 class="pub-item__title">{{ pub.title }}</h3>
@@ -12,11 +18,41 @@
       <span class="pub-item__year">({{ pub.year }})</span>
     {% endif %}
   </p>
+  
   {% if pub.doi %}
-    <p class="pub-item__links">
+    <p class="pub-item__doi">
       <a href="https://doi.org/{{ pub.doi }}" class="pub-item__link">DOI: {{ pub.doi }}</a>
     </p>
   {% endif %}
+
+  <div class="pub-item__resources">
+    {% if pub.links %}
+      <ul class="pub-item__links">
+        {% for key, url in pub.links %}
+          <li class="pub-item__link-item">
+            <a href="{{ url }}" class="pub-item__resource-link" target="_blank" rel="noopener noreferrer">
+              {{ icon(key) }}
+              <span>{{ key | capitalize }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if pub.files %}
+      <ul class="pub-item__files">
+        {% for key, path in pub.files %}
+          <li class="pub-item__file-item">
+            <a href="{{ path }}" class="pub-item__resource-link" download>
+              {{ icon(key if key != 'pdf' else 'paper') }}
+              <span>{{ key | upper }}</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+
   {% if pub.note %}
     <p class="pub-item__note">{{ pub.note }}</p>
   {% endif %}
