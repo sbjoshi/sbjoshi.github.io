@@ -15,7 +15,7 @@
 5.  - [x] Task: Conductor - User Manual Verification 'Phase 2: Data Migration' (Protocol in workflow.md) 59c5e95
 
 ## Phase 3: UI & Template Enhancement
-1.  - [ ] Task: Integrate icon system (e.g., SVG sprites) for resource types
+1.  - [x] Task: Integrate icon system (e.g., SVG sprites) for resource types c04da52
 2.  - [ ] Task: Write tests for publication macro rendering with multiple links
 3.  - [ ] Task: Update `src/_includes/macros/pub-item.njk` to support rich resources
 4.  - [ ] Task: Enhance styling in `src/assets/css/main.css` for icons and action buttons
