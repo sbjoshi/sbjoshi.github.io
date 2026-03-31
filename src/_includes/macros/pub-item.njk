@@ -1,0 +1,24 @@
+{% macro pubItem(pub) %}
+<div class="pub-item" id="{{ pub.id }}">
+  <h3 class="pub-item__title">{{ pub.title }}</h3>
+  <p class="pub-item__authors">{{ pub.author }}</p>
+  <p class="pub-item__venue">
+    {% if pub.journal %}
+      <span class="pub-item__journal">{{ pub.journal }}</span>
+    {% elif pub.booktitle %}
+      <span class="pub-item__booktitle">{{ pub.booktitle }}</span>
+    {% endif %}
+    {% if pub.year %}
+      <span class="pub-item__year">({{ pub.year }})</span>
+    {% endif %}
+  </p>
+  {% if pub.doi %}
+    <p class="pub-item__links">
+      <a href="https://doi.org/{{ pub.doi }}" class="pub-item__link">DOI: {{ pub.doi }}</a>
+    </p>
+  {% endif %}
+  {% if pub.note %}
+    <p class="pub-item__note">{{ pub.note }}</p>
+  {% endif %}
+</div>
+{% endmacro %}

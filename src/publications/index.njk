@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+title: Publications
+---
+{% from "macros/pub-item.njk" import pubItem %}
+
+<h1 class="page__title">Publications</h1>
+
+<div class="pub-list">
+  <!-- DEBUG: {{ publications | dump }} -->
+  {% for pub in publications %}
+    {{ pubItem(pub) }}
+  {% endfor %}
+</div>

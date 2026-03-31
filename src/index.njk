@@ -1,0 +1,25 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<section class="hero">
+  <h1 class="hero__title">Welcome to My Homepage</h1>
+  <p class="hero__subtitle">I am a researcher interested in web technologies and open source.</p>
+</section>
+
+<section class="recent-posts">
+  <h2 class="section__title">Recent Posts</h2>
+  <ul class="post-list">
+    {% for post in collections.posts | reverse %}
+      <li class="post-list__item">
+        <a href="{{ post.url }}" class="post-list__link">{{ post.data.title }}</a>
+        <time class="post-list__date" datetime="{{ post.date }}">{{ post.date }}</time>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section class="featured-publications">
+  <h2 class="section__title">Featured Publications</h2>
+  <p>Check out my <a href="/publications/">full list of publications</a>.</p>
+</section>

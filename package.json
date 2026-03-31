@@ -1,0 +1,19 @@
+{
+  "name": "homepage_v2",
+  "version": "1.0.0",
+  "description": "Personal homepage version 2",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build": "eleventy",
+    "start": "eleventy --serve",
+    "debug": "DEBUG=Eleventy* eleventy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "bibtex-parse-js": "^0.0.24"
+  }
+}
