@@ -8,7 +8,7 @@
       "id": { "type": "string" },
       "type": { "type": "string" },
       "title": { "type": "string" },
-      "authors": { "type": "string" },
+      "author": { "type": "string" },
       "year": { "type": ["string", "number"] },
       "venue": { "type": "string" },
       "journal": { "type": "string" },
@@ -37,6 +37,6 @@
         "additionalProperties": { "type": "string" }
       }
     },
-    "required": ["id", "title", "authors", "year"]
+    "required": ["id", "title", "author", "year"]
   }
 }

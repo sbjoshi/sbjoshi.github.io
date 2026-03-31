@@ -1,7 +1,7 @@
 - id: smith2024journal
   type: article
   title: "A Comprehensive Study on Static Site Generators"
-  authors: "Smith, John and Doe, Jane"
+  author: "Smith, John and Doe, Jane"
   year: 2024
   venue: "Journal of Web Engineering"
   doi: "10.1234/jwe.2024.123"
@@ -15,7 +15,7 @@
 - id: doe2023conference
   type: inproceedings
   title: "Optimizing Performance in Eleventy-based Sites"
-  authors: "Doe, Jane and Brown, Robert"
+  author: "Doe, Jane and Brown, Robert"
   year: 2023
   booktitle: "Proceedings of the International Conference on Web Performance (ICWP)"
   location: "San Francisco, CA"
@@ -29,7 +29,7 @@
 - id: brown2022preprint
   type: unpublished
   title: "The Future of Jamstack: A Survey"
-  authors: "Brown, Robert and Smith, John"
+  author: "Brown, Robert and Smith, John"
   year: 2022
   note: "Preprint available at arXiv:2201.12345"
   links:
