@@ -1,11 +1,11 @@
 # Implementation Plan: Rich Publication Data Support
 
-## Phase 1: Infrastructure & Data Schema Update
+## Phase 1: Infrastructure & Data Schema Update [checkpoint: 95bbfab]
 1.  - [x] Task: Update global metadata to support publication site URL 3d5eb51
 2.  - [x] Task: Create YAML schema definition for rich publications da12566
 3.  - [x] Task: Implement unit tests for YAML data parsing in Eleventy d28a7d5
 4.  - [x] Task: Integrate YAML data parsing into Eleventy's data cascade a7247d2
-5.  - [ ] Task: Conductor - User Manual Verification 'Phase 1: Infrastructure & Data Schema Update' (Protocol in workflow.md)
+5.  - [x] Task: Conductor - User Manual Verification 'Phase 1: Infrastructure & Data Schema Update' (Protocol in workflow.md) 95bbfab
 
 ## Phase 2: Data Migration
 1.  - [ ] Task: Write failing tests for BibTeX to YAML conversion script
