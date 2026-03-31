@@ -1,0 +1,8 @@
+{
+  "track_id": "rich_pub_data_20260331",
+  "type": "feature",
+  "status": "new",
+  "created_at": "2026-03-31T09:30:00Z",
+  "updated_at": "2026-03-31T09:30:00Z",
+  "description": "Transition to YAML-based rich publication data with support for multiple links and files."
+}
