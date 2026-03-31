@@ -1,0 +1,42 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Rich Publication Schema",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "properties": {
+      "id": { "type": "string" },
+      "type": { "type": "string" },
+      "title": { "type": "string" },
+      "authors": { "type": "string" },
+      "year": { "type": ["string", "number"] },
+      "venue": { "type": "string" },
+      "journal": { "type": "string" },
+      "booktitle": { "type": "string" },
+      "doi": { "type": "string" },
+      "abstract": { "type": "string" },
+      "links": {
+        "type": "object",
+        "properties": {
+          "slides": { "type": "string", "format": "uri" },
+          "video": { "type": "string", "format": "uri" },
+          "github": { "type": "string", "format": "uri" },
+          "talk": { "type": "string", "format": "uri" },
+          "paper": { "type": "string", "format": "uri" },
+          "arxiv": { "type": "string", "format": "uri" }
+        },
+        "additionalProperties": { "type": "string", "format": "uri" }
+      },
+      "files": {
+        "type": "object",
+        "properties": {
+          "pdf": { "type": "string" },
+          "markdown": { "type": "string" },
+          "video": { "type": "string" }
+        },
+        "additionalProperties": { "type": "string" }
+      }
+    },
+    "required": ["id", "title", "authors", "year"]
+  }
+}
