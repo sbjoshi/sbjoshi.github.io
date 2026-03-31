@@ -36,10 +36,7 @@ export function bibtexToYaml(bibtex) {
   });
 }
 
-/**
- * Main function to perform the migration.
- */
-function migrate() {
+export function migrate() {
   const bibPath = path.resolve(process.cwd(), 'src/data/publications.bib');
   const yamlPath = path.resolve(process.cwd(), 'src/_data/publications.yaml');
   
