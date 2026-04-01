@@ -1,0 +1,84 @@
+- category: PhD
+  students:
+    - name: Gautam Muduganti
+      url: https://www.linkedin.com/in/gautammuduganti/
+      status: PhD Candidate
+      period: Jan 2017--Present
+    - name: Utpal Bora
+      url: https://utpalbora.com
+      status: PhD
+      thesis: "Techniques for Static Detection of Data-races in OpenMP Programs"
+      period: Jan 2019--Oct 2022
+      note: now a PostDoc at Cambridge University, UK.
+- category: Masters
+  students:
+    - name: Archit Sanghi
+      url: https://www.linkedin.com/in/archit-sanghi-984925200/
+      status: MTech
+      period: July 2020--July 2021
+      note: co-advised with Dr. Praveen Tammana, now at Oracle, India.
+    - name: Akash Banerjee
+      url: https://www.linkedin.com/in/akashbanerjeeab/
+      status: MTech RA
+      period: July 2018--June 2021
+      note: now at AMD, UK.
+    - name: Eti Chaudhary
+      url: https://etichaudhary.github.io
+      status: MTech RA
+      thesis: "Verification of Programs"
+      period: July 2017--July 2020
+      note: now at Goldman Sachs, Bengaluru.
+    - name: Aditya Kumar
+      url: https://www.linkedin.com/in/npakr/
+      status: MTech
+      period: May 2019--July 2020
+      note: co-advised with Dr. Ramakrishna Upadrasta, now at Oracle, India.
+    - name: Sunil Sarode
+      status: MTech
+      period: May 2019--July 2020
+      note: co-advised with Dr. Ramakrishna Upadrasta
+    - name: Uttaran Sinha
+      url: https://uttaransinha.github.io
+      status: MTech
+      thesis: "Defending Neural Networks against Structural Perturbations"
+      period: July 2017--July 2019
+      note: now at Amazon, Bengaluru
+    - name: Arpit Aggarwal
+      url: https://www.linkedin.com/in/arpit94/
+      status: MTech (IIT Delhi)
+      thesis: "GoProver: a bounded model-checker for GO"
+      period: July 2017--July 2018
+      note: co-advised with Dr. Subodh Sharma, now at Candor Health as Founding Engineer
+    - name: Rasika Sapate
+      url: https://www.linkedin.com/in/rasika-sapate-67bb38a2/
+      status: MTech
+      thesis: "LLVM2GOTO: A translator from LLVM IR to CPROVER IR"
+      period: July 2016--July 2018
+      note: now at Microsoft, Hyderabad
+- category: Undergraduates
+  students:
+    - name: Gitanjali Mannepalli
+      url: https://www.linkedin.com/in/gitanjali-mannepalli-a45b4a220/
+      status: BTech
+      period: July 2018--Nov 2018
+      note: Mini Project - Proving program correctness using Coq, now at Microsoft, US.
+    - name: Sukrut Rao
+      url: https://sukrutrao.github.io
+      status: BTech
+      period: Research Internship
+      note: Improving MaxSAT Solving, now PhD candidate at Max Planck Institute, Germany
+    - name: Prateek Kumar
+      url: https://prateekkumar.in
+      status: BTech
+      period: Dec 2017--May 2019
+      note: Improving MaxSAT Solving, now at Apple, India.
+    - name: Nidhi Dhamnani
+      url: https://www.linkedin.com/in/nidhidhamnani/
+      status: BTech
+      period: July 2017--Nov 2017
+      note: Research Internship - Optimizing SAT Solver for push/pop queries, now at Momento, US as a Software Engineer
+    - name: B Shreya
+      url: https://www.linkedin.com/in/ballijepalli-shreya-b25384112/
+      status: BTech
+      period: July 2017--Nov 2017
+      note: Research Internship - Optimizing SAT Solver for push/pop queries, now at Amazon Web Services, US.

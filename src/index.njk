@@ -2,12 +2,193 @@
 layout: layouts/base.njk
 title: Home
 ---
+
 <section class="hero">
-  <h1 class="hero__title">Welcome to My Homepage</h1>
-  <p class="hero__subtitle">I am a researcher interested in web technologies and open source.</p>
+  <div class="hero__content">
+    <div class="hero__sidebar">
+      <div class="hero__avatar-container">
+        <img src="{{ '/assets/images/avatar.jpg' | url }}" alt="{{ metadata.author.name }}" class="hero__avatar">
+      </div>
+      <ul class="hero__social">
+        {% for link in metadata.author.social %}
+          <li>
+            <a href="{{ link.url }}" class="social-link" title="{{ link.name }}">
+              <svg class="icon"><use href="#icon-{{ link.icon }}"></use></svg>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="hero__text">
+      <h1 class="hero__title">{{ metadata.author.name }}</h1>
+      <p class="hero__role">{{ metadata.author.role }}</p>
+      <div class="hero__bio">
+        <p>{{ metadata.author.bio }}</p>
+      </div>
+      <div class="hero__interests">
+        <h3 class="hero__subtitle">Research Interests</h3>
+        <ul class="interests__list">
+          {% for interest in metadata.author.interests %}
+            <li class="interests__item">{{ interest }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section class="recent-posts">
+<section class="section about">
+  <h2 class="section__title">About</h2>
+  <div class="about__text">
+    <p>{{ metadata.author.about }}</p>
+  </div>
+  <div class="about__grid">
+    <div class="education">
+      <h3 class="about__subtitle">Education</h3>
+      <ul class="education__list">
+        {% for edu in metadata.author.education %}
+          <li class="education__item">
+            <span class="education__course">{{ edu.course }}</span>
+            <span class="education__inst">{{ edu.institution }}, {{ edu.year }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="news" class="section news">
+  <h2 class="section__title">News</h2>
+  <ul class="news-list">
+    {% for item in news %}
+      <li class="news-item">
+        {{ item.text | markdown | safe }}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="experience" class="section experience">
+  <h2 class="section__title">Experience</h2>
+  <ul class="experience-list">
+    {% for item in experience %}
+      <li class="experience-item">
+        <h3 class="experience-item__title">{{ item.title }}</h3>
+        <div class="experience-item__company">
+          {% if item.company_url %}
+            <a href="{{ item.company_url }}">{{ item.company }}</a>
+          {% else %}
+            {{ item.company }}
+          {% endif %}
+        </div>
+        <span class="experience-item__date">{{ item.start }} — {{ item.end }}</span>
+        {% if item.description %}
+          <div class="experience-item__description">
+            {{ item.description | safe }}
+          </div>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="projects" class="section projects">
+  <h2 class="section__title">Projects</h2>
+  <div class="project-grid">
+    {% for project in projects %}
+      <div class="project-card">
+        <h3 class="project-card__title">{{ project.title }}</h3>
+        <p class="project-card__summary">{{ project.summary }}</p>
+        <div class="project-card__tags">
+          {% for tag in project.tags %}
+            <span class="project-card__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+        <div class="project-card__links">
+          {% if project.links.blog %}
+            <a href="{{ project.links.blog }}" class="pub-item__resource-link">Blog</a>
+          {% endif %}
+          {% if project.links.video %}
+            <a href="{{ project.links.video }}" class="pub-item__resource-link">Video</a>
+          {% endif %}
+          {% if project.links.docs %}
+            <a href="{{ project.links.docs }}" class="pub-item__resource-link">Docs</a>
+          {% endif %}
+           {% if project.links.url %}
+            <a href="{{ project.links.url }}" class="pub-item__resource-link">Project Page</a>
+          {% endif %}
+          {% if project.links.github %}
+            <a href="{{ project.links.github }}" class="pub-item__resource-link">GitHub</a>
+          {% endif %}
+          {% if project.links.pdf %}
+            <a href="{{ project.links.pdf }}" class="pub-item__resource-link">PDF</a>
+          {% endif %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="patents" class="section patents">
+  <h2 class="section__title">Patents</h2>
+  <ul class="patents-list">
+    {% for patent in patents %}
+      <li class="patent-item">
+        <h3 class="patent-item__title">{{ patent.title }}</h3>
+        <p class="patent-item__authors">{{ patent.authors }}</p>
+        <p class="patent-item__number">Patent No: {{ patent.number }}</p>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<section id="teaching" class="section teaching">
+  <h2 class="section__title">Teaching</h2>
+  {% for category in teaching %}
+    <div class="teaching-category">
+      <h3 class="teaching-category__title">{{ category.category }}</h3>
+      <ul class="teaching-list">
+        {% for course in category.courses %}
+          <li class="teaching-item">
+            <span class="teaching-item__title">{{ course.title }}</span>
+            <span class="teaching-item__period">({{ course.period }})</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section id="students" class="section students">
+  <h2 class="section__title">Students</h2>
+  {% for category in students %}
+    <div class="students-category">
+      <h3 class="students-category__title">{{ category.category }}</h3>
+      <ul class="students-list">
+        {% for student in category.students %}
+          <li class="students-item">
+            <span class="students-item__name">
+              {% if student.url %}
+                <a href="{{ student.url }}">{{ student.name }}</a>
+              {% else %}
+                {{ student.name }}
+              {% endif %}
+            </span>
+            <span class="students-item__period">({{ student.period }})</span>
+            {% if student.thesis %}
+              <span class="students-item__thesis">Thesis: {{ student.thesis }}</span>
+            {% endif %}
+            {% if student.note %}
+              <div class="students-item__note">{{ student.note }}</div>
+            {% endif %}
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>
+
+<section class="section recent-posts">
   <h2 class="section__title">Recent Posts</h2>
   <ul class="post-list">
     {% for post in collections.posts | reverse %}
@@ -15,11 +196,8 @@ title: Home
         <a href="{{ post.url | url }}" class="post-list__link">{{ post.data.title }}</a>
         <time class="post-list__date" datetime="{{ post.date | date('yyyy-LL-dd') }}">{{ post.date | date('DDD') }}</time>
       </li>
+    {% else %}
+      <p>No posts yet.</p>
     {% endfor %}
   </ul>
-</section>
-
-<section class="featured-publications">
-  <h2 class="section__title">Featured Publications</h2>
-  <p>Check out my <a href="{{ '/publications/' | url }}">full list of publications</a>.</p>
 </section>

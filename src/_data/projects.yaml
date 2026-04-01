@@ -1,3 +1,37 @@
+- id: autofi
+  title: Supra AutoFi
+  summary: Automated DeFi powered by Supra Native Automation
+  tags:
+    - Blockchain
+    - Distributed Systems
+  year: '2025'
+  links:
+    docs : https://supra.com/autofi
+  content: >-
+    ## Supra AutoFi
+
+    
+    DeFi today relies heavily on offchain automation and bots for liquidations, arbitrage, and rebalancing — introducing latency, MEV inefficiencies, and governance delays.
+    AutoFi embeds these processes natively, operated by fully onchain system level-automation, eliminating brittle offchain dependencies and aligning execution priority with network health.
+
+- id: automation
+  title: Supra Native Automation
+  summary: On-chain automation with Zero Block Delay guarantee
+  tags:
+    - Blockchain
+    - Distributed Systems
+  year: '2025'
+  links:
+    video: https://www.youtube.com/watch?v=w07EkuNPdwM
+    docs : https://docs.supra.com/automation
+  content: >-
+    ## Supra Native Automation
+
+
+    Supra Native Automation provides Zero Block Delay guarantee by providing on-chain automation. Unlike some other automation
+    services where there could be delay of several blocks between condition of interest becoming _true_ and executing a 
+    target action, Supra Native Automation ensures immediate execution. 
+
 - id: dora
   title: DORA
   summary: Scaleable, transparent and efficient Distributed Oracle Agreement
@@ -6,7 +40,9 @@
     - Distributed Systems
   year: '2022'
   links:
-    pdf: https://supraoracles.com/docs/SupraOracles-DORA-Whitepaper.pdf
+    pdf: https://supra.com/documents/DORA-Whitepaper.pdf
+    blog: https://supra.com/news/dora-distributed-oracle-agreement/
+    docs: https://docs.supra.com/oracles/data-feeds
     slides: >-
       https://docs.google.com/presentation/d/1-46lJOyl9Vd-vNQfdskiREFaJ7cU0AoE5flyT8cMH_0/edit#slide=id.g17a3a86b05a_0_0
   content: >-
@@ -40,7 +76,8 @@
   tags:
     - Program Analysis
   year: '2019'
-  links: {}
+  links:
+    github: https://github.com/utpalbora/LLOV
   content: ''
 - id: openwbo
   title: OpenWBO

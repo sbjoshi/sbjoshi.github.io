@@ -1,6 +1,6 @@
 {% macro icon(name) %}
 <svg class="icon icon-{{ name }}" aria-hidden="true" focusable="false">
-  <use xlink:href="{{ '/assets/icons/resource-icons.svg#icon-' + name | url }}"></use>
+  <use href="#icon-{{ name }}"></use>
 </svg>
 {% endmacro %}
 

@@ -4,6 +4,7 @@
 
 import yaml from 'js-yaml';
 import { DateTime } from 'luxon';
+import markdownIt from 'markdown-it';
 
 /**
  * @param {import("@11ty/eleventy").UserConfig} eleventyConfig
@@ -11,6 +12,15 @@ import { DateTime } from 'luxon';
  */
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
+
+  const md = markdownIt({
+    html: true,
+    linkify: true,
+    typographer: true
+  });
+  eleventyConfig.addFilter('markdown', (content) => {
+    return md.render(content);
+  });
 
   // Add YAML support for data files
   eleventyConfig.addDataExtension('yaml', (contents) => yaml.load(contents));

@@ -1,0 +1,20 @@
+- category: Undergraduate
+  courses:
+    - title: Software Development Fundamentals (CS1023)
+      period: Mar 2021-Jun 2021
+    - title: Introduction to Programming (ID 1063)
+      period: Nov 2020-Feb 2021
+    - title: Principles of Programming Languages I (CS 2400)
+      period: Oct-Dec 2016, Oct-Dec 2017, Oct-Dec 2018, Oct-Dec 2019, May-Jul 2020
+    - title: Principles of Programming Languages II (CS 2433)
+      period: Jan-Apr 2017, Jan-Apr 2018, Jan-Apr 2019, Feb-Mar 2020
+    - title: Software Engineering (CS 4010)
+      period: Jan-Apr 2016 (at IIT Guwahati as CS 242 and CS 243), Jan-Apr 2017
+- category: Postgraduate
+  courses:
+    - title: Introduction to Blockchain Programming (CS 5533)
+      period: Mar-Apr 2026
+    - title: Constraint Solving/Constraint Programming (CS 6400, CS6403, CS6483)
+      period: Aug-Sep 2016, Aug-Oct 2017, Jan-Apr 2019, Jan-Apr 2020
+    - title: Software Verification (CS 6410)
+      period: Jan-Apr 2017, Jan-Apr 2018, Aug-Nov 2019

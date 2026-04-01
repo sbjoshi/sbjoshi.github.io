@@ -4,7 +4,69 @@
   "url": "https://sbjoshi.github.io/homepage_v2",
   "publication_url": "https://sbjoshi.github.io/homepage_v2/publications/",
   "author": {
-    "name": "SBJoshi",
-    "email": "sbjoshi@example.com"
+    "name": "Saurabh Joshi",
+    "email": "sbjoshi@example.com",
+    "role": "Director of R&D",
+    "bio": "",
+    "about": "Problems are not confined to one area of research or technology. I strongly believe that one should learn any tool/technology/area that allows the problem at hand to be solved in the best possible manner. The diversity of my research publications, as well as technologies that I have worked with, is a testament to this belief. Please see my full professional CV and academic CV for details.",
+    "interests": [
+      "Blockchain",
+      "Security",
+      "Distributed Systems",
+      "Constraint Programming",
+      "Formal Verification",
+      "Program Analysis",
+      "Programming Languages",
+      "Compilers"
+    ],
+    "education": [
+      {
+        "course": "PhD in Computer Science and Engineering",
+        "institution": "IIT Kanpur",
+        "year": 2012
+      },
+      {
+        "course": "MTech in Computer Science and Engineering",
+        "institution": "IIT Bombay",
+        "year": 2006
+      },
+      {
+        "course": "BE in Information Technology",
+        "institution": "Sardar Patel University, Vallabhvidyanagar",
+        "year": 2003
+      }
+    ],
+    "social": [
+      {
+        "name": "Twitter",
+        "icon": "twitter",
+        "url": "https://twitter.com/sbjoshi"
+      },
+      {
+        "name": "Google Scholar",
+        "icon": "google-scholar",
+        "url": "https://scholar.google.com/citations?user=MvHEGbYAAAAJ"
+      },
+      {
+        "name": "DBLP",
+        "icon": "dblp",
+        "url": "https://dblp.org/pid/13/4416-1.html"
+      },
+      {
+        "name": "ORCID",
+        "icon": "orcid",
+        "url": "https://orcid.org/0000-0001-8070-1525"
+      },
+      {
+        "name": "GitHub",
+        "icon": "github",
+        "url": "https://github.com/sbjoshi"
+      },
+      {
+        "name": "LinkedIn",
+        "icon": "linkedin",
+        "url": "https://www.linkedin.com/in/sbjoshi0001/"
+      }
+    ]
   }
 }
