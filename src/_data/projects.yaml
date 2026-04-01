@@ -157,7 +157,7 @@
 
 
     If you are merely looking at documentation about how to use it, please refer
-    to the post on [_"How to use Pinaka"_](/post/pinaka-usermanual).
+    to the post on [_"How to use Pinaka"_]({{ '/posts/pinaka-usermanual/' | url }}).
 
 
     #### Incremental Solving

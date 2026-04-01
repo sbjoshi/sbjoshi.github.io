@@ -2,6 +2,7 @@
 layout: layouts/base.njk
 title: Home
 ---
+{% from "macros/pub-item.njk" import pubItem %}
 
 <section class="hero">
   <div class="hero__content">
@@ -40,7 +41,7 @@ title: Home
 <section class="section about">
   <h2 class="section__title">About</h2>
   <div class="about__text">
-    <p>{{ metadata.author.about }}</p>
+    {{ metadata.author.about | markdown | safe }}
   </div>
   <div class="about__grid">
     <div class="education">
@@ -140,6 +141,16 @@ title: Home
       </li>
     {% endfor %}
   </ul>
+</section>
+
+<section id="recent-publications" class="section recent-publications">
+  <h2 class="section__title">Recent Publications</h2>
+  <div class="pub-list">
+    {% for pub in publications.slice(0, 3) %}
+      {{ pubItem(pub) }}
+    {% endfor %}
+  </div>
+  <p><a href="{{ '/publications/' | url }}" class="view-all-link">See full publication list &rarr;</a></p>
 </section>
 
 <section id="teaching" class="section teaching">
