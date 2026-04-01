@@ -1,5 +1,5 @@
 {
-  "name": "homepage_v2",
+  "name": "sbjoshi-github-io",
   "version": "1.0.0",
   "description": "Personal homepage version 2",
   "main": "index.js",
@@ -15,8 +15,10 @@
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.2",
     "luxon": "^3.7.2",
-    "markdown-it": "^14.1.1"
+    "markdown-it": "^14.1.1",
+    "markdown-it-mathjax3": "^5.2.0"
   },
   "devDependencies": {
     "ava": "^6.1.1",

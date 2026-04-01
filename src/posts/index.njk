@@ -1,0 +1,16 @@
+---
+layout: layouts/base.njk
+title: Posts
+---
+<h1 class="page__title">Blog Posts</h1>
+
+<ul class="post-list">
+  {% for post in collections.posts | reverse %}
+    <li class="post-list__item">
+      <a href="{{ post.url | url }}" class="post-list__link">{{ post.data.title }}</a>
+      <time class="post-list__date" datetime="{{ post.date | date('yyyy-LL-dd') }}">{{ post.date | date('DDD') }}</time>
+    </li>
+  {% else %}
+    <p>No posts yet.</p>
+  {% endfor %}
+</ul>

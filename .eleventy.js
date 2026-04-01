@@ -5,6 +5,8 @@
 import yaml from 'js-yaml';
 import { DateTime } from 'luxon';
 import markdownIt from 'markdown-it';
+import markdownItMathjax3 from 'markdown-it-mathjax3';
+import syntaxHighlight from '@11ty/eleventy-plugin-syntaxhighlight';
 
 /**
  * @param {import("@11ty/eleventy").UserConfig} eleventyConfig
@@ -12,12 +14,14 @@ import markdownIt from 'markdown-it';
  */
 export default function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/assets');
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   const md = markdownIt({
     html: true,
     linkify: true,
     typographer: true
-  });
+  }).use(markdownItMathjax3);
+  eleventyConfig.setLibrary("md", md);
   eleventyConfig.addFilter('markdown', (content) => {
     return md.render(content);
   });
@@ -28,6 +32,7 @@ export default function(eleventyConfig) {
   // Date filter
   eleventyConfig.addFilter('date', (dateObj, format = 'yyyy') => {
     let date;
+    if (!dateObj) return '';
     if (dateObj === 'now') {
       date = DateTime.now();
     } else if (typeof dateObj === 'string') {
@@ -35,8 +40,14 @@ export default function(eleventyConfig) {
     } else if (dateObj instanceof Date) {
       date = DateTime.fromJSDate(dateObj);
     } else {
+      // Try to parse it if it's something else
       date = DateTime.fromJSDate(new Date(dateObj));
     }
+    
+    if (!date.isValid) {
+      return dateObj;
+    }
+
     return date.toFormat(format);
   });
 
@@ -46,7 +57,7 @@ export default function(eleventyConfig) {
   });
 
   return {
-    pathPrefix: "/homepage_v2/",
+    pathPrefix: "/",
     dir: {
       input: 'src',
       output: '_site',

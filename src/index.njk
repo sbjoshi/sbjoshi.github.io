@@ -143,6 +143,20 @@ title: Home
   </ul>
 </section>
 
+<section id="recent-posts" class="section recent-posts">
+  <h2 class="section__title">Recent Posts</h2>
+  <ul class="post-list">
+    {% for post in (collections.posts | reverse).slice(0, 3) %}
+      <li class="post-list__item">
+        <a href="{{ post.url | url }}" class="post-list__link">{{ post.data.title }}</a>
+      </li>
+    {% else %}
+      <p>No posts yet.</p>
+    {% endfor %}
+  </ul>
+  <p><a href="{{ '/posts/' | url }}" class="view-all-link">See all posts &rarr;</a></p>
+</section>
+
 <section id="recent-publications" class="section recent-publications">
   <h2 class="section__title">Recent Publications</h2>
   <div class="pub-list">
@@ -197,18 +211,4 @@ title: Home
       </ul>
     </div>
   {% endfor %}
-</section>
-
-<section class="section recent-posts">
-  <h2 class="section__title">Recent Posts</h2>
-  <ul class="post-list">
-    {% for post in collections.posts | reverse %}
-      <li class="post-list__item">
-        <a href="{{ post.url | url }}" class="post-list__link">{{ post.data.title }}</a>
-        <time class="post-list__date" datetime="{{ post.date | date('yyyy-LL-dd') }}">{{ post.date | date('DDD') }}</time>
-      </li>
-    {% else %}
-      <p>No posts yet.</p>
-    {% endfor %}
-  </ul>
 </section>

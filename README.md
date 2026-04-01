@@ -22,8 +22,8 @@ Personal homepage for researcher and engineer, featuring a rich publication libr
 
 1.  Clone the repository:
     ```bash
-    git clone https://github.com/sbjoshi/homepage_v2.git
-    cd homepage_v2
+    git clone https://github.com/sbjoshi/sbjoshi.github.io.git
+    cd sbjoshi.github.io
     ```
 
 2.  Install dependencies:

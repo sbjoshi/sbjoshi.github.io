@@ -5,7 +5,7 @@ layout: layouts/base.njk
   <header class="post__header">
     <h1 class="post__title">{{ title }}</h1>
     {% if date %}
-      <time class="post__date" datetime="{{ date }}">{{ date }}</time>
+      <time class="post__date" datetime="{{ date | date('yyyy-LL-dd') }}">{{ date | date('DDD') }}</time>
     {% endif %}
   </header>
 

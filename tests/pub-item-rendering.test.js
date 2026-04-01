@@ -7,6 +7,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const macrosPath = path.resolve(__dirname, '../src/_includes');
 
 const env = new nunjucks.Environment(new nunjucks.FileSystemLoader(macrosPath));
+env.addFilter('url', (val) => val);
 
 test('pubItem macro renders rich links and icons', t => {
   const pub = {
