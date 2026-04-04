@@ -108,7 +108,26 @@ implicitly be changed and thus made potentially **incorrect**.
 
 I do not even know what this paragraph _mean_. The reference to the word **incorrect** here, alludes that there is some inherent assumption about what a **correct** program is, but that is _exactly_ what contracts intend to define! I am just confused about what the authors wanted to convey here.
 
+
+- >The ability to express postconditions of functions that do not exit normally, e.g., a postcondition
+that a function does or does not exit via an exception -- Section 2.3, 7th clause, page 11
+
+It is often important to be able to write contracts that specifies when a method takes unusual paths, for example [`aborts_if`](https://aptos.dev/build/smart-contracts/prover/spec-lang#aborts_if-condition) in [`Move Specification Language`](https://aptos.dev/build/smart-contracts/prover/spec-lang) does provide a way to formally specify if the method is going to `abort` conditionally.
+
+Yes, Move Specification Language is a separate langauge and the Move Compiler completely ignores the specs. It is only used by the [Move Prover](https://aptos.dev/build/smart-contracts/prover). I really like when proving correctness is not an aferthought. One can't fault the C++ language designers though as the tooling for proving software correctness was scarce at the time of inception of the language.
+
+- >• The ability to write a contract predicate that cannot be evaluated at run time, e.g., because it
+calls a function with no definition -- Section 2.3, 8th clause, page 12
+
+This takes away the ability to use _function summaries_. While we may not have implementation of a method, for the static analyzers as long as we can provide the contracts it may satisfy provide an essential aid to prove program correctness.
+
+- > The ability to express invariants
+
+Ah! Being able to express invariants, especially on a class can be quite vital. [Boost Contract Library](https://www.boost.org/doc/libs/latest/libs/contract/doc/html/index.html) does support it. Invariant avaiable with Boost, was indeed helpful in debugging the example that I used in my [talk](https://youtu.be/_eoZ4OfHypU?t=3234).
+
 ### Guiding principles
+
+I agree with most of the guiding/design principles for contracts noted down in Section 3.1 of the paper. 
 
 - **Principle 6: Destructive Side Effects** 
 > Contract assertions whose predicates, when evaluated, could affect the correctness of the
@@ -130,3 +149,17 @@ In the example above, if I had written
  {30,1,2,3,4,5}
  ```
  but this violates the _intended_ property of _sortedness_ that we wanted to check. And such mistakes can happen due to a small typo by using `<` instead of `<=`.
+
+ - **Principle 14: Choose Ill-Formed to Enable Flexible Evolution**
+ > _When no clear consensus has become apparent regarding the proper solution to a problem
+that Contracts could address, the relevant constructs are left ill-formed._
+
+From the design point of view, while things are still _evolving_ in terms of defining the semantics, this is understandable.
+
+One point though is that C++ contracts are _evolving_ even though they were never made part of the langauge since 2004 as noted in [Section 2.6, P2899R1](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2899r1.pdf). It is kind of disappointing that it took so long before they are made part of the language. Even then, one can't shake the feeling of ``_too little, too late_''.
+
+It is noted in the wild that the creator of the language, _Bjarne Stroustrup_ had remarked, ``_the adopted C++26 contract feature is neither minimal nor viable_''. I kind of agree with his view point but I would have loved to know details about why he thought so.
+
+I think this is enough for now. May be I will write another post with more of my opinion on various aspects of _C++26 Contracts_.
+
+**Disclaimer**: _I have immense respect for C++ Standard committe members. Their perception of how the language is used by the community and the knowledge of the language and semantics itself is far greater than mine. The post is just an opinion piece, or what I wished C++ contracts had supported._
