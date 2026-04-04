@@ -5,9 +5,9 @@ tags: ["Formal Verification", "Programming Languages", "C++", "Formal Specificat
 summary: "Opinion on C++26 Contracts feature"
 ---
 
-Ok, let me say it up front. When I write _Part 1_ in the title, I am hoping that I will write more posts. Not that a lot more can not be written, but I don't write technical posts much, but I am hoping to write more and more as a programming language enthusiast.
+Ok, let me say it up front. When I write _Part 1_ in the title, I am hoping that I will write more posts. Not that a lot more cannot be written, but I don't write technical posts much, but I am hoping to write more and more as a programming language enthusiast.
 
-I have been a formal verification researcher, so let me start with a motivating example that I have always used in my lectures, when I was a faculty member at IIT Hyderabad and in some of the talks (i.e., [CppIndiaCon 2021](https://www.youtube.com/watch?v=_eoZ4OfHypU) )
+I have been a formal verification researcher, so let me start with a motivating example that I have always used in my lectures, when I was a faculty member at IIT Hyderabad and in some of the talks (i.e., [CppIndiaCon 2021](https://www.youtube.com/watch?v=_eoZ4OfHypU))
 
 ```cpp
 
@@ -34,7 +34,7 @@ int main() {
         return 0;
 }
 ```
-The lesson is that we can not say something is _wrong_ or _right_ without first defining what  it means for something to be _wrong_ or _right_. That is exactly what specifications do.
+The lesson is that we cannot say something is _wrong_ or _right_ without first defining what it means for something to be _wrong_ or _right_. That is exactly what specifications do.
 
 The single comment that I wrote above is the specification for this program, which is described in [this working paper](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2900r14.pdf) as a _plain-language contract_ for this program.
 
@@ -50,11 +50,11 @@ that a passed-in function, if called, will return). Therefore, we do not expect 
 assertions can, in general, specify the entire plain-language contract of a function; however, they
 should always specify a subset of the plain-language contract._ -- page 9, 2nd last paragraph of the paper
 
-It seems that the committee has designed the C++ contracts specification, purely from run-time checking point of view. Otherwise, why worry about _runtime complexity_ of contract checking? The example of binary search suggests that _sortedness_ property checking has linear computational complexity as opposed to searching inside a sorted range, which is just logarithmic.
+It seems that the committee has designed the C++ contracts specification, purely from a run-time checking point of view. Otherwise, why worry about _runtime complexity_ of contract checking? The example of binary search suggests that _sortedness_ property checking has linear computational complexity as opposed to searching inside a sorted range, which is just logarithmic.
 
-As a formal verification researcher, I see this as  a missed opportunity. Why? Verification engineers cry at the top of their lungs for developers to provide _specifications_, and designing a standardized syntax in the language itself would perhaps encourage more programmers to write formal specs and perhaps adopt incorporating static analysis/formal verification tools in the development life cycle.
+As a formal verification researcher, I see this as a missed opportunity. Why? Verification engineers cry at the top of their lungs for developers to provide _specifications_, and designing a standardized syntax in the language itself would perhaps encourage more programmers to write formal specs and perhaps adopt incorporating static analysis/formal verification tools in the development life cycle.
 
-Even if a contract can not be checked at run-time without violating run-time complexity guarantees or even if it perhaps can not be checked at all (thanks to _Turing's halting problem_), it acts as  unambiguous documentation inside the code which in itself adds a lot of value.
+Even if a contract cannot be checked at run-time without violating run-time complexity guarantees or even if it perhaps cannot be checked at all (thanks to _Turing's halting problem_), it acts as unambiguous documentation inside the code, which in itself adds a lot of value.
 
 For example,
 ```cpp 
@@ -69,9 +69,9 @@ Yes, I know. Some of you may point out that the proposed syntax for _preconditio
 return_type fun_name(parameters) pre(condition)
 ```
 
-But indeed in [P0542R5](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0542r5.html), similar syntax has existed. They just used `expects` instead of `pre`.
+But indeed, in [P0542R5](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2018/p0542r5.html), similar syntax has existed. They just used `expects` instead of `pre`.
 
-Yes, I also know that there is no such thing as `forall` in C++. What I am trying to say is that just defining a standard syntax, say with the additional keywords `forall`, `exists` and operators `==>` to signify logical implication would have been a fantastic addition even though the same can not be checked at run time.
+Yes, I also know that there is no such thing as `forall` in C++. What I am trying to say is that just defining a standard syntax, say, with the additional keywords `forall`, `exists` and operators `==>` to signify logical implication would have been a fantastic addition even though the same cannot be checked at run time.
 
 Let programmers use `pre()` syntax when they want run time checking and use `[[pre: ]]` syntax when they want it to be used by static analyzers only.
 
@@ -79,20 +79,20 @@ Given that the C++ compiler is quite mature now, in terms of doing a lot of thin
 
 ### Features _not_ proposed
 
-- >_The ability to refer to the original values of     parameters and other entities during the evaluation
+- > _The ability to refer to the original values of parameters and other entities during the evaluation
 of the predicate of a postcondition_ -- Section 2.3, page 11, 3rd clause
 
-What?! If you look at the literature, _most_ of the examples of postconditions have some version of `old(var)`, where it refers to the value of `var` at the beginning of the method but might have changed now inside the method. This is extremely crucial for one to be able to provide a _strong_ postcondition, which is often a make or break in proving the program correctness. [Boost Contract Library](https://www.boost.org/doc/libs/latest/libs/contract/doc/html/index.html) does provide support for the same via `BOOST_CONTRACT_OLDOF(var)`. Of course, it requires that `var` is _copyable_, but something is better than nothing. The committee could have imposed a restriction on when you can refer to `old(var)` based on its copyability. Though, copying a heavy object, especially if it's a deep copy can increase the run time complexity and one may run into other issues such as running out of memory to copy.
+What?! If you look at the literature, _most_ of the examples of postconditions have some version of `old(var)`, where it refers to the value of `var` at the beginning of the method but might have changed now inside the method. This is extremely crucial for one to be able to provide a _strong_ postcondition, which is often a make or break in proving the program correctness. [Boost Contract Library](https://www.boost.org/doc/libs/latest/libs/contract/doc/html/index.html) does provide support for the same via `BOOST_CONTRACT_OLDOF(var)`. Of course, it requires that `var` is _copyable_, but something is better than nothing. The committee could have imposed a restriction on when you can refer to `old(var)` based on its copyability. Though, copying a heavy object, especially if it's a deep copy, can increase the run time complexity and one may run into other issues such as running out of memory to copy.
 
-- >The ability to express the desired evaluation semantic directly on the contract assertion -- Section 2.3, page 11, 5th clause
+- > The ability to express the desired evaluation semantic directly on the contract assertion -- Section 2.3, page 11, 5th clause
 
-A language, which has given the freedom to programmers, not only to shoot themselves in the  foot but to obliterate themselves with a bazooka is now saying it won't allow you to define your own semantics of evaluation, out of the four (a) _ignore_ (b) _observe_ (c) _enforce_, and (d) _quick-enforce_.
+A language, which has given the freedom to programmers, not only to shoot themselves in the foot but to obliterate themselves with a bazooka is now saying it won't allow you to define your own semantics of evaluation, out of the four (a) _ignore_ (b) _observe_ (c) _enforce_, and (d) _quick-enforce_.
 
 Section 3.5.4 does define what these four different semantics mean but Section 3.5.5 leaves it to the _implementation_, as in the compiler to choose which of the four will be used instead of giving this choice to the developer.
 
 Perhaps they could have at least given a choice globally, as in provide a flag `-fcontract-semantics=ignore` and all of the contracts will use the same evaluation semantics instead of giving an option to the programmer to annotate at each contract, which semantics they would like to choose for that particular contract assertion.
 
-Since we are talking about evaluation semantics, let us look at **Principle 5 : Independence from Chosen Semantic**
+Since we are talking about evaluation semantics, let us look at **Principle 5: Independence from Chosen Semantic**
 
 > Which evaluation semantic will be used for any given evaluation of a contract assertion and
 whether that evaluation semantic is a checking semantic should generally not be detectable at
@@ -109,14 +109,14 @@ implicitly be changed and thus made potentially **incorrect**.
 I do not even know what this paragraph _means_. The reference to the word **incorrect** here implies that there is some inherent assumption about what a **correct** program is, but that is _exactly_ what contracts intend to define! I am just confused about what the authors wanted to convey here.
 
 
-- >The ability to express postconditions of functions that do not exit normally, e.g., a postcondition
+- > The ability to express postconditions of functions that do not exit normally, e.g., a postcondition
 that a function does or does not exit via an exception -- Section 2.3, 7th clause, page 11
 
 It is often important to be able to write contracts that specify when a method takes unusual paths; for example, [`aborts_if`](https://aptos.dev/build/smart-contracts/prover/spec-lang#aborts_if-condition) in [`Move Specification Language`](https://aptos.dev/build/smart-contracts/prover/spec-lang) does provide a way to formally specify if the method is going to `abort` conditionally.
 
 Yes, Move Specification Language is a separate language and the Move Compiler completely ignores the specs. It is only used by the [Move Prover](https://aptos.dev/build/smart-contracts/prover). I really like when proving correctness is not an afterthought. One can't fault the C++ language designers though as the tooling for proving software correctness was scarce at the time of inception of the language.
 
-- >• The ability to write a contract predicate that cannot be evaluated at run time, e.g., because it
+- > • The ability to write a contract predicate that cannot be evaluated at run time, e.g., because it
 calls a function with no definition -- Section 2.3, 8th clause, page 12
 
 This takes away the ability to use _function summaries_. While we may not have an implementation of a method, as long as we can provide the contracts the implementation satisfies, they provide an essential aid to static analyzers to prove program correctness.
@@ -158,7 +158,7 @@ From the design point of view, while things are still _evolving_ in terms of def
 
 One point though is that C++ contracts are _evolving_ even though they were never made part of the language since 2004 as noted in [Section 2.6, P2899R1](https://www.open-std.org/jtc1/sc22/wg21/docs/papers/2025/p2899r1.pdf). It is kind of disappointing that it took so long before they are made part of the language. Even then, one can't shake the feeling of ``_too little, too late_''.
 
-It is noted in the wild that the creator of the language, _Bjarne Stroustrup_ had remarked, ``_the adopted C++26 contract feature is neither minimal nor viable_''. I kind of agree with his view point but I would have loved to know details about why he thought so.
+It is noted in the wild that the creator of the language, _Bjarne Stroustrup_ had remarked, ``_the adopted C++26 contract feature is neither minimal nor viable_''. I kind of agree with his viewpoint but I would have loved to know details about why he thought so.
 
 I think this is enough for now. Maybe I will write another post with more of my opinion on various aspects of _C++26 Contracts_.
 
