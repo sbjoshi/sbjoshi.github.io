@@ -82,6 +82,18 @@ body {
   font-size: 1.1rem;
 }
 
+blockquote {
+  background-color: #f1f3f5;
+  border-left: 4px solid var(--color-accent);
+  margin: var(--spacing-unit) 0;
+  padding: 0.5rem var(--spacing-unit);
+  font-style: italic;
+}
+
+blockquote p:last-child {
+  margin-bottom: 0;
+}
+
 /* Global Icon Style */
 .icon {
   fill: currentColor;
