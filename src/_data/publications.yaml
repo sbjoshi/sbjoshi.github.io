@@ -303,8 +303,6 @@
     paper: https://link.springer.com/content/pdf/10.1007%2F978-3-030-17502-3_20.pdf
     slides: https://sv-comp.sosy-lab.org/2019/talks/23_Pinaka.pdf
     pre-print: https://arxiv.org/pdf/1903.02309.pdf
-    post on acm india blog: >-
-      https://acm-fm-blog.blogspot.com/2020/04/pinaka-symbolic-execution-meets.html
   files: {}
   booktitle: Tools and Algorithms for the Construction and Analysis of Systems
 - id: DBLP:journals/corr/abs-1910-04643
@@ -322,7 +320,7 @@
   doi: 10.1007/978-3-319-98334-9_15
   links:
     paper: https://arxiv.org/pdf/1910.04643.pdf
-    virtual volume: https://freuder.wordpress.com/cp-anniversary-project/
+    virtual volume: https://freuder.me/cp-anniversary-project/
   files: {}
   booktitle: 'Virtual Volume to celebrate 25 years of CP '
 - id: DBLP:conf/caldam/JoshiKKB18
